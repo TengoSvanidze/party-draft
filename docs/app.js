@@ -5,18 +5,23 @@ const apiURL=path=>apiOrigin+path;
 const app=document.querySelector('#app'), params=new URLSearchParams(location.search);
 const panel=params.get('panel')||'main', storageKey='party-draft-seat:'+panel;
 const effects=createEffects('party-draft-sound:'+panel);
-const [en,ka,themes]=await Promise.all([basePath+'strings.en.json',basePath+'strings.ka.json',apiURL('/api/themes')].map(u=>fetch(u).then(r=>r.json())));
+const localPractice=params.get('practice')==='1'&&window.parent!==window?window.parent.partyDraftPractice:null;
+window.partyDraftResources=localPractice?window.parent.partyDraftResources:Promise.all([basePath+'strings.en.json',basePath+'strings.ka.json',basePath+'themes.json'].map(u=>fetch(u).then(r=>r.json())));
+const [en,ka,themes]=await window.partyDraftResources;
 let language=localStorage.getItem('party-draft-language')||'en';
 function storedJSON(key){try{return JSON.parse(sessionStorage.getItem(key)||'null');}catch{sessionStorage.removeItem(key);return null;}}
 let session=storedJSON(storageKey), state=null, connected=false, busy=false, selectedRaise=1, homeMode=params.has('room')?'join':'create', controller=null, toastTimer;
+window.addEventListener('pagehide',()=>controller?.abort());
 if(params.has('home'))session=null;
-const homeURL=basePath+'?home=1'+(panel!=='main'?'&panel='+encodeURIComponent(panel):'');
+const homeURL=basePath+'?home=1'+(panel!=='main'?'&panel='+encodeURIComponent(panel):'')+(localPractice?'&practice=1':'');
 const navLabel=key=>language==='ka'?({back:'უკან',home:'მთავარი',resume:'თამაშში დაბრუნება',table:'სატესტო მაგიდაზე დაბრუნება'})[key]:({back:'Back',home:'Home',resume:'Return to game',table:'Return to practice table'})[key];
 function navigation(){return `<nav class="page-nav" aria-label="Page navigation"><button type="button" id="page-back">← ${esc(navLabel('back'))}</button><a href="${esc(homeURL)}">⌂ ${esc(navLabel('home'))}</a></nav>`;}
 function bindNavigation(){document.querySelector('#page-back')?.addEventListener('click',()=>{const dialog=document.querySelector('dialog[open]');if(dialog){dialog.close();lineupOpen=false;return;}let internal=false;try{internal=new URL(document.referrer).origin===location.origin;}catch{}if(history.length>1&&(history.state?.partyDraft||internal))history.back();else location.assign(homeURL);});}
 window.addEventListener('popstate',()=>location.reload());
 let selectedTheme='mcu';
 let pendingAction=null;
+let practiceReady=null,practiceTimer=null;
+const pendingBoxes=new Map();let savingBoxes=false;
 const localActions=new Set(['lineups','close-lineups','copy','home','save-card']);
 function showPending(){
   if(!pendingAction)return;
@@ -34,7 +39,7 @@ function showPending(){
 }
 const currentTheme=()=>state?.theme||themes.find(x=>x.id===selectedTheme)||themes[0];
 let clockOffset=0,phaseKey='',lineupOpen=false,lineupPlayer=null;
-const imageCache=new Map(),imageLoading=new Set(),imageRetryAt=new Map();
+const imageCache=localPractice?window.parent.partyDraftImages:new Map(),imageRequests=localPractice?window.parent.partyDraftImageRequests:new Map(),imageLoading=new Set(),imageRetryAt=new Map();
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const money=n=>'€'+Number(n).toLocaleString('en-US');
 function t(key,values={}){const get=(dict)=>key.split('.').reduce((o,k)=>o?.[k],dict);let text=(language==='ka'&&(currentTheme()?.ka?.ui?.[key]||get(ka)))||currentTheme()?.ui?.[key]||get(en)||key;return String(text).replace(/\{(\w+)\}/g,(_,k)=>values[k]??'');}
@@ -49,6 +54,7 @@ function notify(message){const node=document.querySelector('#toast');node.textCo
 function header(){return `<header><div class="brand"><span>◆</span>${txt('brand')}</div><div class="header-controls"><button type="button" id="sound-toggle" class="sound-toggle" aria-label="Sound" title="Sound" aria-pressed="${effects.enabled}">${effects.enabled?'♫':'♪'}</button><select class="locale" id="language" aria-label="Language"><option value="en" ${language==='en'?'selected':''}>EN</option><option value="ka" ${language==='ka'?'selected':''}>KA</option></select></div></header>${navigation()}`;}
 function bindLanguage(){bindNavigation();effects.bind();document.querySelector('#language')?.addEventListener('change',e=>{language=e.target.value;localStorage.setItem('party-draft-language',language);render();});}
 async function request(url,body,auth=true){
+  if(localPractice&&auth&&session?.code===localPractice.code)return localPractice.request(url,body,session.token);
   const headers={};if(body)headers['Content-Type']='application/json';if(auth&&session)headers.Authorization='Bearer '+session.token;
   let response,data;try{response=await fetch(apiURL(url),{method:body?'POST':'GET',headers,body:body?JSON.stringify(body):undefined,signal:AbortSignal.timeout(10000)});data=await response.json();}catch{throw new Error('network');}
   if(!response.ok)throw new Error(data.error||'serverError');return data;
@@ -57,6 +63,11 @@ function saveSeat(s){session=s;sessionStorage.setItem(storageKey,JSON.stringify(
 function accept(s,animate=true){if(state&&s.revision<state.revision)return;const event=animate?presentationEvent(state,s):null;clockOffset=s.serverTime-Date.now();state=s;render();if(event)requestAnimationFrame(()=>{if(state===s)effects.play(event);});}
 async function connect(){
  controller?.abort();controller=new AbortController();const signal=controller.signal;
+ if(localPractice&&session?.code===localPractice.code){
+  connected=true;let initial=true;
+  const unsubscribe=localPractice.subscribe(session.token,next=>{if(!signal.aborted){if(initial||!state||state.revision!==next.revision)accept(next,!initial);initial=false;}});
+  signal.addEventListener('abort',unsubscribe,{once:true});return;
+ }
  while(!signal.aborted&&session){
   try{
    const response=await fetch(apiURL('/api/rooms/'+session.code+'/state'),{headers:{Authorization:'Bearer '+session.token},signal:AbortSignal.any([signal,AbortSignal.timeout(8000)])});
@@ -68,10 +79,10 @@ async function connect(){
   await new Promise(resolve=>setTimeout(resolve,connected?700:1500));
  }
 }
-function leave(){controller?.abort();controller=null;session=null;state=null;connected=false;lineupOpen=false;for(const url of imageCache.values())URL.revokeObjectURL(url);imageCache.clear();sessionStorage.removeItem(storageKey);history.replaceState(null,'',location.pathname);render();}
+function leave(){controller?.abort();controller=null;session=null;state=null;connected=false;lineupOpen=false;if(!localPractice){for(const url of imageCache.values())URL.revokeObjectURL(url);imageCache.clear();}sessionStorage.removeItem(storageKey);history.replaceState(null,'',location.pathname);render();}
 function renderHome(){
   const saved=storedJSON(storageKey),table=storedJSON('party-draft-table');
-  const resume=saved?`<aside class="resume-room"><a href="${basePath}?room=${encodeURIComponent(saved.code)}${panel!=='main'?'&panel='+encodeURIComponent(panel):''}">${esc(navLabel('resume'))} · ${esc(saved.code)}</a><p>${language==='ka'?'შენი ადგილი შენახულია.':'Your seat is saved. Live timers continue while you are away.'}</p></aside>`:'';
+  const resume=saved?`<aside class="resume-room"><a href="${basePath}?room=${encodeURIComponent(saved.code)}${panel!=='main'?'&panel='+encodeURIComponent(panel):''}${localPractice?'&practice=1':''}">${esc(navLabel('resume'))} · ${esc(saved.code)}</a><p>${language==='ka'?'შენი ადგილი შენახულია.':'Your seat is saved. Live timers continue while you are away.'}</p></aside>`:'';
   app.innerHTML=`<main class="shell">${header()}${resume}${table?`<a class="table-return" href="${basePath}?table=1">${esc(navLabel('table'))}</a>`:''}<section class="intro enter"><span class="eyebrow orange">${txt('tagline')}</span><h1>${txt('hero1')}<br><span>${txt('hero2')}</span></h1><p>${txt('intro')}</p></section><div class="tabs"><button data-mode="create" class="${homeMode==='create'?'selected':''}">${txt('createTab')}</button><button data-mode="join" class="${homeMode==='join'?'selected':''}">${txt('joinTab')}</button></div><form id="entry">${homeMode==='create'?`<fieldset class="theme-picker"><legend>Choose your theme</legend>${themes.map(theme=>`<label class="theme-option"><input type="radio" name="theme" value="${esc(theme.id)}" ${selectedTheme===theme.id?'checked':''}><span><strong>${esc(theme.name)}</strong><small>${esc(themeText(theme,'description'))}</small></span></label>`).join('')}<p class="hint" id="theme-notice">${esc(themeText(currentTheme(),'notice'))}</p></fieldset>`:''}<div class="field"><label for="name">${txt('yourName')}</label><input id="name" name="name" autocomplete="nickname" maxlength="24" placeholder="${txt('namePlaceholder')}" required></div>${homeMode==='join'?`<div class="field"><label for="code">${txt('roomCode')}</label><input id="code" name="code" maxlength="6" minlength="6" pattern="[A-Za-z2-9]{6}" autocapitalize="characters" autocomplete="off" value="${esc(params.get('room')||'')}" placeholder="A7K9Q2" required></div>`:`<p class="hint">${txt('hostHint')}</p>`}<button class="primary wide" type="submit">${txt(homeMode==='join'?'join':'create')}</button></form><hr class="divider"><button class="ghost wide" id="practice">${txt('demo')}</button><p class="hint">${txt('demoHint')}</p><p class="foot">${txt('scope')}</p></main>`;
   bindLanguage();document.querySelectorAll('[name=theme]').forEach(input=>input.onchange=()=>{selectedTheme=input.value;document.querySelector('#theme-notice').textContent=themeText(currentTheme(),'notice');document.querySelector('.intro p').textContent=t('intro');document.querySelector('.foot').textContent=t('scope');});document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{homeMode=b.dataset.mode;renderHome();});
   document.querySelector('#entry').onsubmit=async e=>{e.preventDefault();const submit=e.target.querySelector('button[type=submit]');if(submit.disabled)return;const originalLabel=submit.textContent;submit.disabled=true;submit.textContent=t('sending');submit.classList.add('action-pending');submit.setAttribute('aria-busy','true');
@@ -81,15 +92,34 @@ function renderHome(){
 async function makePractice(){
   const button=document.querySelector('#practice');button.disabled=true;button.textContent=t('startingDemo');
   try{
-    const host=await request('/api/rooms',{name:'Narrator',themeId:selectedTheme},false),seats=[host];
-    for(const name of ['John','George','Nick'])seats.push(await request(`/api/rooms/${host.code}/join`,{name},false));
+    const host=await request('/api/rooms',{name:'Narrator',themeId:selectedTheme,practice:true},false),seats=host.seats;
+    sessionStorage.setItem('party-draft-local:'+host.code,JSON.stringify(host.practiceRoom));
     const saved=seats.map((seat,i)=>{const id='practice-'+host.code+'-'+i;sessionStorage.setItem('party-draft-seat:'+id,JSON.stringify(seat));return {id,label:['Narrator','John','George','Nick'][i]};});
     sessionStorage.setItem('party-draft-table',JSON.stringify({code:host.code,seats:saved}));location.href=basePath+'?table=1';
   }catch(error){notify(t('errors.'+error.message));button.disabled=false;button.textContent=t('demo');}
 }
-function renderTable(){
+async function renderTable(){
   const table=storedJSON('party-draft-table');if(!table){location.replace(basePath);return;}
-  app.innerHTML=`<main class="test-shell">${navigation()}<div class="test-head"><div><span class="eyebrow orange">${txt('room',{code:table.code})}</span><h1>${txt('testTitle')}</h1><p>${txt('testDescription')}</p></div><a href="${basePath}?home=1">${txt('testExit')}</a></div><div class="test-grid">${table.seats.map(s=>`<section><h2>${esc(s.label)}</h2><iframe title="${esc(s.label)}" src="${basePath}?room=${table.code}&panel=${esc(s.id)}"></iframe></section>`).join('')}</div></main>`;bindNavigation();
+  if(!practiceReady){
+   app.innerHTML=`<main class="shell">${navigation()}<p role="status">${txt('startingDemo')}</p></main>`;bindNavigation();
+   practiceReady=(async()=>{
+    const {createPractice}=await import('./practice.js');
+    const seats=table.seats.map(s=>storedJSON('party-draft-seat:'+s.id));
+    if(seats.some(s=>!s))throw Error('unauthorized');
+    let room=storedJSON('party-draft-local:'+table.code);
+    if(!room){
+     const response=await fetch(apiURL(`/api/rooms/${table.code}/practice`),{method:'POST',headers:{'Content-Type':'application/json',Authorization:'Bearer '+seats[0].token},body:JSON.stringify({tokens:seats.map(s=>s.token)}),signal:AbortSignal.timeout(10000)});
+     const data=await response.json();if(!response.ok)throw Error(data.error||'network');room=data.room;
+    }
+    const persist=r=>sessionStorage.setItem('party-draft-local:'+table.code,JSON.stringify(r));persist(room);
+    window.partyDraftPractice=createPractice(room,seats,{persist});window.partyDraftPractice.advance();
+    window.partyDraftImages=new Map();window.partyDraftImageRequests=new Map();
+    practiceTimer=setInterval(()=>window.partyDraftPractice.advance(),100);
+    window.addEventListener('pagehide',()=>clearInterval(practiceTimer),{once:true});
+   })();
+  }
+  try{await practiceReady;}catch(error){practiceReady=null;app.innerHTML=`<main class="shell">${navigation()}<p>${esc(t('errors.'+error.message))}</p><button id="retry-practice">${txt('continue')}</button></main>`;bindNavigation();document.querySelector('#retry-practice').onclick=renderTable;return;}
+  app.innerHTML=`<main class="test-shell">${navigation()}<div class="test-head"><div><span class="eyebrow orange">${txt('room',{code:table.code})}</span><h1>${txt('testTitle')}</h1><p>${txt('testDescription')}</p></div><a href="${basePath}?home=1">${txt('testExit')}</a></div><div class="test-grid">${table.seats.map(s=>`<section><h2>${esc(s.label)}</h2><iframe title="${esc(s.label)}" src="${basePath}?room=${table.code}&panel=${esc(s.id)}&practice=1"></iframe></section>`).join('')}</div></main>`;bindNavigation();
 }
 function wallet(){return state.role==='narrator'?`<section class="panel private"><h2>${txt('privateTitle')}</h2><p>${txt('privateText')}</p></section>`:`<section class="panel wallet"><div class="avatar">${esc(me().name[0].toUpperCase())}</div><div class="identity"><strong>${esc(me().name)}</strong><small>${txt('you')}</small></div><div class="money"><strong>${money(me().budget)}</strong><span>${txt('budget')}</span></div></section>`;}
 function photo(card,className=''){return card?`<img class="${className}" data-character="${esc(card.id)}" ${imageCache.get(card.id)?`src="${imageCache.get(card.id)}"`: 'hidden'} alt="${esc(local(card.name))}">`:'';}
@@ -98,8 +128,8 @@ function clock(){return `<div class="timer ${state.paused?'paused':''}" id="time
 function playerStrip(){return `<div class="players">${state.members.filter(m=>m.role==='drafter').map(m=>`<div class="seat ${state.bid?.playerId===m.id?'leading':''} ${m.pick?'done':''}"><strong>${esc(m.name)}</strong><span>${money(m.budget)} · ${m.pick?txt('owned'):m.budget===0?txt('broke'):state.yielded.includes(m.id)?txt('out'):state.bid?.playerId===m.id?txt('leadingYou',{amount:money(state.bid.amount)}):txt('in')}</span></div>`).join('')}</div>`;}
 function boxSetup(){
   if(state.role!=='narrator')return `<p class="note">${txt(state.boxesLocked?'boxesReady':'narratorPreparing')}</p>`;
-  const rows=state.boxSetup||[],chosen=rows.filter(r=>r.selectedId).length;
-  return `<section class="panel private box-setup"><span class="eyebrow orange">${txt('privateSetup')}</span><h2>${txt('setupTitle')}</h2><p>${txt(state.boxesLocked?'setupLockedText':'setupText')}</p>${rows.map((row,i)=>`<fieldset><legend>${i+1}. ${esc(local(row.title))}</legend><div class="box-options">${row.options.map(c=>`<button id="setup-${row.positionId}-${c.id}" data-action="set-box:${row.positionId}:${c.id}" aria-pressed="${row.selectedId===c.id}" class="${row.selectedId===c.id?'selected':''}" ${state.boxesLocked||busy||!connected?'disabled':''}>${row.selectedId===c.id?'✓ ':''}${esc(local(c.name))}</button>`).join('')}</div></fieldset>`).join('')}<p class="hint" role="status">${txt(state.boxesLocked?'boxesLocked':'boxesChosen',{count:chosen,total:rows.length})}</p>${state.boxesLocked?'':button(txt('lockBoxes'),'lock-boxes',{primary:true,disabled:chosen!==rows.length||!connected})}</section>`;
+  const rows=(state.boxSetup||[]).map(row=>({...row,selectedId:pendingBoxes.get(row.positionId)||row.selectedId})),chosen=rows.filter(r=>r.selectedId).length;
+  return `<section class="panel private box-setup"><span class="eyebrow orange">${txt('privateSetup')}</span><h2>${txt('setupTitle')}</h2><p>${txt(state.boxesLocked?'setupLockedText':'setupText')}</p>${rows.map((row,i)=>`<fieldset><legend>${i+1}. ${esc(local(row.title))}</legend><div class="box-options">${row.options.map(c=>`<button id="setup-${row.positionId}-${c.id}" data-action="set-box:${row.positionId}:${c.id}" aria-pressed="${row.selectedId===c.id}" class="${row.selectedId===c.id?'selected':''} ${pendingBoxes.get(row.positionId)===c.id?'selection-saving':''}" ${state.boxesLocked||busy||!connected?'disabled':''}>${row.selectedId===c.id?(pendingBoxes.has(row.positionId)?'':'✓ '):''}${esc(local(c.name))}${pendingBoxes.get(row.positionId)===c.id?`<small class="pending-label">${txt('sending')}</small>`:''}</button>`).join('')}</div></fieldset>`).join('')}<p class="hint" role="status">${txt(state.boxesLocked?'boxesLocked':'boxesChosen',{count:chosen,total:rows.length})}</p>${state.boxesLocked?'':button(txt('lockBoxes'),'lock-boxes',{primary:true,disabled:chosen!==rows.length||!connected||pendingBoxes.size>0})}</section>`;
 }
 function lobby(){const players=state.members.filter(m=>m.role==='drafter');const invite=location.origin+basePath+'?room='+state.code;
   return `<span class="eyebrow orange">${txt('round',{number:state.round})}</span><h1>${txt('lobbyTitle')}</h1><div class="theme-room"><strong>${esc(state.theme.name)}</strong>${state.theme.notice?`<p class="hint">${esc(themeText(state.theme,'notice'))}</p>`:''}</div><p>${txt('lobbyText')}</p><section class="panel"><small>${txt('roomCode')}</small><div class="room-code">${esc(state.code)}</div><div class="row">${button(txt('copy'),'copy')}</div><label for="invite" class="hint">${txt('invite')}</label><input class="linkbox" readonly id="invite" value="${esc(invite)}">${['localhost','127.0.0.1'].includes(location.hostname)?`<p class="hint">${txt('inviteLocal')}</p>`:''}</section><section class="panel">${Array.from({length:3},(_,i)=>`<div class="lobby-seat"><div class="avatar">${players[i]?esc(players[i].name[0]):'+'}</div><strong>${players[i]?esc(players[i].name):txt('waitingSeat',{number:i+1})}</strong>${players[i]?`<small>${txt('ready')}</small>`:''}</div>`).join('')}</section>${boxSetup()}${state.role==='narrator'?button(players.length===3?txt('start'):txt('needSeats',{number:3-players.length}),'start',{primary:true,disabled:players.length!==3||!connected||!state.boxesLocked}):`<p class="note">${txt('waitingHost')}</p>`}`;
@@ -175,6 +205,23 @@ function render(){
   bind();showPending();if(lineupOpen)document.querySelector('#lineup-sheet')?.showModal();if(oldFocus)document.getElementById(oldFocus)?.focus({preventScroll:true});loadImages();updateClock();
 }
 function bind(){bindLanguage();document.querySelector('#lineup-player')?.addEventListener('change',e=>{lineupPlayer=e.target.value;render();});document.querySelector('#lineup-sheet')?.addEventListener('cancel',()=>{lineupOpen=false;});document.querySelectorAll('[data-action]').forEach(b=>b.onclick=()=>command(b.dataset.action));document.querySelectorAll('[data-raise]').forEach(b=>b.onclick=()=>{selectedRaise=Number(b.dataset.raise);render();});}
+async function saveBoxSelections(){
+ if(savingBoxes)return;savingBoxes=true;const seat=session;
+ try{
+  while(pendingBoxes.size&&session===seat){
+   const selections=[...pendingBoxes].map(([positionId,characterId])=>({positionId,characterId}));
+   let next;
+   for(let attempt=0;attempt<3;attempt++){
+    try{next=await request(`/api/rooms/${seat.code}/action`,{type:'set-boxes',selections,revision:state.revision,requestId:crypto.randomUUID()});break;}
+    catch(error){if(error.message!=='stateChanged'||attempt===2)throw error;accept(await request(`/api/rooms/${seat.code}/state`));}
+   }
+   if(session!==seat)break;
+   for(const s of selections)if(pendingBoxes.get(s.positionId)===s.characterId)pendingBoxes.delete(s.positionId);
+   accept(next);
+  }
+ }catch(error){pendingBoxes.clear();if(session===seat){notify(t('errors.'+error.message));render();connect();}}
+ finally{savingBoxes=false;}
+}
 async function command(type){
   if(type==='save-card'){await saveResultCard();return;}
   if(type==='lineups'){lineupOpen=true;render();return;}
@@ -182,12 +229,21 @@ async function command(type){
   if(type==='home'){leave();return;}
   if(type==='copy'){const field=document.querySelector('#invite');try{await navigator.clipboard.writeText(field.value);notify(t('copied'));}catch{field.select();notify(t('copyManual'));}return;}
   if(busy||!connected)return;
+  if(type.startsWith('set-box:')&&!localPractice){
+   const [,positionId,characterId]=type.split(':');pendingBoxes.set(positionId,characterId);render();saveBoxSelections();return;
+  }
+  if(pendingBoxes.size)return;
   const input={type,revision:state.revision,requestId:crypto.randomUUID?crypto.randomUUID():Array.from(crypto.getRandomValues(new Uint8Array(16)),x=>x.toString(16).padStart(2,'0')).join('')};
   if(type.startsWith('set-box:')){[input.type,input.positionId,input.characterId]=type.split(':');}
   if(type.startsWith('vote:')||type.startsWith('break-tie:')){[input.type,input.targetId]=type.split(':');}
   if(type==='bid')input.amount=state.bid?state.bid.amount+selectedRaise:state.freeRound?0:state.card.price;
   if(type==='known'||type==='box'){input.type='choose';input.kind=type;}
   const seat=session;
+  if(localPractice&&seat.code===localPractice.code){
+   try{accept(localPractice.request(`/api/rooms/${seat.code}/action`,input,seat.token));}
+   catch(error){notify(t('errors.'+error.message));accept(localPractice.request(`/api/rooms/${seat.code}/state`,null,seat.token));}
+   return;
+  }
   busy=true;pendingAction=type;showPending();
   try{
     const next=await request(`/api/rooms/${seat.code}/action`,input);
@@ -204,11 +260,16 @@ async function loadImages(){
   const seat=session;
   for(const img of document.querySelectorAll('[data-character]')){
     const id=img.dataset.character;if(imageCache.has(id)){img.src=imageCache.get(id);img.hidden=false;continue;}if(imageLoading.has(id)||(imageRetryAt.get(id)||0)>Date.now())continue;imageLoading.add(id);imageRetryAt.set(id,Date.now()+5000);
-    try{const res=await fetch(apiURL(`/api/rooms/${seat.code}/image/${id}`),{headers:{Authorization:'Bearer '+seat.token},signal:AbortSignal.timeout(10000)});if(!res.ok)continue;const data=await res.blob();if(session!==seat)continue;const blob=URL.createObjectURL(data);imageCache.set(id,blob);for(const el of document.querySelectorAll('[data-character]'))if(el.dataset.character===id){el.src=blob;el.hidden=false;}}
+    try{
+      if(!imageRequests.has(id))imageRequests.set(id,(async()=>{const res=await fetch(apiURL(`/api/rooms/${seat.code}/image/${id}`),{headers:{Authorization:'Bearer '+seat.token},signal:AbortSignal.timeout(10000)});if(!res.ok)throw Error('image');const blob=(localPractice?window.parent.URL:URL).createObjectURL(await res.blob());imageCache.set(id,blob);return blob;})());
+      const blob=await imageRequests.get(id);if(session!==seat)continue;
+      for(const el of document.querySelectorAll('[data-character]'))if(el.dataset.character===id){el.src=blob;el.hidden=false;}
+    }
     catch{/* Names and actions remain usable if a photo cannot load. */}
-    finally{imageLoading.delete(id);}
+    finally{imageLoading.delete(id);imageRequests.delete(id);}
   }
 }
 function updateClock(){const nodes=[...document.querySelectorAll('#timer,#lineup-timer')];if(!nodes.length||!state)return;const value=state.paused?t('paused'):Math.max(0,Math.ceil((state.deadline-Date.now()-clockOffset)/1000))+'s';for(const node of nodes)if(node.textContent!==value)node.textContent=value;}
 setInterval(updateClock,100);
 if(params.has('table'))renderTable();else{if(session&&params.get('room')&&session.code!==params.get('room')){session=null;state=null;}render();if(session)connect();}
+
