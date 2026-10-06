@@ -16,6 +16,22 @@ function navigation(){return `<nav class="page-nav" aria-label="Page navigation"
 function bindNavigation(){document.querySelector('#page-back')?.addEventListener('click',()=>{const dialog=document.querySelector('dialog[open]');if(dialog){dialog.close();lineupOpen=false;return;}let internal=false;try{internal=new URL(document.referrer).origin===location.origin;}catch{}if(history.length>1&&(history.state?.partyDraft||internal))history.back();else location.assign(homeURL);});}
 window.addEventListener('popstate',()=>location.reload());
 let selectedTheme='mcu';
+let pendingAction=null;
+const localActions=new Set(['lineups','close-lineups','copy','home','save-card']);
+function showPending(){
+  if(!pendingAction)return;
+  for(const b of document.querySelectorAll('[data-action]')){
+    if(localActions.has(b.dataset.action))continue;
+    b.disabled=true;
+    if(b.dataset.action===pendingAction){
+      b.classList.add('action-pending');b.setAttribute('aria-busy','true');
+      if(!b.querySelector('.pending-label')){
+        const label=document.createElement('span');label.className='pending-label';label.textContent=t('sending');b.append(label);
+      }
+    }
+  }
+  for(const b of document.querySelectorAll('[data-raise]'))b.disabled=true;
+}
 const currentTheme=()=>state?.theme||themes.find(x=>x.id===selectedTheme)||themes[0];
 let clockOffset=0,phaseKey='',lineupOpen=false,lineupPlayer=null;
 const imageCache=new Map(),imageLoading=new Set(),imageRetryAt=new Map();
@@ -26,7 +42,7 @@ const local=x=>x?.[language]||x?.en||'';
 const themeText=(theme,key)=>(language==='ka'&&theme?.ka?.[key])||theme?.[key]||'';
 const txt=(key,v)=>esc(t(key,v));
 const voteLabel=n=>t(n===1?'oneVote':'voteCount',{count:n});
-const button=(label,action,{primary=false,disabled=false,id=action}={})=>`<button id="${esc(id)}" data-action="${esc(action)}" class="${primary?'primary ':''}wide" ${disabled||busy?'disabled':''}>${label}</button>`;
+const button=(label,action,{primary=false,disabled=false,id=action}={})=>`<button id="${esc(id)}" data-action="${esc(action)}" class="${primary?'primary ':''}wide" ${disabled||(busy&&!localActions.has(action))?'disabled':''}>${label}</button>`;
 const me=()=>state?.members.find(m=>m.id===state.you);
 const name=id=>state?.members.find(m=>m.id===id)?.name||'';
 function notify(message){const node=document.querySelector('#toast');node.textContent=message;node.className='visible';clearTimeout(toastTimer);toastTimer=setTimeout(()=>node.className='',4200);}
@@ -58,8 +74,8 @@ function renderHome(){
   const resume=saved?`<aside class="resume-room"><a href="${basePath}?room=${encodeURIComponent(saved.code)}${panel!=='main'?'&panel='+encodeURIComponent(panel):''}">${esc(navLabel('resume'))} · ${esc(saved.code)}</a><p>${language==='ka'?'შენი ადგილი შენახულია.':'Your seat is saved. Live timers continue while you are away.'}</p></aside>`:'';
   app.innerHTML=`<main class="shell">${header()}${resume}${table?`<a class="table-return" href="${basePath}?table=1">${esc(navLabel('table'))}</a>`:''}<section class="intro enter"><span class="eyebrow orange">${txt('tagline')}</span><h1>${txt('hero1')}<br><span>${txt('hero2')}</span></h1><p>${txt('intro')}</p></section><div class="tabs"><button data-mode="create" class="${homeMode==='create'?'selected':''}">${txt('createTab')}</button><button data-mode="join" class="${homeMode==='join'?'selected':''}">${txt('joinTab')}</button></div><form id="entry">${homeMode==='create'?`<fieldset class="theme-picker"><legend>Choose your theme</legend>${themes.map(theme=>`<label class="theme-option"><input type="radio" name="theme" value="${esc(theme.id)}" ${selectedTheme===theme.id?'checked':''}><span><strong>${esc(theme.name)}</strong><small>${esc(themeText(theme,'description'))}</small></span></label>`).join('')}<p class="hint" id="theme-notice">${esc(themeText(currentTheme(),'notice'))}</p></fieldset>`:''}<div class="field"><label for="name">${txt('yourName')}</label><input id="name" name="name" autocomplete="nickname" maxlength="24" placeholder="${txt('namePlaceholder')}" required></div>${homeMode==='join'?`<div class="field"><label for="code">${txt('roomCode')}</label><input id="code" name="code" maxlength="6" minlength="6" pattern="[A-Za-z2-9]{6}" autocapitalize="characters" autocomplete="off" value="${esc(params.get('room')||'')}" placeholder="A7K9Q2" required></div>`:`<p class="hint">${txt('hostHint')}</p>`}<button class="primary wide" type="submit">${txt(homeMode==='join'?'join':'create')}</button></form><hr class="divider"><button class="ghost wide" id="practice">${txt('demo')}</button><p class="hint">${txt('demoHint')}</p><p class="foot">${txt('scope')}</p></main>`;
   bindLanguage();document.querySelectorAll('[name=theme]').forEach(input=>input.onchange=()=>{selectedTheme=input.value;document.querySelector('#theme-notice').textContent=themeText(currentTheme(),'notice');document.querySelector('.intro p').textContent=t('intro');document.querySelector('.foot').textContent=t('scope');});document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{homeMode=b.dataset.mode;renderHome();});
-  document.querySelector('#entry').onsubmit=async e=>{e.preventDefault();const submit=e.target.querySelector('button[type=submit]');submit.disabled=true;
-    try{const entered=new FormData(e.target),code=String(entered.get('code')||'').toUpperCase(),url=homeMode==='create'?'/api/rooms':`/api/rooms/${code}/join`;saveSeat(await request(url,{name:entered.get('name'),...(homeMode==='create'?{themeId:selectedTheme}:{})},false));history.replaceState(null,'',homeURL);history.pushState({partyDraft:true},'',`?room=${session.code}${panel!=='main'?'&panel='+encodeURIComponent(panel):''}`);connect();}catch(error){notify(t('errors.'+error.message));submit.disabled=false;}};
+  document.querySelector('#entry').onsubmit=async e=>{e.preventDefault();const submit=e.target.querySelector('button[type=submit]');if(submit.disabled)return;const originalLabel=submit.textContent;submit.disabled=true;submit.textContent=t('sending');submit.classList.add('action-pending');submit.setAttribute('aria-busy','true');
+    try{const entered=new FormData(e.target),code=String(entered.get('code')||'').toUpperCase(),url=homeMode==='create'?'/api/rooms':`/api/rooms/${code}/join`;saveSeat(await request(url,{name:entered.get('name'),...(homeMode==='create'?{themeId:selectedTheme}:{})},false));history.replaceState(null,'',homeURL);history.pushState({partyDraft:true},'',`?room=${session.code}${panel!=='main'?'&panel='+encodeURIComponent(panel):''}`);render();connect();}catch(error){notify(t('errors.'+error.message));submit.disabled=false;submit.textContent=originalLabel;submit.classList.remove('action-pending');submit.removeAttribute('aria-busy');}};
   document.querySelector('#practice').onclick=makePractice;
 }
 async function makePractice(){
@@ -156,7 +172,7 @@ function render(){
   else if(state.phase==='complete')content=completion();else if(['voting','tiebreak'].includes(state.phase))content=voting();else if(state.phase==='results')content=results();else content=mystery();
   const drafting=!['lobby','voting','tiebreak','results'].includes(state.phase);
   app.innerHTML=`<main class="shell">${header()}<p class="status" role="status">${connected?'':txt('connecting')}</p>${wallet()}${state.upgraded?`<p class="note">${txt('upgraded')}</p>`:''}${drafting?`<div class="match-progress" aria-label="${txt('positionProgress',{number:state.positionIndex+1,total:state.positionCount})}">${state.slots.map((s,i)=>`<i class="${i<=state.positionIndex?'active':''}"></i>`).join('')}</div><div class="meta round-heading"><div><small>${txt('positionProgress',{number:state.positionIndex+1,total:state.positionCount})}</small><h2>${state.slots[state.positionIndex].label?esc(local(state.slots[state.positionIndex].label)):txt('roundNames.'+state.slots[state.positionIndex].id)}</h2></div><span class="badge">${['clues','choice','locked'].includes(state.phase)?txt('choiceBadge'):txt('lot',{number:state.lotIndex+1})}</span></div>${state.effect==='negative'?`<p class="negative-note">${txt('negativeRole')}</p>`:''}`:''}<section class="${transition&&state.phase!=='complete'?'enter':''}">${content}</section>${state.phase!=='lobby'?`<div class="lineup">${button(txt('lineups'),'lineups')}</div>${lineupSheet()}`:''}<p class="foot">${txt('room',{code:state.code})} · ${txt('scope')}</p></main>`;
-  bind();if(lineupOpen)document.querySelector('#lineup-sheet')?.showModal();if(oldFocus)document.getElementById(oldFocus)?.focus({preventScroll:true});loadImages();updateClock();
+  bind();showPending();if(lineupOpen)document.querySelector('#lineup-sheet')?.showModal();if(oldFocus)document.getElementById(oldFocus)?.focus({preventScroll:true});loadImages();updateClock();
 }
 function bind(){bindLanguage();document.querySelector('#lineup-player')?.addEventListener('change',e=>{lineupPlayer=e.target.value;render();});document.querySelector('#lineup-sheet')?.addEventListener('cancel',()=>{lineupOpen=false;});document.querySelectorAll('[data-action]').forEach(b=>b.onclick=()=>command(b.dataset.action));document.querySelectorAll('[data-raise]').forEach(b=>b.onclick=()=>{selectedRaise=Number(b.dataset.raise);render();});}
 async function command(type){
@@ -171,10 +187,17 @@ async function command(type){
   if(type.startsWith('vote:')||type.startsWith('break-tie:')){[input.type,input.targetId]=type.split(':');}
   if(type==='bid')input.amount=state.bid?state.bid.amount+selectedRaise:state.freeRound?0:state.card.price;
   if(type==='known'||type==='box'){input.type='choose';input.kind=type;}
-  busy=true;render();
-  try{accept(await request(`/api/rooms/${session.code}/action`,input));}
-  catch(error){notify(t('errors.'+error.message));try{accept(await request(`/api/rooms/${session.code}/state`));}catch{connected=false;}}
-  finally{busy=false;render();}
+  const seat=session;
+  busy=true;pendingAction=type;showPending();
+  try{
+    const next=await request(`/api/rooms/${seat.code}/action`,input);
+    busy=false;pendingAction=null;
+    if(session===seat){accept(next);if(state.revision>next.revision)render();}
+  }
+  catch(error){
+    busy=false;pendingAction=null;
+    if(session===seat){notify(t('errors.'+error.message));render();connect();}
+  }
 }
 async function loadImages(){
   if(!session||!connected)return;
