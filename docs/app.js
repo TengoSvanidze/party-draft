@@ -10,7 +10,7 @@ window.partyDraftResources=localPractice?window.parent.partyDraftResources:Promi
 const [en,ka,themes]=await window.partyDraftResources;
 let language=localStorage.getItem('party-draft-language')||'en';
 function storedJSON(key){try{return JSON.parse(sessionStorage.getItem(key)||'null');}catch{sessionStorage.removeItem(key);return null;}}
-let session=storedJSON(storageKey), state=null, connected=false, busy=false, selectedRaise=1, homeMode=params.has('room')?'join':'create', controller=null, toastTimer;
+let session=storedJSON(storageKey), state=null, connected=false, busy=false, selectedRaise=10, homeMode=params.has('room')?'join':'create', controller=null, toastTimer;
 window.addEventListener('pagehide',()=>controller?.abort());
 if(params.has('home'))session=null;
 const homeURL=basePath+'?home=1'+(panel!=='main'?'&panel='+encodeURIComponent(panel):'')+(localPractice?'&practice=1':'');
@@ -143,7 +143,7 @@ function auction(){
   else if(me().pick)controls=`<p class="note">${txt('filled')}</p>`;
   else if(me().budget===0)controls=`<p class="note">${txt('noMoney')}</p>`;
   else if(state.yielded.includes(state.you))controls=`<p class="note">${txt('yielded')}</p>`;
-  else controls=`<div class="raises">${[1,10,50].map(n=>`<button data-raise="${n}" id="raise-${n}" class="raise ${selectedRaise===n?'selected':''}" aria-pressed="${selectedRaise===n}" ${busy||isLeader||state.paused?'disabled':''}>+${money(n)}</button>`).join('')}</div><div class="actions">${button(isLeader?txt('leadingYou',{amount:money(state.bid.amount)}):minimum>me().budget?txt('notEnough'):busy?txt('sending'):txt('bid',{amount:money(minimum)}),'bid',{primary:true,disabled:!connected||state.paused||isLeader||minimum>me().budget})}${button(txt('yield'),'yield',{disabled:!connected||state.paused||isLeader})}</div>`;
+  else controls=`<div class="raises">${[10,50].map(n=>`<button data-raise="${n}" id="raise-${n}" class="raise ${selectedRaise===n?'selected':''}" aria-pressed="${selectedRaise===n}" ${busy||isLeader||state.paused?'disabled':''}>+${money(n)}</button>`).join('')}</div><div class="actions">${button(isLeader?txt('leadingYou',{amount:money(state.bid.amount)}):minimum>me().budget?txt('notEnough'):busy?txt('sending'):txt('bid',{amount:money(minimum)}),'bid',{primary:true,disabled:!connected||state.paused||isLeader||minimum>me().budget})}${button(txt('yield'),'yield',{disabled:!connected||state.paused||isLeader})}</div>`;
   return `<h1>${esc(local(state.position))}</h1>${hero(state.card)}<section class="auction-price"><div><small class="orange">● ${txt('live')}</small><div class="amount">${money(state.bid?.amount??state.card.price)}</div><div class="leader" aria-live="polite">${state.bid?txt('leading',{name:name(state.bid.playerId)}):txt('noBid')}</div></div>${clock()}</section>${playerStrip()}${!state.bid?assignmentNotice():''}${state.paused?`<p class="note">${txt('pausedNote')}</p>`:''}${controls}`;
 }
 function clueList(){return `<ol class="clues">${[0,1,2].map(i=>`<li class="clue ${i>=state.clueCount?'hidden':''} ${state.role==='narrator'&&i===state.clueCount?'next':''}"><span class="num">${i+1}</span><span>${state.clues[i]?esc(local(state.clues[i])):txt('cluePending')}</span></li>`).join('')}</ol>`;}
