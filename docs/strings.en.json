@@ -192,5 +192,9 @@
     "boyfriend": "Boyfriend",
     "best-friend": "Best Friend",
     "nemesis": "Who Attacks You"
-  }
+  },
+  "clueExplanations": "Clue explanations",
+  "revealedAnswer": "Revealed answer",
+  "clueNumber": "Clue {number}",
+  "backToReveal": "Back to the reveal"
 }

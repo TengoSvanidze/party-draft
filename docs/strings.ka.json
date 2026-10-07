@@ -192,5 +192,9 @@
     "boyfriend": "შეყვარებული",
     "best-friend": "საუკეთესო მეგობარი",
     "nemesis": "მტერი"
-  }
+  },
+  "clueExplanations": "მინიშნებების ახსნა",
+  "revealedAnswer": "გამჟღავნებული პასუხი",
+  "clueNumber": "მინიშნება {number}",
+  "backToReveal": "გამჟღავნებაზე დაბრუნება"
 }
