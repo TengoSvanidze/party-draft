@@ -196,5 +196,11 @@
   "clueExplanations": "Clue explanations",
   "revealedAnswer": "Revealed answer",
   "clueNumber": "Clue {number}",
-  "backToReveal": "Back to the reveal"
+  "backToReveal": "Back to the reveal",
+  "chooseTheme": "Choose your theme",
+  "sound": "Sound",
+  "language": "Language",
+  "secondsRemaining": "Seconds remaining",
+  "pageNavigation": "Page navigation",
+  "timerSeconds": "{seconds}s"
 }
