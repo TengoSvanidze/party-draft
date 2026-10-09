@@ -65,3 +65,26 @@ button.action-pending:disabled{opacity:1;border-color:#ff984a;background:#48301f
 .explanation-list li{padding:18px 0;border-bottom:1px solid #443730}
 .explanation-list h2{font-size:19px;line-height:1.4;margin:8px 0}
 .explanation-list p{font-size:16px;line-height:1.6;margin:0}
+
+/* AoT: scout green, warm parchment, and unobstructed card names. */
+body[data-theme="attack-on-titan"]{background:#101511}
+body[data-theme="attack-on-titan"] .primary{background:#bfcc8b;border-color:#bfcc8b;color:#11190e}
+body[data-theme="attack-on-titan"] .primary:hover:not(:disabled){background:#d3dfa8}
+body[data-theme="attack-on-titan"] :is(.orange,.eyebrow.orange,.round-heading h2,.room-code,.brand span,.intro h1 span){color:#d0dca3}
+body[data-theme="attack-on-titan"] :is(.panel,.seat,.note,.auction-price){background:#1c241c}
+body[data-theme="attack-on-titan"] :is(.badge,.clue .num){background:#293528;color:#dae5b8}
+body[data-theme="attack-on-titan"] :is(.progress i,.match-progress .active,.avatar){background:#bfcc8b;color:#11190e}
+body[data-theme="attack-on-titan"] .timer{border-color:#bfcc8b}
+body[data-theme="attack-on-titan"] .box-options .selected{background:#30402c;border-color:#bfcc8b;color:#edf2d9}
+.theme-option:has(input[value="attack-on-titan"]){border-color:#526344;background:linear-gradient(120deg,#1f2c20,#171a15)}
+.theme-option:has(input[value="attack-on-titan"]:checked){border-color:#d0dca3;background:#2b3928}
+.theme-option input[value="attack-on-titan"]{accent-color:#bfcc8b}
+.hero:has(img[data-character^="aot-"]){display:block;padding:0;min-height:0;background:#202a20}
+.hero:has(img[data-character^="aot-"]) img{position:relative;display:block;height:clamp(155px,45vw,205px);object-fit:contain;object-position:center;background:#171d17;z-index:0}
+.hero:has(img[data-character^="aot-"])>div{position:relative;padding:14px 16px;background:#202a20;z-index:1}
+.hero:has(img[data-character^="aot-"]) h2{font-size:clamp(22px,6vw,28px);line-height:1.2;letter-spacing:-.3px;text-transform:none}
+.hero:has(img[data-character^="aot-"]) .badge{top:10px;left:10px;background:#11190ee8;color:#edf2d9;z-index:2}
+.hero:has(img[data-character^="aot-"]):after{display:none}
+.hero:has(img[data-character^="aot-"]) .fallback-letter{display:none}
+.pick-card:has(img[data-character^="aot-"]) h2{font-size:18px;line-height:1.3}
+html[lang="ka"] body[data-theme="attack-on-titan"] :is(h1,h2,.theme-option strong){letter-spacing:0}
