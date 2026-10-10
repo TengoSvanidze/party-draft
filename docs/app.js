@@ -19,10 +19,30 @@ function navigation(){return `<nav class="page-nav" aria-label="${txt('pageNavig
 function bindNavigation(){document.querySelector('#page-back')?.addEventListener('click',()=>{if(explanationsOpen){command('close-explanations');return;}const dialog=document.querySelector('dialog[open]');if(dialog){dialog.close();lineupOpen=false;return;}let internal=false;try{internal=new URL(document.referrer).origin===location.origin;}catch{}if(history.length>1&&(history.state?.partyDraft||internal))history.back();else location.assign(homeURL);});}
 window.addEventListener('popstate',()=>location.reload());
 let selectedTheme='mcu';
+let darkExperience=null,darkLoadVersion=0;
+function closeDarkExperience(focus=false){
+ darkLoadVersion++;darkExperience?.dispose();darkExperience=null;document.querySelector('#dark-hero')?.remove();
+ if(focus){const target=document.querySelector('#name')||document.querySelector('#explore-dark')||document.querySelector('#explore-dark-lobby');target?.focus();target?.scrollIntoView({block:'center',behavior:'instant'});}
+}
+async function openDarkExperience(){
+ if(currentTheme().id!=='dark'||(session&&state?.phase!=='lobby')||params.has('table'))return;
+ if(darkExperience){document.querySelector('#dark-hero')?.scrollIntoView({behavior:'instant'});return;}
+ const version=++darkLoadVersion;
+ document.querySelector('#dark-hero')?.remove();
+ const root=document.createElement('section');root.id='dark-hero';root.className='dark-portal';root.dataset.mode='loading';
+ root.innerHTML=`<div class="dark-loading dark-centered" role="status"><span class="dark-hourglass" aria-hidden="true">⌛</span><p>${language==='ka'?'გასასვლელის ძიება…':'Finding the passage…'}</p></div><nav class="dark-top"><button type="button">← ${language==='ka'?'საიტზე დაბრუნება':'Back to site'}</button></nav>`;
+ root.querySelector('button').onclick=()=>closeDarkExperience(true);app.prepend(root);root.scrollIntoView({behavior:'instant'});
+ try{
+  const {mountDarkPortal}=await import('./dark-portal.js');
+  if(version!==darkLoadVersion||!root.isConnected)return;
+  darkExperience=mountDarkPortal(root,{language,onExit:()=>closeDarkExperience(true),onEnterGame:()=>closeDarkExperience(true)});
+ }catch{if(version!==darkLoadVersion)return;closeDarkExperience(true);notify(language==='ka'?'3D ვერ ჩაიტვირთა. ოთახის შექმნა მაინც შეგიძლია.':'3D could not load. You can still create your room.');}
+}
+window.addEventListener('pagehide',()=>closeDarkExperience());
 let pendingAction=null;
 let practiceReady=null,practiceTimer=null;
 const pendingBoxes=new Map();let savingBoxes=false;
-const localActions=new Set(['lineups','close-lineups','copy','home','save-card','explain-clues','close-explanations']);
+const localActions=new Set(['lineups','close-lineups','copy','home','save-card','explain-clues','close-explanations','dark-experience']);
 function showPending(){
   if(!pendingAction)return;
   for(const b of document.querySelectorAll('[data-action]')){
@@ -81,11 +101,13 @@ async function connect(){
 }
 function leave(){controller?.abort();controller=null;session=null;state=null;connected=false;lineupOpen=false;if(!localPractice){for(const url of imageCache.values())URL.revokeObjectURL(url);imageCache.clear();}sessionStorage.removeItem(storageKey);history.replaceState(null,'',location.pathname);render();}
 function renderHome(){
+  closeDarkExperience();
   document.body.dataset.theme=selectedTheme;
   const saved=storedJSON(storageKey),table=storedJSON('party-draft-table');
   const resume=saved?`<aside class="resume-room"><a href="${basePath}?room=${encodeURIComponent(saved.code)}${panel!=='main'?'&panel='+encodeURIComponent(panel):''}${localPractice?'&practice=1':''}">${esc(navLabel('resume'))} · ${esc(saved.code)}</a><p>${language==='ka'?'შენი ადგილი შენახულია.':'Your seat is saved. Live timers continue while you are away.'}</p></aside>`:'';
   app.innerHTML=`<main class="shell">${header()}${resume}${table?`<a class="table-return" href="${basePath}?table=1">${esc(navLabel('table'))}</a>`:''}<section class="intro enter"><span class="eyebrow orange">${txt('tagline')}</span><h1>${txt('hero1')}<br><span>${txt('hero2')}</span></h1><p>${txt('intro')}</p></section><div class="tabs"><button data-mode="create" class="${homeMode==='create'?'selected':''}">${txt('createTab')}</button><button data-mode="join" class="${homeMode==='join'?'selected':''}">${txt('joinTab')}</button></div><form id="entry">${homeMode==='create'?`<fieldset class="theme-picker"><legend>${txt('chooseTheme')}</legend>${themes.map(theme=>`<label class="theme-option"><input type="radio" name="theme" value="${esc(theme.id)}" ${selectedTheme===theme.id?'checked':''}><span><strong>${esc(themeText(theme,'name'))}</strong><small>${esc(themeText(theme,'description'))}</small></span></label>`).join('')}<p class="hint" id="theme-notice">${esc(themeText(currentTheme(),'notice'))}</p></fieldset>`:''}<div class="field"><label for="name">${txt('yourName')}</label><input id="name" name="name" autocomplete="nickname" maxlength="24" placeholder="${txt('namePlaceholder')}" required></div>${homeMode==='join'?`<div class="field"><label for="code">${txt('roomCode')}</label><input id="code" name="code" maxlength="6" minlength="6" pattern="[A-Za-z2-9]{6}" autocapitalize="characters" autocomplete="off" value="${esc(params.get('room')||'')}" placeholder="A7K9Q2" required></div>`:`<p class="hint">${txt('hostHint')}</p>`}<button class="primary wide" type="submit">${txt(homeMode==='join'?'join':'create')}</button></form><hr class="divider"><button class="ghost wide" id="practice">${txt('demo')}</button><p class="hint">${txt('demoHint')}</p><p class="foot">${txt('scope')}</p></main>`;
-  bindLanguage();document.querySelectorAll('[name=theme]').forEach(input=>input.onchange=()=>{selectedTheme=input.value;document.body.dataset.theme=selectedTheme;document.querySelector('#theme-notice').textContent=themeText(currentTheme(),'notice');document.querySelector('.intro p').textContent=t('intro');document.querySelector('.foot').textContent=t('scope');});document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{homeMode=b.dataset.mode;renderHome();});
+  const explore=document.createElement('button');explore.id='explore-dark';explore.type='button';explore.className='dark-explore';explore.textContent=language==='ka'?'შეაბიჯე ვინდენში · ინტერაქტიული 3D':'Step into Winden · interactive 3D';explore.hidden=selectedTheme!=='dark';explore.onclick=openDarkExperience;document.querySelector('.intro').after(explore);
+  bindLanguage();document.querySelectorAll('[name=theme]').forEach(input=>input.onchange=()=>{selectedTheme=input.value;document.body.dataset.theme=selectedTheme;document.querySelector('#theme-notice').textContent=themeText(currentTheme(),'notice');document.querySelector('.intro p').textContent=t('intro');document.querySelector('.foot').textContent=t('scope');explore.hidden=selectedTheme!=='dark';if(selectedTheme==='dark')openDarkExperience();else closeDarkExperience();});document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{homeMode=b.dataset.mode;renderHome();});
   document.querySelector('#entry').onsubmit=async e=>{e.preventDefault();const submit=e.target.querySelector('button[type=submit]');if(submit.disabled)return;const originalLabel=submit.textContent;submit.disabled=true;submit.textContent=t('sending');submit.classList.add('action-pending');submit.setAttribute('aria-busy','true');
     try{const entered=new FormData(e.target),code=String(entered.get('code')||'').toUpperCase(),url=homeMode==='create'?'/api/rooms':`/api/rooms/${code}/join`;saveSeat(await request(url,{name:entered.get('name'),...(homeMode==='create'?{themeId:selectedTheme}:{})},false));history.replaceState(null,'',homeURL);history.pushState({partyDraft:true},'',`?room=${session.code}${panel!=='main'?'&panel='+encodeURIComponent(panel):''}`);render();connect();}catch(error){notify(t('errors.'+error.message));submit.disabled=false;submit.textContent=originalLabel;submit.classList.remove('action-pending');submit.removeAttribute('aria-busy');}};
   document.querySelector('#practice').onclick=makePractice;
@@ -193,6 +215,7 @@ function lineupSheet(){
   return `<dialog id="lineup-sheet" aria-labelledby="lineup-heading"><div class="sheet-top"><h2 id="lineup-heading">${txt('lineups')}</h2><button data-action="close-lineups" class="ghost" aria-label="${txt('close')}">✕</button></div><label for="lineup-player">${txt('viewPlayer')}</label><select id="lineup-player">${players.map(p=>`<option value="${esc(p.id)}" ${p.id===player.id?'selected':''}>${esc(p.name)} · ${money(p.budget)}</option>`).join('')}</select>${state.deadline||state.paused?`<p class="sheet-clock">${txt('roundStillLive')} <strong id="lineup-timer"></strong></p>`:''}<ul class="slot-list">${rows}</ul>${player.budget===0?`<p class="note">${txt('noMoney')}</p>`:''}<button data-action="close-lineups" class="primary wide">${txt('backToRound')}</button></dialog>`;
 }
 function render(){
+  closeDarkExperience();
   document.documentElement.lang=language==='ka'?'ka':'en';
   document.body.dataset.theme=currentTheme().id;
   if(params.has('table')){renderTable();return;}if(!session){renderHome();return;}
@@ -202,7 +225,7 @@ function render(){
   const oldFocus=document.activeElement?.id;
   const nextPhaseKey=state.round+':'+state.positionIndex+':'+state.phase+':'+state.lotIndex,transition=phaseKey!==nextPhaseKey;phaseKey=nextPhaseKey;
   let content='';
-  if(state.phase==='lobby')content=lobby();
+  if(state.phase==='lobby')content=lobby()+(state.theme.id==='dark'?`<button id="explore-dark-lobby" type="button" data-action="dark-experience" class="dark-explore">${language==='ka'?'მოლოდინისას შეაბიჯე ვინდენში':'Explore Winden while you wait'}</button><p class="hint">${language==='ka'?'ოთახში ცვლილებისას ავტომატურად დაბრუნდები.':'You’ll return automatically when the lobby changes.'}</p>`:'');
   else if(state.phase==='ready')content=`<h1>${esc(local(state.position))}</h1>${hero(state.card)}${state.role==='narrator'?`<p>${esc(local(state.prompt))}</p>`:''}<p class="note">${txt('starting')} · ${money(state.card.price)}</p>${playerStrip()}${assignmentNotice()}${state.role==='narrator'?button(txt('open'),'open',{primary:true,disabled:!connected}):`<p class="note">${txt('waitingOpen')}</p>`}`;
   else if(state.phase==='auction')content=auction();
   else if(state.phase==='sold')content=`<section class="sale-confirmation" role="status"><span class="sale-check" aria-hidden="true">✓</span><div><h1>${txt(state.lastSale.automatic?'assigned':'sold',{name:name(state.lastSale.playerId)})}</h1><strong>${money(state.lastSale.price)}</strong><p>${esc(local(state.lastSale.card.name))}</p></div></section>${hero(state.lastSale.card)}<p class="note">${txt('paid',{amount:money(state.lastSale.price)})}${state.lastSale.automatic?' · '+txt('assignedReason'):''}</p>${playerStrip()}${state.role==='narrator'?button(txt(state.lotIndex===1?'nextChoice':'next'),'next',{primary:true,disabled:!connected}):`<p class="note">${txt('waitNext')}</p>`}`;
@@ -231,6 +254,7 @@ async function saveBoxSelections(){
  finally{savingBoxes=false;}
 }
 async function command(type){
+  if(type==='dark-experience'){openDarkExperience();return;}
   if(type==='explain-clues'){if(state?.phase==='complete'&&state.answer){explanationsOpen=true;render();document.querySelector('#explanations-heading')?.focus();window.scrollTo(0,0);}return;}
   if(type==='close-explanations'){explanationsOpen=false;render();document.querySelector('#explain-clues')?.focus();return;}
   if(type==='save-card'){await saveResultCard();return;}
