@@ -37,7 +37,7 @@ async function openDarkExperience(){
  root.innerHTML=`<div class="dark-loading dark-centered" role="status"><span class="dark-hourglass" aria-hidden="true">⌛</span><p>${language==='ka'?'გასასვლელის ძიება…':'Finding the passage…'}</p></div><nav class="dark-top"><button type="button">← ${language==='ka'?'საიტზე დაბრუნება':'Back to site'}</button></nav>`;
  root.querySelector('button').onclick=()=>closeDarkExperience(true);app.prepend(root);root.scrollIntoView({behavior:'instant'});
  try{
-  const {mountDarkPortal}=await import('./dark-portal.js?v=dark-years-20261012');
+  const {mountDarkPortal}=await import('./dark-portal.js?v=dark-cave-20261013');
   if(version!==darkLoadVersion||!root.isConnected)return;
   darkExperience=mountDarkPortal(root,{language,onExit:()=>closeDarkExperience(true),onEnterGame:()=>closeDarkExperience(true)});
  }catch{if(version!==darkLoadVersion)return;closeDarkExperience(true);notify(language==='ka'?'3D ვერ ჩაიტვირთა. ოთახის შექმნა მაინც შეგიძლია.':'3D could not load. You can still create your room.');}
