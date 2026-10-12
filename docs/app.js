@@ -1,5 +1,5 @@
 import {createEffects,presentationEvent} from './polish.js';
-import {syncDarkWaiting,clearDarkWaiting} from './dark-waiting.js';
+import {syncDarkWaiting,clearDarkWaiting,prepareDarkTravel,cancelDarkTravel} from './dark-waiting.js?v=dark-depth-20261012';
 const basePath=new URL('.',location.href).pathname;
 const apiOrigin=location.hostname==='tengosvanidze.github.io'?'https://party-draft-tengo.tengosvanidze3.chatgpt.site':location.origin;
 const apiURL=path=>apiOrigin+path;
@@ -20,7 +20,7 @@ function navigation(){return `<nav class="page-nav" aria-label="${txt('pageNavig
 function bindNavigation(){document.querySelector('#page-back')?.addEventListener('click',()=>{if(explanationsOpen){command('close-explanations');return;}const dialog=document.querySelector('dialog[open]');if(dialog){dialog.close();lineupOpen=false;return;}let internal=false;try{internal=new URL(document.referrer).origin===location.origin;}catch{}if(history.length>1&&(history.state?.partyDraft||internal))history.back();else location.assign(homeURL);});}
 window.addEventListener('popstate',()=>location.reload());
 let selectedTheme=themes.some(theme=>theme.id===params.get('theme'))?params.get('theme'):'mcu';
-function updateDarkWaiting(){syncDarkWaiting({active:currentTheme().id==='dark'&&!params.has('table')&&(!session||!state||state.phase==='lobby'),language,phase:!session?'setup':!state?'connecting':'lobby',players:state?.members.filter(member=>member.role==='drafter').length||0,connected:!session||connected});}
+function updateDarkWaiting(){syncDarkWaiting({active:currentTheme().id==='dark'&&!params.has('table')&&(!session||!state||state.phase==='lobby'),language,phase:!session?'setup':!state?'connecting':'lobby',role:state?.role,players:state?.members.filter(member=>member.role==='drafter').length||0,readyPlayers:state?.members.filter(member=>member.role==='drafter'&&member.ready).length||0,ready:!!state?.members.find(member=>member.id===state.you)?.ready,identity:state?`${state.code}:${state.round}:${state.you}`:'setup',connected:!session||connected});}
 let darkExperience=null,darkLoadVersion=0;
 function closeDarkExperience(focus=false){
  darkLoadVersion++;darkExperience?.dispose();darkExperience=null;document.querySelector('#dark-hero')?.remove();
@@ -131,7 +131,7 @@ async function renderTable(){
   if(!practiceReady){
    app.innerHTML=`<main class="shell">${navigation()}<p role="status">${txt('startingDemo')}</p></main>`;bindNavigation();
    practiceReady=(async()=>{
-    const {createPractice}=await import('./practice.js');
+    const {createPractice}=await import('./practice.js?v=dark-depth-20261012');
     const seats=table.seats.map(s=>storedJSON('party-draft-seat:'+s.id));
     if(seats.some(s=>!s))throw Error('unauthorized');
     let room=storedJSON('party-draft-local:'+table.code);
@@ -160,7 +160,8 @@ function boxSetup(){
   return `<section class="panel private box-setup"><span class="eyebrow orange">${txt('privateSetup')}</span><h2>${txt('setupTitle')}</h2><p>${txt(state.boxesLocked?'setupLockedText':'setupText')}</p>${rows.map((row,i)=>`<fieldset><legend>${i+1}. ${esc(local(row.title))}</legend><div class="box-options">${row.options.map(c=>`<button id="setup-${row.positionId}-${c.id}" data-action="set-box:${row.positionId}:${c.id}" aria-pressed="${row.selectedId===c.id}" class="${row.selectedId===c.id?'selected':''} ${pendingBoxes.get(row.positionId)===c.id?'selection-saving':''}" ${state.boxesLocked||busy||!connected?'disabled':''}>${row.selectedId===c.id?(pendingBoxes.has(row.positionId)?'':'✓ '):''}${esc(local(c.name))}${pendingBoxes.get(row.positionId)===c.id?`<small class="pending-label">${txt('sending')}</small>`:''}</button>`).join('')}</div></fieldset>`).join('')}<p class="hint" role="status">${txt(state.boxesLocked?'boxesLocked':'boxesChosen',{count:chosen,total:rows.length})}</p>${state.boxesLocked?'':button(txt('lockBoxes'),'lock-boxes',{primary:true,disabled:chosen!==rows.length||!connected||pendingBoxes.size>0})}</section>`;
 }
 function lobby(){const players=state.members.filter(m=>m.role==='drafter');const invite=location.origin+basePath+'?room='+state.code+(state.theme.id==='dark'?'&theme=dark':'');
-  return `<span class="eyebrow orange">${txt('round',{number:state.round})}</span><h1>${txt('lobbyTitle')}</h1><div class="theme-room"><strong>${esc(themeText(state.theme,'name'))}</strong>${state.theme.notice?`<p class="hint">${esc(themeText(state.theme,'notice'))}</p>`:''}</div><p>${txt('lobbyText')}</p><section class="panel"><small>${txt('roomCode')}</small><div class="room-code">${esc(state.code)}</div><div class="row">${button(txt('copy'),'copy')}</div><label for="invite" class="hint">${txt('invite')}</label><input class="linkbox" readonly id="invite" value="${esc(invite)}">${['localhost','127.0.0.1'].includes(location.hostname)?`<p class="hint">${txt('inviteLocal')}</p>`:''}</section><section class="panel">${Array.from({length:3},(_,i)=>`<div class="lobby-seat"><div class="avatar">${players[i]?esc(players[i].name[0]):'+'}</div><strong>${players[i]?esc(players[i].name):txt('waitingSeat',{number:i+1})}</strong>${players[i]?`<small>${txt('ready')}</small>`:''}</div>`).join('')}</section>${boxSetup()}${state.role==='narrator'?button(players.length===3?txt('start'):txt('needSeats',{number:3-players.length}),'start',{primary:true,disabled:players.length!==3||!connected||!state.boxesLocked}):`<p class="note">${txt('waitingHost')}</p>`}`;
+  const dark=state.theme.id==='dark',readyCount=players.filter(p=>p.ready).length,allReady=!state.readyRequired||readyCount===3;
+  return `<span class="eyebrow orange">${txt('round',{number:state.round})}</span><h1>${txt('lobbyTitle')}</h1><div class="theme-room"><strong>${esc(themeText(state.theme,'name'))}</strong>${state.theme.notice?`<p class="hint">${esc(themeText(state.theme,'notice'))}</p>`:''}</div><p>${txt('lobbyText')}</p><section class="panel"><small>${txt('roomCode')}</small><div class="room-code">${esc(state.code)}</div><div class="row">${button(txt('copy'),'copy')}</div><label for="invite" class="hint">${txt('invite')}</label><input class="linkbox" readonly id="invite" value="${esc(invite)}">${['localhost','127.0.0.1'].includes(location.hostname)?`<p class="hint">${txt('inviteLocal')}</p>`:''}</section><section class="panel">${Array.from({length:3},(_,i)=>`<div class="lobby-seat"><div class="avatar">${players[i]?esc(players[i].name[0]):'+'}</div><strong>${players[i]?esc(players[i].name):txt('waitingSeat',{number:i+1})}</strong>${players[i]?`<small>${txt(dark&&!players[i].ready?'notReady':'ready')}</small>`:''}</div>`).join('')}</section>${dark&&state.role==='drafter'?`<section class="dark-ready-panel"><p class="hint">${txt(me().ready?'darkReadySaved':'darkReadyHint')}</p>${button(txt(me().ready?'notReady':'darkReady'),'player-ready',{primary:!me().ready,disabled:!connected})}</section>`:''}${boxSetup()}${state.role==='narrator'?`${dark&&players.length===3&&!allReady?`<p class="hint" role="status">${txt('darkWaitingReady',{count:readyCount})}</p>`:''}${button(players.length===3?txt('start'):txt('needSeats',{number:3-players.length}),'start',{primary:true,disabled:players.length!==3||!connected||!state.boxesLocked||!allReady})}`:`<p class="note">${txt('waitingHost')}</p>`}`;
 }
 function assignmentNotice(){if(state.role!=='narrator')return '';return '<p class="hint">'+(state.autoAssignId?txt('autoAssignNotice',{name:name(state.autoAssignId),amount:money(state.card.price)}):txt('noAffordableRecipient'))+'</p>';}
 function auction(){
@@ -273,25 +274,39 @@ async function command(type){
    const [,positionId,characterId]=type.split(':');pendingBoxes.set(positionId,characterId);render();saveBoxSelections();return;
   }
   if(pendingBoxes.size)return;
+  if(type==='player-ready'&&!me().ready)prepareDarkTravel();
   const input={type,revision:state.revision,requestId:crypto.randomUUID?crypto.randomUUID():Array.from(crypto.getRandomValues(new Uint8Array(16)),x=>x.toString(16).padStart(2,'0')).join('')};
   if(type.startsWith('set-box:')){[input.type,input.positionId,input.characterId]=type.split(':');}
   if(type.startsWith('vote:')||type.startsWith('break-tie:')){[input.type,input.targetId]=type.split(':');}
   if(type==='bid')input.amount=state.bid?state.bid.amount+selectedRaise:state.freeRound?0:state.card.price;
   if(type==='known'||type==='box'){input.type='choose';input.kind=type;}
+  if(type==='player-ready')input.ready=!me().ready;
   const seat=session;
   if(localPractice&&seat.code===localPractice.code){
    try{accept(localPractice.request(`/api/rooms/${seat.code}/action`,input,seat.token));}
-   catch(error){notify(t('errors.'+error.message));accept(localPractice.request(`/api/rooms/${seat.code}/state`,null,seat.token));}
+   catch(error){cancelDarkTravel();notify(t('errors.'+error.message));accept(localPractice.request(`/api/rooms/${seat.code}/state`,null,seat.token));}
    return;
   }
   busy=true;pendingAction=type;showPending();
   try{
-    const next=await request(`/api/rooms/${seat.code}/action`,input);
+    let next;
+    // Ready is an explicit boolean, so it can safely retry when another player
+    // or the narrator updates the lobby between polling and the click.
+    for(let attempt=0;attempt<3;attempt++){
+      try{next=await request(`/api/rooms/${seat.code}/action`,input);break;}
+      catch(error){
+        if(type!=='player-ready'||error.message!=='stateChanged'||attempt===2)throw error;
+        const latest=await request(`/api/rooms/${seat.code}/state`);
+        if(latest.phase!=='lobby')throw error;
+        input.revision=latest.revision;
+      }
+    }
     busy=false;pendingAction=null;
     if(session===seat){accept(next);if(state.revision>next.revision)render();}
   }
   catch(error){
     busy=false;pendingAction=null;
+    cancelDarkTravel();
     if(session===seat){notify(t('errors.'+error.message));render();connect();}
   }
 }
