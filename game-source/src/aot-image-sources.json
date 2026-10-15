@@ -1,0 +1,318 @@
+[
+  {
+    "id": "aot-scouts",
+    "name": "Scouts",
+    "source": "User attachment: Scouts.jpg",
+    "userProvided": true,
+    "sha256": "c991ab767acbe80e30d0ead89d9fea6b7368351c6a79f62f2446e8e2c57ef877",
+    "bytes": 34712,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-garrison",
+    "name": "Garrison",
+    "source": "User attachment: Garrison.jpg",
+    "userProvided": true,
+    "sha256": "18c360151187712e14a21997830155d088592b520cc47e2ba0ca8670429984f2",
+    "bytes": 87575,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-police",
+    "name": "Military Police",
+    "source": "User attachment: Military Police.jpg",
+    "userProvided": true,
+    "sha256": "8164ad0ac482a564b103ca30dc9728809056f48c46b62f7a81252b4bec4d73fc",
+    "bytes": 18984,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-yeagerists",
+    "name": "Yeagerists",
+    "source": "User attachment: Yeagerists.jpg",
+    "userProvided": true,
+    "sha256": "514b26aa3fdb78963d0b961c8e00363df09e278cf0075eb6ff1f7a224463d6c6",
+    "bytes": 17560,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-warriors",
+    "name": "Marley’s Warriors",
+    "source": "User attachment: Marley’s Warriors.jpg",
+    "userProvided": true,
+    "sha256": "2630c1f9fac092b3c67146ccfe2868e53ee49f833d43b81bdea3cd93d6da161d",
+    "bytes": 49863,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-pixis",
+    "name": "Dot Pixis",
+    "source": "User attachment: Pixis.jpg",
+    "userProvided": true,
+    "sha256": "efdd5274c170b9814e1aa649d162758cb6650efa4255f9dcab9f68a8680d2bde",
+    "bytes": 90309,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-magath",
+    "name": "Theo Magath",
+    "source": "User attachment: Magath.jpg",
+    "userProvided": true,
+    "sha256": "68bd1f09fab0432ed5e17666c9de0725496e3d46cf1c3a56789998b192d2ed53",
+    "bytes": 35831,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-shadis",
+    "name": "Keith Shadis",
+    "source": "User attachment: Shadis.jpg",
+    "userProvided": true,
+    "sha256": "47a19344f31a828fc0bbf39c763fd625228c4d188b8637cbf79191daf0be5848",
+    "bytes": 58444,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-zachary",
+    "name": "Dhalis Zachary",
+    "source": "User attachment: Zachary.jpg",
+    "userProvided": true,
+    "sha256": "8bb692b6600af4cb9ef9afd21a6e1068afbc667d2593a81779e4e03ac2b75e89",
+    "bytes": 55497,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-kitz",
+    "name": "Kitz Woermann",
+    "source": "User attachment: Kitz.jpg",
+    "userProvided": true,
+    "sha256": "893e3a1bbedc29e6764cb8a7ac60bf661feefcf3be0717e426ee7f117129e27e",
+    "bytes": 65515,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-erwin",
+    "name": "Erwin Smith",
+    "source": "User attachment: Erwin.jpg",
+    "userProvided": true,
+    "sha256": "6a108d3b085a05bf0ffb778461f453b00e24560939883d4e0b015ea454981417",
+    "bytes": 42700,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-hange",
+    "name": "Hange Zoë",
+    "source": "User attachment: Hange.jpg",
+    "userProvided": true,
+    "sha256": "eafe628db479f43dec7e497f9a95b679c30b00c24cecc91e719f873141e61fe2",
+    "bytes": 55766,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-jean",
+    "name": "Jean Kirstein",
+    "source": "User attachment: Jean.jpg",
+    "userProvided": true,
+    "sha256": "0e2d3035dcc9c97754e731cc9f61b435237bd05b4b42f1a17548a1206ad87751",
+    "bytes": 68851,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-armin",
+    "name": "Armin Arlert",
+    "source": "User attachment: Armin.jpg",
+    "userProvided": true,
+    "sha256": "ebe2c54ef07e9f3011dc586c11e74ac0f0a4aa60bd587a920797020f8a73c36f",
+    "bytes": 64459,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-connie",
+    "name": "Connie Springer",
+    "source": "User attachment: Connie.jpg",
+    "userProvided": true,
+    "sha256": "d92bb6b390f2feca9457f4f6e793c03e75c80393fd4c07f085b06e2116a2e2f8",
+    "bytes": 70460,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-levi",
+    "name": "Levi Ackerman",
+    "source": "User attachment: Levi.jpg",
+    "userProvided": true,
+    "sha256": "ade7c186bc12197cf1d451161b336b7d459ab0915880ba03f393a84592a8a93e",
+    "bytes": 40379,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-floch",
+    "name": "Floch Forster",
+    "source": "User attachment: Floch.jpg",
+    "userProvided": true,
+    "sha256": "57a307a29882f2a94ce986e6d18c0bf3ef7b951f2dc5d3e4a5d94b3c36861d3c",
+    "bytes": 45160,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-sasha",
+    "name": "Sasha Braus",
+    "source": "User attachment: Sasha.jpg",
+    "userProvided": true,
+    "sha256": "ee0920cdfbd218eae04e6e382ac6ce47c7992a41d9b8bec38958b9bffcc0c987",
+    "bytes": 51304,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-kenny",
+    "name": "Kenny Ackerman",
+    "source": "User attachment: Kenny.jpg",
+    "userProvided": true,
+    "sha256": "0413865d1a108eb9ce4bce1af6b6a3c6cd81b104b9ae1580ab6dd1af54e1e8ce",
+    "bytes": 37072,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-marlo",
+    "name": "Marlo Freudenberg",
+    "source": "https://manga-imperial.fr/blogs/attaque-des-titans/marlowe-freudenberg",
+    "userProvided": false,
+    "sha256": "d1a501008321d9630baddfd43318ab062fe19b38e3e1ff4ba40f1750b802c3a2",
+    "bytes": 502923,
+    "contentType": "image/png",
+    "approval": "User chose the earlier correct Marlo gallery photo on 2026-10-10."
+  },
+  {
+    "id": "aot-mikasa",
+    "name": "Mikasa Ackerman",
+    "source": "User attachment: Mikasa.jpg",
+    "userProvided": true,
+    "sha256": "5acf32f1631587e7fb682b3fab6b525b7269269ced7d119c48a75083d65d920d",
+    "bytes": 43948,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-miche",
+    "name": "Miche Zacharius",
+    "source": "User attachment: Miche.jpg",
+    "userProvided": true,
+    "sha256": "b269881725b3deeaac99f9d80730ea5e52f2b9acde7eadae88d950cb74f59a2d",
+    "bytes": 58420,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-nanaba",
+    "name": "Nanaba",
+    "source": "User attachment: Nanaba.jpg",
+    "userProvided": true,
+    "sha256": "6b20a9bc4cc285c3e4805b0c6cf904cc911406805cafdc63ac89f270f1d0a0e7",
+    "bytes": 62121,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-petra",
+    "name": "Petra Ral",
+    "source": "User attachment: Petra.jpg",
+    "userProvided": true,
+    "sha256": "8032630b14b528c76d9e8931aaf01cae127a3511bed6d1a59ce10384084cc9e7",
+    "bytes": 71904,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-daz",
+    "name": "Daz",
+    "source": "User attachment: Daz.webp",
+    "userProvided": true,
+    "sha256": "f6bd1cea93ff14a554ae0b8c368e3f925a16f3363340093fcdd54bed34959fa1",
+    "bytes": 234944,
+    "contentType": "image/webp"
+  },
+  {
+    "id": "aot-eren",
+    "name": "Eren — Attack Titan",
+    "source": "User attachment: Eren — Attack Titan.jpg",
+    "userProvided": true,
+    "sha256": "30cb7e23dd3668d80df90029be20db6930bc26f903a6ff72a532e24bcf08f0e4",
+    "bytes": 94244,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-zeke",
+    "name": "Zeke — Beast Titan",
+    "source": "User attachment: Zeke — Beast Titan.jpg",
+    "userProvided": true,
+    "sha256": "921aa19d03d52089accbcb2e71fbbd55ebb2119e8e159f127bcca9bb08bf21af",
+    "bytes": 58398,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-pieck",
+    "name": "Pieck — Cart Titan",
+    "source": "User attachment: Pieck — Cart Titan.jpg",
+    "userProvided": true,
+    "sha256": "bb465ba08bd189430f7cda2136ced93bd3cba1f89e1b4246dff2fb3a7aa3e501",
+    "bytes": 110909,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-annie",
+    "name": "Annie — Female Titan",
+    "source": "User attachment: Annie — Female Titan.jpg",
+    "userProvided": true,
+    "sha256": "a7eba5fdb372adf4c24098bc07eaa3ac4395b1aa734f1a3adc001f48803c6726",
+    "bytes": 122819,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-porco",
+    "name": "Porco — Jaw Titan",
+    "source": "User attachment: Porco — Jaw Titan.jpg",
+    "userProvided": true,
+    "sha256": "ce9adb420dfe01857390435e9fb068115334f1662450cadc7890d1ea8bf1f417",
+    "bytes": 168802,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-reiner",
+    "name": "Reiner — Armored Titan",
+    "source": "User attachment: Reiner — Armored Titan.jpg",
+    "userProvided": true,
+    "sha256": "1e04d61ed8f4877ca83a54fe5197bde78b474ef67b9bff9472019d7e40c7be5c",
+    "bytes": 155309,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-lara",
+    "name": "Lara Tybur — War Hammer Titan",
+    "source": "User attachment: Lara Tybur — War Hammer Titan.jpg",
+    "userProvided": true,
+    "sha256": "6cb0419303a51cfc990b57e351ac4e4da9ac4e6e9af926c9f9b1515880971e5f",
+    "bytes": 88907,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-grisha",
+    "name": "Grisha — Attack Titan",
+    "source": "User attachment: Grisha — Attack Titan.jpg",
+    "userProvided": true,
+    "sha256": "411dfd2636bd3df9ef87f9624e9fe22a698eac8816938f5aba8ad4c311cee05b",
+    "bytes": 87521,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-bertholdt",
+    "name": "Bertholdt — Colossal Titan",
+    "source": "User attachment: Bertholdt — Colossal Titan.jpg",
+    "userProvided": true,
+    "sha256": "923decab53d55101d60a26a100079dc11bed1d0290c9fda57dac2d6ee9de6845",
+    "bytes": 136718,
+    "contentType": "image/jpeg"
+  },
+  {
+    "id": "aot-ymir",
+    "name": "Ymir — Jaw Titan",
+    "source": "User attachment: Ymir — Jaw Titan.jpg",
+    "userProvided": true,
+    "sha256": "5109c3a289bb85ab86fd9e21120354cc749f3452c7ca1780cbcc88fab68ca303",
+    "bytes": 106056,
+    "contentType": "image/jpeg"
+  }
+]

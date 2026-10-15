@@ -1,0 +1,332 @@
+[
+  {
+    "id": "naruto-hidden-leaf",
+    "filename": "Hidden Leaf.jpg",
+    "sha256": "fa24b7833c06216c9a7012bb0d0cd8ae936247afc1b0d87d1e0df5b7055a80e3"
+  },
+  {
+    "id": "naruto-hidden-sand",
+    "filename": "Hidden Sand.jpg",
+    "sha256": "5d1c538a947c82cd04d53d8a88e9ac91e7487cb681a3361df8c9cb03e4800a97"
+  },
+  {
+    "id": "naruto-hidden-mist",
+    "filename": "Hidden Mist.jpg",
+    "sha256": "a3ac596649bb5fdd8409d9b07c7260626f5de339a4698daa3e8191a238f49349"
+  },
+  {
+    "id": "naruto-hidden-cloud",
+    "filename": "Hidden Cloud.jpg",
+    "sha256": "867539349c31fa18ae4b8b821cdc0bd31cbf3ed0ca4d56e6b9ad282bfd135863"
+  },
+  {
+    "id": "naruto-hidden-rain",
+    "filename": "Hidden Rain.jpg",
+    "sha256": "80b7ef7ed462ecc33140c53781b6b26076e5428c4fbb7bac830d58932ce0be55"
+  },
+  {
+    "id": "naruto-uchiha",
+    "filename": "Uchiha.jpg",
+    "sha256": "b8cbfcb85de9df6c56d2f43d925b751cb21a264f5bbae6f599a5a5350e11fba6"
+  },
+  {
+    "id": "naruto-hyuga",
+    "filename": "Hyūga.jpg",
+    "sha256": "558d4b02053b97eb407585b40311e9e6a229a4567186646c9b0a79305fa59dc7"
+  },
+  {
+    "id": "naruto-nara",
+    "filename": "Nara.jpg",
+    "sha256": "c1954b82bb8a70385b58d9711b2f59eb1c3075128a3431a3f7f1dc17c3ffb1d2"
+  },
+  {
+    "id": "naruto-uzumaki",
+    "filename": "Uzumaki.jpg",
+    "sha256": "85564f735df99768e4616d6e747bda1a23be4269af30ca93e3582e24f842199c"
+  },
+  {
+    "id": "naruto-inuzuka",
+    "filename": "Inuzuka.jpg",
+    "sha256": "28d636ee4d99c8ee78de80cebfdb0180d396abe05701ff1c41e77aa1aa521b66"
+  },
+  {
+    "id": "naruto-minato-namikaze",
+    "filename": "Minato Namikaze.jpg",
+    "sha256": "a2f6ac60ee70886d8651559017c698d6f7d29377e560f6d30f13e25c718bc55a"
+  },
+  {
+    "id": "naruto-sakumo-hatake",
+    "filename": "Sakumo Hatake.jpg",
+    "sha256": "68f53b9bb8d707f88f90a0b0b3cb24c7c728300472485fd908c187727fa9fd57"
+  },
+  {
+    "id": "naruto-choza-akimichi",
+    "filename": "Chōza Akimichi.jpg",
+    "sha256": "2d65200cba21ec5f1fce99cc234b57115af5cf20f0a8f0236d1b37b95086134a"
+  },
+  {
+    "id": "naruto-shikaku-nara",
+    "filename": "Shikaku Nara.jpg",
+    "sha256": "549d94a9d3d8df88c4cec17b573a13e0a8af9b19f6bc8e79c14f8556eac9d9ed"
+  },
+  {
+    "id": "naruto-rasa",
+    "filename": "Rasa.jpg",
+    "sha256": "f65f5f7bc9d5ff6c1ffe40228986b91191070958de2bf037090847db95043abc"
+  },
+  {
+    "id": "naruto-konan",
+    "filename": "Konan.jpg",
+    "sha256": "9aaf777710a3881a8f1b8ffb75e899a1620bfd39ebd8878fbeaba14f5f8befc9"
+  },
+  {
+    "id": "naruto-kushina-uzumaki",
+    "filename": "Kushina Uzumaki.jpg",
+    "sha256": "93d0cd21de96330a6706b5eecf317c59268e811d9e26955f1eabbf262c410eb9"
+  },
+  {
+    "id": "naruto-shizune",
+    "filename": "Shizune.jpg",
+    "sha256": "525f46251c153ac21355d7f4e4328884e9c51f22a0f4e1e6b7b479130d4756ea"
+  },
+  {
+    "id": "naruto-karura",
+    "filename": "Karura.jpg",
+    "sha256": "054f67bb89fa1a35492d38384b377301b076c220e501f4a6b4516e7fcc8c343e"
+  },
+  {
+    "id": "naruto-kaguya-otsutsuki",
+    "filename": "Kaguya Ōtsutsuki.jpg",
+    "sha256": "b78d511589e270fed9e7e76c83dedb522d5abe7dda23ec9fdad483b8df10df9c"
+  },
+  {
+    "id": "naruto-naruto-uzumaki",
+    "filename": "Naruto Uzumaki.jpg",
+    "sha256": "a5f801b8a7de283b68fc5d9c42ad176738b7283469640f025751802c822269ee"
+  },
+  {
+    "id": "naruto-shikamaru-nara",
+    "filename": "Shikamaru Nara.jpg",
+    "sha256": "ecb653d81ae10706560c1dd22231624496f0f97f37397c0bf0e22560dffa4b18"
+  },
+  {
+    "id": "naruto-shino-aburame",
+    "filename": "Shino Aburame.jpg",
+    "sha256": "303a80a2b93c8f50991d282e290a5ba2c3aae931758cb50d76c23b8e83942632"
+  },
+  {
+    "id": "naruto-rock-lee",
+    "filename": "Rock Lee.jpg",
+    "sha256": "a1516418f469e0d5530a3f3f49355589a41cc2e3ffc95878b25bcb566e610637"
+  },
+  {
+    "id": "naruto-kabuto-yakushi",
+    "filename": "Kabuto Yakushi.jpg",
+    "sha256": "aebed19c013ce7bbbd9f57035637e7c8229228340fa663284a0cc431f6a269e9"
+  },
+  {
+    "id": "naruto-jiraiya",
+    "filename": "Jiraiya.jpg",
+    "sha256": "80bd94f14de114d1300c384ba0a4a7f8ef68ba33a63e3e9a069bbecdc766d737"
+  },
+  {
+    "id": "naruto-kakashi-hatake",
+    "filename": "Kakashi Hatake.jpg",
+    "sha256": "019c47471303cdebada1b77d77acaf4df57b04bec1ceafe45fa7589163802a92"
+  },
+  {
+    "id": "naruto-iruka-umino",
+    "filename": "Iruka Umino.jpg",
+    "sha256": "e030af4c020e69f4da085dfbc40bb0888e0deb91a07fd256cf6ef5347d57084f"
+  },
+  {
+    "id": "naruto-orochimaru",
+    "filename": "Orochimaru.jpg",
+    "sha256": "6986746f878045780bf2ef4a80e83a83fad8c787978150ff2e8be9134f0af784"
+  },
+  {
+    "id": "naruto-mizuki",
+    "filename": "Mizuki.jpg",
+    "sha256": "352ed1dab501ad839fbc758e5b815e509c378cc1173cfac672d02574123a8fdf"
+  },
+  {
+    "id": "naruto-gaara",
+    "filename": "Gaara.jpg",
+    "sha256": "f5cac36efa97567fa780a4c1a7e519a410265c5eb4f6364e98e1ce7013032187"
+  },
+  {
+    "id": "naruto-tenten",
+    "filename": "Tenten.jpg",
+    "sha256": "1d21cb7296cf03f4c530decaae7209ff86963213e4a28a2cbc4d8ea7c7acffc1"
+  },
+  {
+    "id": "naruto-tsukuyomi",
+    "filename": "Tsukuyomi.jpg",
+    "sha256": "6ebde809ea8ca132f9f9ec33e4605edb693d5844a8bcb80c37967106b53e4e86"
+  },
+  {
+    "id": "naruto-rasengan",
+    "filename": "Rasengan.jpg",
+    "sha256": "e3a410baa91cb7c77fcc567f5101638af2c4d41de2d9f831f0dd07782c7d8b1e"
+  },
+  {
+    "id": "naruto-mind-body-switch-technique",
+    "filename": "Mind–Body Switch Technique.jpg",
+    "sha256": "34f1831b180751dfdf05508a051d50e1708d6e59277f2a2478cb486291132d7d"
+  },
+  {
+    "id": "naruto-truth-seeking-balls",
+    "filename": "Truth-Seeking Balls.jpg",
+    "sha256": "c565d6005a09f480276e5007385301a12d05999f3f10bfbcc6b8040f345f7c87"
+  },
+  {
+    "id": "naruto-transformation-technique",
+    "filename": "Transformation Technique.jpg",
+    "sha256": "18e947fcc49c2a8eb8bef377b7304757c8e277366cfde0f756c1a4cb510542d1"
+  },
+  {
+    "id": "naruto-kabuto-yakushi-regular-pre-sage",
+    "filename": "Kabuto Yakushi.jpg",
+    "sha256": "aebed19c013ce7bbbd9f57035637e7c8229228340fa663284a0cc431f6a269e9"
+  },
+  {
+    "id": "naruto-pain",
+    "filename": "Pain.jpg",
+    "sha256": "d0aef4cccb9d4bac0d54cad1a6f9cf680bc81e13e87e105949722b429daa0d9d"
+  },
+  {
+    "id": "naruto-zabuza-momochi",
+    "filename": "Zabuza Momochi.jpg",
+    "sha256": "4d47ecb04d2bbd998313bcab02e5ac87359276f5b5bc5a6413f0bb81c2171c83"
+  },
+  {
+    "id": "naruto-hashirama-senju",
+    "filename": "Hashirama Senju.jpg",
+    "sha256": "68dfd90cbde5bc72a79230f4a22569079e89f44bb2c3088f7cf941e2ff85b339"
+  },
+  {
+    "id": "naruto-might-guy",
+    "filename": "Might Guy.jpg",
+    "sha256": "18d5dd1dc46f2eed91870e9338ee99a35b2dc6fa29999c9e24598315586eebb2"
+  },
+  {
+    "id": "naruto-yamato",
+    "filename": "Yamato.jpg",
+    "sha256": "42e49b4e820ae2adf4ad4a9bb775c127f79adf34b4ae4589495a6f955a266e8f"
+  },
+  {
+    "id": "naruto-itachi-uchiha",
+    "filename": "Itachi Uchiha.jpg",
+    "sha256": "f179870b171c5634906b7c88051fe58763f34fe0a105c8954e863693e4876a2f"
+  },
+  {
+    "id": "naruto-ebisu",
+    "filename": "Ebisu.jpg",
+    "sha256": "e125a6c4df92ba97fa2bf6cb6208a84af59833b2023ef9bdb9ed024c7d13cb89"
+  },
+  {
+    "id": "naruto-tsunade",
+    "filename": "Tsunade.jpg",
+    "sha256": "8ba8d8784db62fe268fa8de103d7c95952d5e47a77ed65003f00f201dc4d577f"
+  },
+  {
+    "id": "naruto-hiruzen-sarutobi",
+    "filename": "Hiruzen Sarutobi.jpg",
+    "sha256": "fbb563b24d54d29402f5ec913997ff371d1310b714eaa38224d404eefae1fbdb"
+  },
+  {
+    "id": "naruto-danzo-shimura",
+    "filename": "Danzō Shimura.jpg",
+    "sha256": "2d2264ab36158b67f92fbb1bbb36fa74e36cd1a58ffb77bb86efca308b2aa166"
+  },
+  {
+    "id": "naruto-kurama-nine-tails",
+    "filename": "Kurama — Nine-Tails.jpg",
+    "sha256": "f7ba90bda7613bb0b731b88ec68f8e7b75680c45fd023625c3f8f934ca3fe628"
+  },
+  {
+    "id": "naruto-gyuki-eight-tails",
+    "filename": "Gyūki — Eight-Tails.jpg",
+    "sha256": "cc783319213c679d7958a50cf1dfc74239106b2ab18764e25cc544a0d2d8968d"
+  },
+  {
+    "id": "naruto-matatabi-two-tails",
+    "filename": "Matatabi — Two-Tails.jpg",
+    "sha256": "87c69b2c9e0a54af6ace3f5f56986e54d5b9f14029574857e9971981e8470c7b"
+  },
+  {
+    "id": "naruto-ten-tails",
+    "filename": "Ten-Tails.jpg",
+    "sha256": "bc8b4e503e9b18bcf48c11ab0da5f00e54961192b017b33a168d6b506acbdbe5"
+  },
+  {
+    "id": "naruto-shukaku-one-tail",
+    "filename": "Shukaku — One-Tail.jpg",
+    "sha256": "73be1910d84dc30e549c88047fa9133238673101e6a3de1e945534e093ab1ddb"
+  },
+  {
+    "id": "naruto-rinnegan",
+    "filename": "Rinnegan.jpg",
+    "sha256": "7b05cb28e03171e1cc728b5f2775954e1008c08399a51b02345e06cdf933362d"
+  },
+  {
+    "id": "naruto-sharingan",
+    "filename": "Sharingan.jpg",
+    "sha256": "e0e6d523e742573ef3b8df7d956216d3d35b87862c920dc9cbe9a5d386ec0ecb"
+  },
+  {
+    "id": "naruto-wood-release",
+    "filename": "Wood Release.jpg",
+    "sha256": "5eb0be140e039fe107510091a2e1b0aea0239856588695f36fb14c156d3b12ee"
+  },
+  {
+    "id": "naruto-ice-release",
+    "filename": "Ice Release.jpg",
+    "sha256": "1dafc4424529a44327ab383ebc9d64a75c2128630e847e976e95b0ab1002ca2e"
+  },
+  {
+    "id": "naruto-dead-bone-pulse-shikotsumyaku",
+    "filename": "Dead Bone Pulse — Shikotsumyaku.jpg",
+    "sha256": "3b6b54e11a0a682935f51a7c2c7ef458751efcee259686763ef6cb9e52c626f6"
+  },
+  {
+    "id": "naruto-edo-tensei",
+    "filename": "Edo Tensei.jpg",
+    "sha256": "d17610713d8c220b439e73b402cc8aa9957dd6785c6d1486ebdfe82ddf7c9bed"
+  },
+  {
+    "id": "naruto-eight-gates",
+    "filename": "Eight Gates.jpg",
+    "sha256": "6fc950bb0159fdddf1dbf1620d65e4d62951f7e5b8e76484ae3b9637a377ccc0"
+  },
+  {
+    "id": "naruto-reaper-death-seal",
+    "filename": "Reaper Death Seal.jpg",
+    "sha256": "f3cff23d8d1a5985b3c9a6dc2cd3b1d34f75369b37f7ca21b4e7ca585d12a14e"
+  },
+  {
+    "id": "naruto-izanagi",
+    "filename": "Izanagi.jpg",
+    "sha256": "3e998b136152be9f34b7f930223771edb158e12f4185bb66b82c95f8c9730bd4"
+  },
+  {
+    "id": "naruto-twin-snake-sacrifice-jutsu",
+    "filename": "Twin Snake Sacrifice Jutsu.jpg",
+    "sha256": "18e7e821a866ba0371ec85b15c70435f9f00dc858f7d8e53642d2dee12ff085c"
+  },
+  {
+    "id": "naruto-killer-b",
+    "filename": "Killer B.jpg",
+    "sha256": "d191b05e527d200f128e2d6c09107e765cc7b9621d61f771ac7dfe7467a63659"
+  },
+  {
+    "id": "naruto-tobirama-senju",
+    "filename": "Tobirama Senju.jpg",
+    "sha256": "c84317fb87d7ea7bd360de8c9b85766a97c212a0190abaca0cd8d09f0c3cb1a5"
+  },
+  {
+    "id": "naruto-anko-mitarashi",
+    "filename": "Anko Mitarashi.jpg",
+    "sha256": "e00e78b7bcad93f3922543044175679dcf7f9892dea320498fceaecd55800644"
+  }
+]

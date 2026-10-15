@@ -1,0 +1,764 @@
+{
+  "id": "dark",
+  "continuity": "Adam’s world · All three seasons",
+  "positions": [
+    {
+      "id": "dark-house",
+      "title": {
+        "en": "Which house do you live in?",
+        "ka": "რომელ სახლში ცხოვრობ?"
+      },
+      "label": {
+        "en": "House",
+        "ka": "სახლი"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Which house do you live in? Bid for a known option or risk the mystery box.",
+        "ka": "რომელ სახლში ცხოვრობ? ჩამოდი ფსონი ცნობილ ვარიანტზე ან გარისკე საიდუმლო ყუთით."
+      },
+      "lots": [
+        {
+          "id": "dark-tiedemann-house",
+          "name": {
+            "en": "Regina and Aleksander’s house",
+            "ka": "რეჯინას და ალექსანდრეს სახლი"
+          },
+          "pitch": {
+            "en": "A spacious home with secrets behind its glass walls.",
+            "ka": "დიდი სახლი მინის კედლებს მიღმა დამალული საიდუმლოებებით."
+          },
+          "price": 70
+        },
+        {
+          "id": "dark-nielsen-house",
+          "name": {
+            "en": "Nielsen family house",
+            "ka": "ნილსენების ოჯახის სახლი"
+          },
+          "pitch": {
+            "en": "A family home where generations overlap.",
+            "ka": "ოჯახის სახლი, სადაც თაობები ერთმანეთს კვეთს."
+          },
+          "price": 50
+        },
+        {
+          "id": "dark-kahnwald-house",
+          "name": {
+            "en": "Kahnwald family house",
+            "ka": "კანვალდების ოჯახის სახლი"
+          },
+          "pitch": {
+            "en": "A familiar red house at the edge of the woods.",
+            "ka": "ნაცნობი წითელი სახლი ტყის პირას."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "dark-doppler-manor",
+          "name": {
+            "en": "Doppler manor",
+            "ka": "დოპლერების ვილა"
+          },
+          "pitch": {
+            "en": "The Doppler family home, before it became the hotel.",
+            "ka": "დოპლერების ოჯახის სახლი, სანამ ის სასტუმროდ გადაიქცეოდა."
+          },
+          "explanations": [
+            {
+              "en": "The manor stands near the woods outside Winden.",
+              "ka": "მამული ვინდენის გარეთ, ტყესთან ახლოს დგას."
+            },
+            {
+              "en": "Bernd Doppler, who founded Winden’s nuclear power plant, lived here.",
+              "ka": "ბერნდ დოპლერი, რომელმაც ვინდენის ატომური ელექტროსადგური დააარსა, აქ ცხოვრობდა."
+            },
+            {
+              "en": "The Unknown murders Bernd Doppler at the manor.",
+              "ka": "უცნობი კლავს ბერნდ დოპლერს მამულში."
+            }
+          ]
+        },
+        {
+          "id": "dark-doppler-cabin",
+          "name": {
+            "en": "Doppler hunting cabin",
+            "ka": "დოპლერების სანადირო ქოხი"
+          },
+          "pitch": {
+            "en": "A secluded cabin in the Winden forest.",
+            "ka": "მიტოვებული ქოხი ვინდენის ტყეში."
+          },
+          "explanations": [
+            {
+              "en": "The hunting cabin is in the Winden forest.",
+              "ka": "სანადირო ქოხი ვინდენის ტყეშია."
+            },
+            {
+              "en": "The cabin belongs to the Doppler family, whose Bernd founded the power plant.",
+              "ka": "ქოხი ეკუთვნის დოპლერების ოჯახს, რომელთა წევრმაც, ბერნდმა, ელექტროსადგური დააარსა."
+            },
+            {
+              "en": "Noah shoots Claudia, a former director of the power plant, near the cabin.",
+              "ka": "ნოა ესვრის კლაუდიას, ელექტროსადგურის ყოფილ დირექტორს, ქოხთან ახლოს."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "The woods are never far from my door.",
+          "ka": "ტყე არასდროს არის შორს ჩემი კარიდან."
+        },
+        {
+          "en": "The family connected to me helped power Winden.",
+          "ka": "ჩემთან დაკავშირებული ოჯახი ეხმარებოდა ვინდენს ენერგიით მომარაგებაში."
+        },
+        {
+          "en": "Someone connected to the power plant was murdered at or near me.",
+          "ka": "ელექტროსადგურთან დაკავშირებული პირი ჩემთან ან ჩემს მახლობლად მოკლეს."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "dark-profession",
+      "title": {
+        "en": "What is your profession?",
+        "ka": "რა არის შენი პროფესია?"
+      },
+      "label": {
+        "en": "Profession",
+        "ka": "პროფესია"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Choose your job in Winden. Mystery clues describe people who held these jobs in the series.",
+        "ka": "აირჩიე შენი სამსახური ვინდენში. საიდუმლო მინიშნებები აღწერს ადამიანებს, რომლებსაც სერიალში ეს თანამდებობები ეკავათ."
+      },
+      "lots": [
+        {
+          "id": "dark-investigator",
+          "name": {
+            "en": "Police investigator",
+            "ka": "პოლიციის გამომძიებელი"
+          },
+          "pitch": {
+            "en": "Follow the evidence—even when the dates make no sense.",
+            "ka": "მიჰყევი მტკიცებულებებს — მაშინაც კი, როცა თარიღებს გაუგებარია."
+          },
+          "price": 70
+        },
+        {
+          "id": "dark-director",
+          "name": {
+            "en": "Nuclear power plant director",
+            "ka": "ატომური ელექტროსადგურის დირექტორი"
+          },
+          "pitch": {
+            "en": "Power, responsibility, and a very dangerous secret.",
+            "ka": "ძალაუფლება, პასუხისმგებლობა და ძალიან საშიში საიდუმლო."
+          },
+          "price": 50
+        },
+        {
+          "id": "dark-principal",
+          "name": {
+            "en": "School principal",
+            "ka": "სკოლის დირექტორი"
+          },
+          "pitch": {
+            "en": "Keep Winden’s school running while the town unravels.",
+            "ka": "მართე ვინდენის სკოლა მაშინ, როცა ქალაქი ინგრევა."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "dark-hotel-owner",
+          "name": {
+            "en": "Hotel owner",
+            "ka": "სასტუმროს მფლობელი"
+          },
+          "pitch": {
+            "en": "Welcome guests to a town full of unanswered questions.",
+            "ka": "უმასპინძლე სტუმრებს პასუხგაუცემელი კითხვებით სავსე ქალაქში."
+          },
+          "explanations": [
+            {
+              "en": "Regina, the hotel owner, is Claudia Tiedemann’s daughter. Claudia ran the power plant.",
+              "ka": "რეგინა, სასტუმროს მფლობელი, კლაუდია ტიდემანის ქალიშვილია. კლაუდია ელექტროსადგურს ხელმძღვანელობდა."
+            },
+            {
+              "en": "Regina’s Waldhotel was previously the Doppler manor.",
+              "ka": "რეგინას Waldhotel-ი მანამდე დოპლერების მამული იყო."
+            },
+            {
+              "en": "The disappearances in Winden damage the hotel’s business.",
+              "ka": "ვინდენში ხალხის გაუჩინარებამ სასტუმროს ბიზნესი დააზარალა."
+            }
+          ]
+        },
+        {
+          "id": "dark-cleaner",
+          "name": {
+            "en": "Nuclear power plant cleaner",
+            "ka": "ატომური ელექტროსადგურის დამლაგებელი"
+          },
+          "pitch": {
+            "en": "Work behind the scenes at the heart of Winden.",
+            "ka": "იმუშავე კულისებში ვინდენის გულში."
+          },
+          "explanations": [
+            {
+              "en": "Helge, a cleaner at the plant, was raised by Bernd Doppler, the plant’s founder and director.",
+              "ka": "ჰელგე, დამლაგებელი ელექტროსადგურში, გაზარდა ბერნდ დოპლერმა — სადგურის დამაარსებელმა და დირექტორმა."
+            },
+            {
+              "en": "Helge works at the nuclear power plant founded by Bernd Doppler.",
+              "ka": "ჰელგე მუშაობს ბერნდ დოპლერის მიერ დაარსებულ ატომურ ელექტროსადგურში."
+            },
+            {
+              "en": "Helge helps Noah abduct children for the time-travel experiments.",
+              "ka": "ჰელგე ეხმარება ნოეს ბავშვების გატაცებაში დროში მოგზაურობის ექსპერიმენტებისთვის."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "Someone doing my job had a parent who ran the power plant.",
+          "ka": "ვიღაცას, ვინც ჩემს საქმეს აკეთებდა, ჰყავდა მშობელი, რომელიც ელექტროსადგურს ხელმძღვანელობდა."
+        },
+        {
+          "en": "My workplace is connected to the Doppler family.",
+          "ka": "ჩემი სამუშაო ადგილი დაკავშირებულია დოპლერების ოჯახთან."
+        },
+        {
+          "en": "Missing children became part of my story, although investigating them wasn’t my job.",
+          "ka": "დაკარგული ბავშვები ჩემი ისტორიის ნაწილი გახდნენ, თუმცა მათი გამოძიება ჩემი საქმე არ ყოფილა."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "dark-friend",
+      "title": {
+        "en": "Who is your best friend?",
+        "ka": "ვინ არის შენი საუკეთესო მეგობარი?"
+      },
+      "label": {
+        "en": "Best friend",
+        "ka": "საუკეთესო მეგობარი"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Who is your best friend? Bid for a known option or risk the mystery box.",
+        "ka": "ვინ არის შენი საუკეთესო მეგობარი? ჩამოდი ფსონი ცნობილ ვარიანტზე ან გარისკე საიდუმლო ყუთით."
+      },
+      "lots": [
+        {
+          "id": "dark-jonas",
+          "name": {
+            "en": "Jonas Kahnwald",
+            "ka": "იონას კანვალდი"
+          },
+          "pitch": {
+            "en": "A loyal friend with a future he cannot escape.",
+            "ka": "ერთგული მეგობარი, რომელიც თავის მომავალს ვერ გაექცევა."
+          },
+          "price": 70
+        },
+        {
+          "id": "dark-magnus",
+          "name": {
+            "en": "Magnus Nielsen",
+            "ka": "მაგნუს ნილსენი"
+          },
+          "pitch": {
+            "en": "Protective, stubborn, and pulled into the knot.",
+            "ka": "მზრუნველი, ჯიუტი და კვანძში ჩათრეული."
+          },
+          "price": 50
+        },
+        {
+          "id": "dark-bartosz",
+          "name": {
+            "en": "Bartosz Tiedemann",
+            "ka": "ბარტოშ ტიდემანი"
+          },
+          "pitch": {
+            "en": "A friend caught between trust and manipulation.",
+            "ka": "ნდობასა და მანიპულაციას შორის გაჭედილი მეგობარი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "dark-martha",
+          "name": {
+            "en": "Martha Nielsen",
+            "ka": "მართა ნილსენი"
+          },
+          "pitch": {
+            "en": "Martha from the world introduced in Season 1.",
+            "ka": "მართა იმ სამყაროდან, რომელიც პირველ სეზონში გავიცანით."
+          },
+          "explanations": [
+            {
+              "en": "Martha’s feelings for Jonas complicate her relationship with Bartosz.",
+              "ka": "მართას გრძნობები იონასის მიმართ ართულებს მის ურთიერთობას ბარტოშთან."
+            },
+            {
+              "en": "Martha’s younger brother Mikkel disappears; her father Ulrich later disappears too.",
+              "ka": "მართას უმცროსი ძმა მიკელი უჩინარდება; მოგვიანებით მამამისი ულრიხიც იკარგება."
+            },
+            {
+              "en": "Adam, the older Jonas whom Martha loved, shoots her.",
+              "ka": "ადამი — უფროსი იონასი, რომელიც მართას უყვარდა — მას ესვრის."
+            }
+          ]
+        },
+        {
+          "id": "dark-hannah",
+          "name": {
+            "en": "Hannah Kahnwald",
+            "ka": "ჰანა კანვალდი"
+          },
+          "pitch": {
+            "en": "Love, resentment, and choices that cross generations.",
+            "ka": "სიყვარული, წყენა და არჩევანი, რომელიც თაობებს კვეთს."
+          },
+          "explanations": [
+            {
+              "en": "Hannah loves Ulrich, who is married to Katharina.",
+              "ka": "ჰანას უყვარს ულრიხი, რომელიც კატარინაზეა დაქორწინებული."
+            },
+            {
+              "en": "Hannah’s son Jonas disappears.",
+              "ka": "ჰანას ვაჟი იონასი უჩინარდება."
+            },
+            {
+              "en": "Her son Jonas grows into Adam, who kills her.",
+              "ka": "მისი ვაჟი იონასი იზრდება ადამად, რომელიც მას კლავს."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "My feelings drew me into a love triangle.",
+          "ka": "ჩემმა გრძნობებმა სასიყვარულო სამკუთხედში ჩამითრია."
+        },
+        {
+          "en": "Someone disappearing left a hole in my family.",
+          "ka": "ვიღაცის გაუჩინარებამ ჩემს ოჯახში სიცარიელე დატოვა."
+        },
+        {
+          "en": "Someone I loved became the person who killed me.",
+          "ka": "ვიღაც, ვინც მიყვარდა, ჩემს მკვლელად იქცა."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "dark-father",
+      "title": {
+        "en": "Who is your father?",
+        "ka": "ვინ არის მამაშენი?"
+      },
+      "label": {
+        "en": "Father",
+        "ka": "მამა"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Who is your father? Bid for a known option or risk the mystery box.",
+        "ka": "ვინ არის მამაშენი? ჩამოდი ფსონი ცნობილ ვარიანტზე ან გარისკე საიდუმლო ყუთით."
+      },
+      "lots": [
+        {
+          "id": "dark-ulrich",
+          "name": {
+            "en": "Ulrich Nielsen",
+            "ka": "ულრიხ ნილსენი"
+          },
+          "pitch": {
+            "en": "A desperate father who refuses to stop searching.",
+            "ka": "უიმედო მამა, რომელიც ძებნის შეწყვეტაზე უარს ამბობს."
+          },
+          "price": 70
+        },
+        {
+          "id": "dark-aleksander",
+          "name": {
+            "en": "Aleksander Tiedemann",
+            "ka": "ალექსანდერ ტიდემანი"
+          },
+          "pitch": {
+            "en": "A guarded past and fierce loyalty to his family.",
+            "ka": "საიდუმლო წარსული და ძლიერი ერთგულება ოჯახის მიმართ."
+          },
+          "price": 50
+        },
+        {
+          "id": "dark-peter",
+          "name": {
+            "en": "Peter Doppler",
+            "ka": "პეტერ დოპლერი"
+          },
+          "pitch": {
+            "en": "A father trying to hold his family together.",
+            "ka": "მამა, რომელიც ცდილობს ოჯახი შეინარჩუნოს."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "dark-michael",
+          "name": {
+            "en": "Michael Kahnwald",
+            "ka": "მიხაელ კანვალდი"
+          },
+          "pitch": {
+            "en": "A father whose childhood belongs to another time.",
+            "ka": "მამა, რომლის ბავშვობაც სხვა დროს ეკუთვნის."
+          },
+          "explanations": [
+            {
+              "en": "Michael Kahnwald was born Mikkel Nielsen.",
+              "ka": "მაიკლ კანვალდი დაიბადა, როგორც მიკელ ნილსენი."
+            },
+            {
+              "en": "Mikkel’s journey into the past lets him grow up as Michael and become Jonas’s father.",
+              "ka": "მიკელის მოგზაურობა წარსულში აძლევს მას საშუალებას გაიზარდოს როგორც მაიკლი და გახდეს იონასის მამა."
+            },
+            {
+              "en": "Jonas and Claudia visit Michael before his death; their knowledge of the loop shapes his decision.",
+              "ka": "იონასი და კლაუდია სტუმრობენ მაიკლს მის სიკვდილამდე; მარყუჟის შესახებ მათმა ცოდნამ ჩამოაყალიბა მაიკლის გადაწყვეტილება."
+            }
+          ]
+        },
+        {
+          "id": "dark-noah",
+          "name": {
+            "en": "Noah",
+            "ka": "ნოა"
+          },
+          "pitch": {
+            "en": "A traveller whose faith conceals a father’s search.",
+            "ka": "მოგზაური, რომლის რწმენაც მამის ძიებას მალავს."
+          },
+          "explanations": [
+            {
+              "en": "Noah was born Hanno Tauber.",
+              "ka": "ნოა დაიბადა, როგორც ჰანო ტაუბერი."
+            },
+            {
+              "en": "Time travel brings Noah into the life he shares with Elisabeth; their daughter is Charlotte.",
+              "ka": "დროში მოგზაურობა ნოეს იმ ცხოვრებაში მიიყვანს, რომელსაც ის ელიზაბეტთან იზიარებს; მათი ქალიშვილი შარლოტაა."
+            },
+            {
+              "en": "Noah follows Adam, who knows more about the loop and withholds the truth about Charlotte.",
+              "ka": "ნოე მიჰყვება ადამს, რომელმაც მეტი იცის მარყუჟის შესახებ და შარლოტას შესახებ სიმართლეს მალავს."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "The name you know me by is not the name I was born with.",
+          "ka": "სახელი, რომლითაც მიცნობთ, არ არის ის სახელი, რომლითაც დავიბადე."
+        },
+        {
+          "en": "Time travel is part of the reason my child exists.",
+          "ka": "დროში მოგზაურობა ერთ-ერთი მიზეზია, რის გამოც ჩემი შვილი არსებობს."
+        },
+        {
+          "en": "I followed guidance from someone who knew more about my future than I did.",
+          "ka": "მივყვებოდი მითითებებს ვიღაცისგან, ვინც ჩემს მომავალზე ჩემზე მეტი იცოდა."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "dark-mother",
+      "title": {
+        "en": "Who is your mother?",
+        "ka": "ვინ არის დედაშენი?"
+      },
+      "label": {
+        "en": "Mother",
+        "ka": "დედა"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Who is your mother? Bid for a known option or risk the mystery box.",
+        "ka": "ვინ არის დედაშენი? ჩამოდი ფსონი ცნობილ ვარიანტზე ან გარისკე საიდუმლო ყუთით."
+      },
+      "lots": [
+        {
+          "id": "dark-katharina",
+          "name": {
+            "en": "Katharina Nielsen",
+            "ka": "კატარინა ნილსენი"
+          },
+          "pitch": {
+            "en": "Determined to bring her family home.",
+            "ka": "მტკიცედ გადაწყვეტილი, რომ ოჯახი სახლში დააბრუნოს."
+          },
+          "price": 70
+        },
+        {
+          "id": "dark-claudia",
+          "name": {
+            "en": "Claudia Tiedemann",
+            "ka": "კლაუდია ტიდემანი"
+          },
+          "pitch": {
+            "en": "A lifetime spent understanding the knot.",
+            "ka": "მთელი ცხოვრება, კვანძის ამოხსნას დაეთმო."
+          },
+          "price": 50
+        },
+        {
+          "id": "dark-hannah",
+          "name": {
+            "en": "Hannah Kahnwald",
+            "ka": "ჰანა კანვალდი"
+          },
+          "pitch": {
+            "en": "Love, resentment, and choices that cross generations.",
+            "ka": "სიყვარული, წყენა და არჩევანი, რომელიც თაობებს კვეთს."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "dark-charlotte",
+          "name": {
+            "en": "Charlotte Doppler",
+            "ka": "შარლოტე დოპლერი"
+          },
+          "pitch": {
+            "en": "An investigator with an impossible family history.",
+            "ka": "გამომძიებელი წარმოუდგენელი ოჯახური ისტორიით."
+          },
+          "explanations": [
+            {
+              "en": "Charlotte leads Winden’s police investigation.",
+              "ka": "შარლოტა ხელმძღვანელობს პოლიციის გამოძიებას ვინდენში."
+            },
+            {
+              "en": "Charlotte is taken from her mother Elisabeth as a baby and brought to the past.",
+              "ka": "შარლოტა ჩვილობაში წაართვეს დედამის ელიზაბეტს და წარსულში გადაიყვანეს."
+            },
+            {
+              "en": "Adult Charlotte helps Elisabeth take baby Charlotte—herself—to the past, where Tannhaus raises her.",
+              "ka": "ზრდასრული შარლოტა ეხმარება ელიზაბეტს ჩვილი შარლოტას — ანუ საკუთარი თავის — წარსულში გადაყვანაში, სადაც მას ტანჰაუსი ზრდის."
+            }
+          ]
+        },
+        {
+          "id": "dark-elisabeth",
+          "name": {
+            "en": "Elisabeth Doppler",
+            "ka": "ელიზაბეტ დოპლერი"
+          },
+          "pitch": {
+            "en": "A survivor who becomes a leader in a ruined world.",
+            "ka": "გადარჩენილი, რომელიც დანგრეულ სამყაროში ლიდერი ხდება."
+          },
+          "explanations": [
+            {
+              "en": "Elisabeth leads the survivors in the post-apocalyptic future.",
+              "ka": "ელიზაბეტი ხელმძღვანელობს გადარჩენილებს პოსტ-აპოკალიფსურ მომავალში."
+            },
+            {
+              "en": "The apocalypse sends her mother Charlotte into the future, separating them.",
+              "ka": "აპოკალიფსი დედამისს, შარლოტას, მომავალში აგზავნის, რითაც მათ ერთმანეთს აშორებს."
+            },
+            {
+              "en": "Elisabeth and adult Charlotte take Elisabeth’s baby daughter Charlotte into the past.",
+              "ka": "ელიზაბეტი და ზრდასრული შარლოტა ელიზაბეტის ჩვილ ქალიშვილს, შარლოტას, წარსულში მიიყვანენ."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "People followed my orders.",
+          "ka": "ხალხი ჩემს ბრძანებებს ასრულებდა."
+        },
+        {
+          "en": "Time travel separated me from my mother.",
+          "ka": "დროში მოგზაურობამ დედას დამაშორა."
+        },
+        {
+          "en": "I helped take a baby into the past—and that baby was part of my own family.",
+          "ka": "მონაწილეობა მივიღე ბავშვის წარსულში გადაყვანაში — და ის ბავშვი ჩემი საკუთარი ოჯახის წევრი იყო."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "dark-rescuer",
+      "title": {
+        "en": "Who brings you back from the wrong year?",
+        "ka": "ვის მოჰყავხარ უკან არასწორი წლიდან?"
+      },
+      "label": {
+        "en": "Time-travel rescuer",
+        "ka": "დროში მოგზაური მაშველი"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Who brings you back from the wrong year? Bid for a known option or risk the mystery box.",
+        "ka": "ვის მოჰყავხარ უკან არასწორი წლიდან? ჩამოდი ფსონი ცნობილ ვარიანტზე ან გარისკე საიდუმლო ყუთით."
+      },
+      "lots": [
+        {
+          "id": "dark-claudia",
+          "name": {
+            "en": "Claudia Tiedemann",
+            "ka": "კლაუდია ტიდემანი"
+          },
+          "pitch": {
+            "en": "A lifetime spent understanding the knot.",
+            "ka": "მთელი ცხოვრება, კვანძის ამოხსნას დაეთმო."
+          },
+          "price": 70
+        },
+        {
+          "id": "dark-jonas",
+          "name": {
+            "en": "Jonas Kahnwald",
+            "ka": "იონას კანვალდი"
+          },
+          "pitch": {
+            "en": "A loyal friend with a future he cannot escape.",
+            "ka": "ერთგული მეგობარი, რომელიც თავის მომავალს ვერ გაექცევა."
+          },
+          "price": 50
+        },
+        {
+          "id": "dark-bartosz",
+          "name": {
+            "en": "Bartosz Tiedemann",
+            "ka": "ბარტოშ ტიდემანი"
+          },
+          "pitch": {
+            "en": "A friend caught between trust and manipulation.",
+            "ka": "ნდობასა და მანიპულაციას შორის გაჭედილი მეგობარი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "dark-noah",
+          "name": {
+            "en": "Noah",
+            "ka": "ნოა"
+          },
+          "pitch": {
+            "en": "A traveller whose faith conceals a father’s search.",
+            "ka": "მოგზაური, რომლის რწმენაც მამის ძიებას მალავს."
+          },
+          "explanations": [
+            {
+              "en": "Noah searches across time for his missing daughter Charlotte.",
+              "ka": "ნოა დროში ეძებს თავის დაკარგულ ქალიშვილ შარლოტას."
+            },
+            {
+              "en": "Noah kills Claudia to obtain the missing pages and later turns his gun on Adam.",
+              "ka": "ნოა კლავს კლაუდიას დაკარგული გვერდების მოსაპოვებლად და მოგვიანებით იარაღს ადამისკენ მიმართავს."
+            },
+            {
+              "en": "Noah meets Charlotte as an adult, but that reunion does not return his missing baby to him.",
+              "ka": "ნოა ხვდება ზრდასრულ შარლოტას, მაგრამ ეს შეხვედრა მას დაკარგულ შვილს ვერ დაუბრუნებს."
+            }
+          ]
+        },
+        {
+          "id": "dark-ulrich",
+          "name": {
+            "en": "Ulrich Nielsen",
+            "ka": "ულრიხ ნილსენი"
+          },
+          "pitch": {
+            "en": "A desperate father who refuses to stop searching.",
+            "ka": "უიმედო მამა, რომელიც ძებნის შეწყვეტაზე უარს ამბობს."
+          },
+          "explanations": [
+            {
+              "en": "Ulrich travels into the past while searching for Mikkel.",
+              "ka": "ულრიხი მიკელის ძებნისას წარსულში მოგზაურობს."
+            },
+            {
+              "en": "Ulrich attacks young Helge because he believes stopping him will save Mikkel.",
+              "ka": "ულრიხი თავს ესხმის ახალგაზრდა ჰელგეს, რადგან სჯერა, რომ მისი შეჩერება მიკელს გადაარჩენს."
+            },
+            {
+              "en": "Ulrich finds Mikkel in 1987, but their attempt to escape together is stopped.",
+              "ka": "ულრიხი პოულობს მიკელს 1987 წელს, მაგრამ მათი ერთად გაქცევის მცდელობა ჩაიშლება."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "A missing child gave me a reason to cross time.",
+          "ka": "დაკარგულმა ბავშვმა დროში გადასვლის მიზეზი მომცა."
+        },
+        {
+          "en": "I used violence because I believed it could help me reach that child.",
+          "ka": "ვიძალადე, რადგან მჯეროდა, რომ ეს იმ ბავშვამდე მიღწევაში დამეხმარებოდა."
+        },
+        {
+          "en": "Finding my child did not mean I could bring them home.",
+          "ka": "ჩემი შვილის პოვნა არ ნიშნავდა, რომ მის სახლში დაბრუნებას შევძლებდი."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    }
+  ],
+  "clueVersion": 1,
+  "continuityKa": "ადამის სამყარო · სამივე სეზონი"
+}

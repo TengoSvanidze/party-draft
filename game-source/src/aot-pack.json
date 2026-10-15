@@ -1,0 +1,916 @@
+{
+  "id": "attack-on-titan",
+  "continuity": "Full TV anime spoilers. Seven-round hypothetical team draft. Each shifter receives only the named Titan power; no automatic Founding Titan or Rumbling. Armin is the strategist. No duplicate characters. Ymir is the 104th cadet, not Ymir Fritz.",
+  "positions": [
+    {
+      "id": "aot-regiment",
+      "label": {
+        "en": "Regiment",
+        "ka": "დანაყოფი"
+      },
+      "title": {
+        "en": "Choose the force behind your team.",
+        "ka": "აირჩიე შენი გუნდის სამხედრო ძალა."
+      },
+      "prompt": {
+        "en": "Choose the force behind your team.",
+        "ka": "აირჩიე შენი გუნდის სამხედრო ძალა."
+      },
+      "effect": "positive",
+      "lots": [
+        {
+          "id": "aot-scouts",
+          "name": {
+            "en": "Scouts",
+            "ka": "მზვერავები"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Veterans who explore beyond the Walls.",
+            "ka": "ვეტერანები, რომლებიც კედლების მიღმა იკვლევენ სამყაროს."
+          },
+          "price": 70
+        },
+        {
+          "id": "aot-garrison",
+          "name": {
+            "en": "Garrison",
+            "ka": "გარნიზონი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Soldiers trained to defend the Walls.",
+            "ka": "კედლების დასაცავად გაწვრთნილი ჯარისკაცები."
+          },
+          "price": 50
+        },
+        {
+          "id": "aot-police",
+          "name": {
+            "en": "Military Police",
+            "ka": "სამხედრო პოლიცია"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Guards who keep order inside the Walls.",
+            "ka": "მცველები, რომლებიც კედლების შიგნით წესრიგს იცავენ."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "aot-yeagerists",
+          "name": {
+            "en": "Yeagerists",
+            "ka": "იეგერისტები"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "A determined force loyal to Eren.",
+            "ka": "ერენის ერთგული, მტკიცედ განწყობილი ძალა."
+          },
+          "explanations": [
+            {
+              "en": "The Yeagerists were Eldian soldiers who supported Eren.",
+              "ka": "იეგერისტები ერენის მხარდამჭერი ელდიელი ჯარისკაცები იყვნენ."
+            },
+            {
+              "en": "The Yeagerists fought Marley’s forces in Shiganshina.",
+              "ka": "იეგერისტები შიგანშინაში მარლის ძალებს ებრძოდნენ."
+            },
+            {
+              "en": "They helped Eren, the holder of the Founding Titan, carry out his plan.",
+              "ka": "ისინი დამფუძნებელი ტიტანის მფლობელ ერენს გეგმის შესრულებაში ეხმარებოდნენ."
+            }
+          ]
+        },
+        {
+          "id": "aot-warriors",
+          "name": {
+            "en": "Marley’s Warriors",
+            "ka": "მარლის მეომრები"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Marley’s trained Titan unit, with divided loyalties.",
+            "ka": "მარლის გაწვრთნილი ტიტანების რაზმი, რომელსაც ერთგულების საკითხი ყოფს."
+          },
+          "explanations": [
+            {
+              "en": "Marley’s Warriors were Eldians trained to inherit Titan powers.",
+              "ka": "მარლის მეომრები ტიტანების ძალის მისაღებად გაწვრთნილი ელდიელები იყვნენ."
+            },
+            {
+              "en": "Warriors including Reiner fought in Shiganshina.",
+              "ka": "მეომრები, მათ შორის რაინერი, შიგანშინაში იბრძოდნენ."
+            },
+            {
+              "en": "Marley sent its Warriors to capture the Founding Titan.",
+              "ka": "მარლიმ მეომრები დამფუძნებელი ტიტანის ხელში ჩასაგდებად გაგზავნა."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "Eldian soldiers fought in our ranks.",
+          "ka": "ჩვენს რიგებში ელდიელი ჯარისკაცები იბრძოდნენ."
+        },
+        {
+          "en": "We fought in Shiganshina.",
+          "ka": "შიგანშინაში ვიბრძოდით."
+        },
+        {
+          "en": "The Founding Titan was central to our mission.",
+          "ka": "დამფუძნებელი ტიტანი ჩვენი მისიის მთავარი ნაწილი იყო."
+        }
+      ],
+      "prices": [
+        30,
+        50,
+        80
+      ]
+    },
+    {
+      "id": "aot-captain",
+      "label": {
+        "en": "Captain",
+        "ka": "კაპიტანი"
+      },
+      "title": {
+        "en": "Choose who leads your team.",
+        "ka": "აირჩიე შენი გუნდის მეთაური."
+      },
+      "prompt": {
+        "en": "Choose who leads your team.",
+        "ka": "აირჩიე შენი გუნდის მეთაური."
+      },
+      "effect": "positive",
+      "lots": [
+        {
+          "id": "aot-pixis",
+          "name": {
+            "en": "Dot Pixis",
+            "ka": "დოტ პიქსისი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "A calm commander who takes bold risks.",
+            "ka": "მშვიდი მეთაური, რომელიც გაბედულად რისკავს."
+          },
+          "price": 70
+        },
+        {
+          "id": "aot-magath",
+          "name": {
+            "en": "Theo Magath",
+            "ka": "თეო მაგათი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "An experienced leader of Marley’s troops.",
+            "ka": "მარლის ჯარის გამოცდილი მეთაური."
+          },
+          "price": 50
+        },
+        {
+          "id": "aot-shadis",
+          "name": {
+            "en": "Keith Shadis",
+            "ka": "კით შადისი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "A strict instructor who knows his soldiers.",
+            "ka": "მკაცრი ინსტრუქტორი, რომელიც თავის ჯარისკაცებს იცნობს."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "aot-zachary",
+          "name": {
+            "en": "Dhalis Zachary",
+            "ka": "დალის ზაქარი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "A military leader with authority over every branch.",
+            "ka": "სამხედრო ხელმძღვანელი, რომელსაც ყველა დანაყოფზე აქვს ძალაუფლება."
+          },
+          "explanations": [
+            {
+              "en": "Zachary commanded the military branches inside the Walls.",
+              "ka": "ზაქარი კედლების შიგნით სამხედრო დანაყოფებს ხელმძღვანელობდა."
+            },
+            {
+              "en": "Zachary presided over Eren’s trial before Eren joined Levi’s squad.",
+              "ka": "ზაქარი ერენის სასამართლოს უძღვებოდა, სანამ ერენი ლევის რაზმს შეუერთდებოდა."
+            },
+            {
+              "en": "He decided who would take custody of Eren; the Military Police wanted Eren killed.",
+              "ka": "მან გადაწყვიტა, ვის ჩაბარდებოდა ერენი; სამხედრო პოლიციას ერენის მოკვლა სურდა."
+            }
+          ]
+        },
+        {
+          "id": "aot-kitz",
+          "name": {
+            "en": "Kitz Woermann",
+            "ka": "კიც ვოერმანი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "A commander whose fear can cloud his judgment.",
+            "ka": "მეთაური, რომელსაც შიში საღად განსჯაში უშლის ხელს."
+          },
+          "explanations": [
+            {
+              "en": "Kitz commanded Garrison soldiers in Trost.",
+              "ka": "კიცი ტროსტში გარნიზონის ჯარისკაცებს მეთაურობდა."
+            },
+            {
+              "en": "Kitz confronted Eren after his Titan power was discovered in Trost.",
+              "ka": "კიცი ერენს ტროსტში ტიტანის ძალის აღმოჩენის შემდეგ დაუპირისპირდა."
+            },
+            {
+              "en": "Kitz ordered a cannon fired at Eren and his friends.",
+              "ka": "კიცმა ერენისა და მისი მეგობრებისთვის ქვემეხიდან სროლა ბრძანა."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "I gave orders to soldiers inside the Walls.",
+          "ka": "კედლების შიგნით ჯარისკაცებს ბრძანებებს ვაძლევდი."
+        },
+        {
+          "en": "I faced Eren before he joined the Scouts.",
+          "ka": "ერენს მანამდე შევხვდი, სანამ მზვერავებს შეუერთდებოდა."
+        },
+        {
+          "en": "My decision could have ended his life.",
+          "ka": "ჩემს გადაწყვეტილებას მისი სიცოცხლის დასრულება შეეძლო."
+        }
+      ],
+      "prices": [
+        30,
+        50,
+        80
+      ]
+    },
+    {
+      "id": "aot-strategy",
+      "label": {
+        "en": "Strategy teammate",
+        "ka": "სტრატეგი"
+      },
+      "title": {
+        "en": "Choose who makes your battle plan.",
+        "ka": "აირჩიე, ვინ დაგეგმავს ბრძოლას."
+      },
+      "prompt": {
+        "en": "Choose who makes your battle plan.",
+        "ka": "აირჩიე, ვინ დაგეგმავს ბრძოლას."
+      },
+      "effect": "positive",
+      "lots": [
+        {
+          "id": "aot-erwin",
+          "name": {
+            "en": "Erwin Smith",
+            "ka": "ერვინ სმითი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "A planner willing to risk everything.",
+            "ka": "სტრატეგი, რომელიც ყველაფერს რისკავს."
+          },
+          "price": 70
+        },
+        {
+          "id": "aot-hange",
+          "name": {
+            "en": "Hange Zoë",
+            "ka": "ჰანჯი ზოე"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "A curious thinker who finds new solutions.",
+            "ka": "ცნობისმოყვარე მოაზროვნე, რომელიც ახალ გზებს პოულობს."
+          },
+          "price": 50
+        },
+        {
+          "id": "aot-jean",
+          "name": {
+            "en": "Jean Kirstein",
+            "ka": "ჟან კირშტაინი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "A practical leader who thinks on his feet.",
+            "ka": "პრაქტიკული ლიდერი, რომელიც სწრაფად იღებს გადაწყვეტილებებს."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "aot-armin",
+          "name": {
+            "en": "Armin Arlert",
+            "ka": "არმინ არლერტი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "A sharp mind for plans and negotiations.",
+            "ka": "გამჭრიახი გონება გეგმებისა და მოლაპარაკებებისთვის."
+          },
+          "explanations": [
+            {
+              "en": "Armin and Eren trained in the 104th Training Corps.",
+              "ka": "არმინი და ერენი 104-ე საწვრთნელ კორპუსში ვარჯიშობდნენ."
+            },
+            {
+              "en": "Armin destroyed Marley’s fleet during the Scouts’ attack on Liberio.",
+              "ka": "არმინმა ლიბერიოზე მზვერავების თავდასხმისას მარლის ფლოტი გაანადგურა."
+            },
+            {
+              "en": "Armin tried to secure the flying boat and was shot by Samuel at the port.",
+              "ka": "არმინი ნავსადგურში ჰიდროპლანის ხელში ჩაგდებას ცდილობდა, როცა სამუელმა ესროლა."
+            }
+          ]
+        },
+        {
+          "id": "aot-connie",
+          "name": {
+            "en": "Connie Springer",
+            "ka": "კონი სპრინგერი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "A loyal fighter who needs a clear plan.",
+            "ka": "ერთგული მებრძოლი, რომელსაც ნათელი გეგმა სჭირდება."
+          },
+          "explanations": [
+            {
+              "en": "Connie also trained with Eren in the 104th Training Corps.",
+              "ka": "კონიც ერენთან ერთად 104-ე საწვრთნელ კორპუსში ვარჯიშობდა."
+            },
+            {
+              "en": "Connie joined the Scouts’ raid on Liberio and returned on the airship.",
+              "ka": "კონი ლიბერიოზე მზვერავების იერიშში მონაწილეობდა და დირიჟაბლით დაბრუნდა."
+            },
+            {
+              "en": "Connie killed his former comrades Daz and Samuel to protect the flying boat.",
+              "ka": "კონიმ ჰიდროპლანის დასაცავად ყოფილი თანამებრძოლები, დაზი და სამუელი, მოკლა."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "I trained alongside Eren.",
+          "ka": "ერენთან ერთად ვვარჯიშობდი."
+        },
+        {
+          "en": "I fought with the Scouts in Liberio.",
+          "ka": "მზვერავებთან ერთად ლიბერიოში ვიბრძოდი."
+        },
+        {
+          "en": "At the port, I faced soldiers who used to be on my side.",
+          "ka": "ნავსადგურში ყოფილ თანამებრძოლებს დავუპირისპირდი."
+        }
+      ],
+      "prices": [
+        30,
+        50,
+        80
+      ]
+    },
+    {
+      "id": "aot-attack-teammate",
+      "label": {
+        "en": "Attack teammate",
+        "ka": "შემტევი თანაგუნდელი"
+      },
+      "title": {
+        "en": "Choose your human attacker.",
+        "ka": "აირჩიე შენი შემტევი მებრძოლი."
+      },
+      "prompt": {
+        "en": "Choose your human attacker.",
+        "ka": "აირჩიე შენი შემტევი მებრძოლი."
+      },
+      "effect": "positive",
+      "lots": [
+        {
+          "id": "aot-levi",
+          "name": {
+            "en": "Levi Ackerman",
+            "ka": "ლევი აკერმანი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "A deadly fighter with unmatched precision.",
+            "ka": "სასიკვდილოდ ზუსტი მებრძოლი."
+          },
+          "price": 70
+        },
+        {
+          "id": "aot-floch",
+          "name": {
+            "en": "Floch Forster",
+            "ka": "ფლოხ ფორსტერი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "A fierce fighter who commits to the attack.",
+            "ka": "მებრძოლი, რომელიც თავდასხმაში ბოლომდე იხარჯება."
+          },
+          "price": 50
+        },
+        {
+          "id": "aot-sasha",
+          "name": {
+            "en": "Sasha Braus",
+            "ka": "საშა ბრაუსი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "A skilled shot with excellent instincts.",
+            "ka": "ზუსტი მსროლელი შესანიშნავი ალღოთი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "aot-kenny",
+          "name": {
+            "en": "Kenny Ackerman",
+            "ka": "კენი აკერმანი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "A ruthless expert in fighting other humans.",
+            "ka": "ადამიანებთან ბრძოლის დაუნდობელი ოსტატი."
+          },
+          "explanations": [
+            {
+              "en": "Kenny led an anti-personnel squad within the Interior Military Police.",
+              "ka": "კენი შინაგან სამხედრო პოლიციაში ადამიანებთან საბრძოლველ რაზმს ხელმძღვანელობდა."
+            },
+            {
+              "en": "Kenny’s squad fought Levi and his allies during the uprising.",
+              "ka": "აჯანყების დროს კენის რაზმი ლევის და მის მოკავშირეებს ებრძოდა."
+            },
+            {
+              "en": "Kenny died after the Reiss cavern collapsed, before the return to Shiganshina.",
+              "ka": "კენი რაისების გამოქვაბულის ჩამონგრევის შემდეგ, შიგანშინაში დაბრუნებამდე გარდაიცვალა."
+            }
+          ]
+        },
+        {
+          "id": "aot-marlo",
+          "name": {
+            "en": "Marlo Freudenberg",
+            "ka": "მარლო ფროიდენბერგი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "A brave recruit with limited battle experience.",
+            "ka": "მამაცი ახალწვეული მცირე საბრძოლო გამოცდილებით."
+          },
+          "explanations": [
+            {
+              "en": "Marlo served in the Military Police before joining the Scouts.",
+              "ka": "მარლო მზვერავებთან შეერთებამდე სამხედრო პოლიციაში მსახურობდა."
+            },
+            {
+              "en": "Marlo helped Levi’s squad during the uprising against the royal government.",
+              "ka": "მარლო სამეფო ხელისუფლების წინააღმდეგ აჯანყებისას ლევის რაზმს ეხმარებოდა."
+            },
+            {
+              "en": "Marlo died in the charge against the Beast Titan before the basement was reached.",
+              "ka": "მარლო მხეცი ტიტანის წინააღმდეგ იერიშისას დაიღუპა, სარდაფამდე მიღწევამდე."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "I once wore a Military Police uniform.",
+          "ka": "ერთ დროს სამხედრო პოლიციის ფორმა მეცვა."
+        },
+        {
+          "en": "I crossed paths with Levi’s squad during the fight against the royal government.",
+          "ka": "სამეფო ხელისუფლების წინააღმდეგ ბრძოლისას ლევის რაზმს შევხვდი."
+        },
+        {
+          "en": "I died before the Scouts reached the basement.",
+          "ka": "მოვკვდი, სანამ მზვერავები სარდაფამდე მიაღწევდნენ."
+        }
+      ],
+      "prices": [
+        30,
+        50,
+        80
+      ]
+    },
+    {
+      "id": "aot-defence-teammate",
+      "label": {
+        "en": "Defence teammate",
+        "ka": "დამცველი თანაგუნდელი"
+      },
+      "title": {
+        "en": "Choose who protects your team.",
+        "ka": "აირჩიე, ვინ დაიცავს შენს გუნდს."
+      },
+      "prompt": {
+        "en": "Choose who protects your team.",
+        "ka": "აირჩიე, ვინ დაიცავს შენს გუნდს."
+      },
+      "effect": "positive",
+      "lots": [
+        {
+          "id": "aot-mikasa",
+          "name": {
+            "en": "Mikasa Ackerman",
+            "ka": "მიკასა აკერმანი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "A powerful fighter who protects her allies.",
+            "ka": "ძლიერი მებრძოლი, რომელიც მოკავშირეებს იცავს."
+          },
+          "price": 70
+        },
+        {
+          "id": "aot-miche",
+          "name": {
+            "en": "Miche Zacharius",
+            "ka": "მიკე ზაქარიასი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "A veteran with sharp senses and elite skill.",
+            "ka": "მახვილი გრძნობებისა და დიდი ოსტატობის მქონე ვეტერანი."
+          },
+          "price": 50
+        },
+        {
+          "id": "aot-nanaba",
+          "name": {
+            "en": "Nanaba",
+            "ka": "ნანაბა"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "A dependable veteran under pressure.",
+            "ka": "სანდო ვეტერანი რთულ ვითარებაში."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "aot-petra",
+          "name": {
+            "en": "Petra Ral",
+            "ka": "პეტრა რალი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "A skilled Scout who works well with her squad.",
+            "ka": "დახელოვნებული მზვერავი, რომელიც რაზმთან შეთანხმებულად მოქმედებს."
+          },
+          "explanations": [
+            {
+              "en": "Petra was a Scout in Levi’s special operations squad.",
+              "ka": "პეტრა ლევის სპეციალური ოპერაციების რაზმის მზვერავი იყო."
+            },
+            {
+              "en": "Petra fought Annie’s Female Titan, whose human identity was still hidden.",
+              "ka": "პეტრა ენის მდედრ ტიტანს ებრძოდა, რომლის ადამიანური ვინაობა ჯერ საიდუმლო იყო."
+            },
+            {
+              "en": "Annie, a graduate of the 104th, killed Petra in the forest.",
+              "ka": "104-ე კორპუსის კურსდამთავრებულმა ენიმ პეტრა ტყეში მოკლა."
+            }
+          ]
+        },
+        {
+          "id": "aot-daz",
+          "name": {
+            "en": "Daz",
+            "ka": "დაზი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "A nervous soldier who struggles under pressure.",
+            "ka": "შეშინებული ჯარისკაცი, რომელსაც დაძაბულ ვითარებაში უჭირს მოქმედება."
+          },
+          "explanations": [
+            {
+              "en": "Daz wore the Scouts’ uniform at the port as a Yeagerist.",
+              "ka": "იეგერისტი დაზი ნავსადგურში მზვერავების ფორმას ატარებდა."
+            },
+            {
+              "en": "Daz faced his former comrades Connie and Armin at the port.",
+              "ka": "დაზი ნავსადგურში ყოფილ თანამებრძოლებს, კონის და არმინს, დაუპირისპირდა."
+            },
+            {
+              "en": "Connie, who trained with Daz in the 104th, shot him.",
+              "ka": "კონიმ, რომელიც დაზესთან ერთად 104-ე კორპუსში ვარჯიშობდა, მას ესროლა."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "I wore the Wings of Freedom.",
+          "ka": "თავისუფლების ფრთების ემბლემას ვატარებდი."
+        },
+        {
+          "en": "I was caught in a fight between former allies.",
+          "ka": "ყოფილ მოკავშირეებს შორის ბრძოლაში აღმოვჩნდი."
+        },
+        {
+          "en": "Someone from the 104th Training Corps killed me.",
+          "ka": "104-ე საწვრთნელი კორპუსის წევრმა მომკლა."
+        }
+      ],
+      "prices": [
+        30,
+        50,
+        80
+      ]
+    },
+    {
+      "id": "aot-attack-shifter",
+      "label": {
+        "en": "Attack Titan shifter",
+        "ka": "შემტევი ტიტანის მფლობელი"
+      },
+      "title": {
+        "en": "Choose a Titan shifter for attack.",
+        "ka": "აირჩიე ტიტანის მფლობელი თავდასხმისთვის."
+      },
+      "prompt": {
+        "en": "Choose a Titan shifter for attack.",
+        "ka": "აირჩიე ტიტანის მფლობელი თავდასხმისთვის."
+      },
+      "effect": "positive",
+      "lots": [
+        {
+          "id": "aot-eren",
+          "name": {
+            "en": "Eren — Attack Titan",
+            "ka": "ერენი — შემტევი ტიტანი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "A relentless close-range attacker.",
+            "ka": "შეუპოვარი მებრძოლი ახლო მანძილზე."
+          },
+          "price": 70
+        },
+        {
+          "id": "aot-zeke",
+          "name": {
+            "en": "Zeke — Beast Titan",
+            "ka": "ზიკი — მხეცი ტიტანი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Devastating throws from a distance.",
+            "ka": "გამანადგურებელი ტყორცნები შორი მანძილიდან."
+          },
+          "price": 50
+        },
+        {
+          "id": "aot-pieck",
+          "name": {
+            "en": "Pieck — Cart Titan",
+            "ka": "პიკი — მზიდი ტიტანი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Stamina and mobility for a long fight.",
+            "ka": "გამძლეობა და მობილურობა ხანგრძლივი ბრძოლისთვის."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "aot-annie",
+          "name": {
+            "en": "Annie — Female Titan",
+            "ka": "ენი — მდედრი ტიტანი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Precise strikes backed by hardening.",
+            "ka": "ზუსტი დარტყმები გამყარების ძალით."
+          },
+          "explanations": [
+            {
+              "en": "Annie trained in Marley’s Warrior program as a child.",
+              "ka": "ენი ბავშვობაში მარლის მეომრების პროგრამაში ვარჯიშობდა."
+            },
+            {
+              "en": "Annie’s Female Titan fought Eren in the forest and in Stohess.",
+              "ka": "ენის მდედრი ტიტანი ერენს ტყეში და სტოჰესში ებრძოდა."
+            },
+            {
+              "en": "Annie fought the Scouts while trying to escape from Stohess.",
+              "ka": "ენი სტოჰესიდან გაქცევის მცდელობისას მზვერავებს ებრძოდა."
+            }
+          ]
+        },
+        {
+          "id": "aot-porco",
+          "name": {
+            "en": "Porco — Jaw Titan",
+            "ka": "პორკო — ყბის ტიტანი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Fast and fierce, but exposed in a long fight.",
+            "ka": "სწრაფი და მძვინვარე, თუმცა ხანგრძლივ ბრძოლაში დაუცველი."
+          },
+          "explanations": [
+            {
+              "en": "Porco trained alongside the other Warrior candidates in Marley.",
+              "ka": "პორკო მარლიში მეომრობის სხვა კანდიდატებთან ერთად ვარჯიშობდა."
+            },
+            {
+              "en": "Porco’s Jaw Titan fought Eren in Liberio and Shiganshina.",
+              "ka": "პორკოს ყბის ტიტანი ერენს ლიბერიოში და შიგანშინაში ებრძოდა."
+            },
+            {
+              "en": "Porco fought the Scouts during their raid on Liberio.",
+              "ka": "პორკო ლიბერიოზე მზვერავების იერიშის დროს მათ ებრძოდა."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "Marley trained me to become a Warrior.",
+          "ka": "მარლიმ მეომრად გამწვრთნა."
+        },
+        {
+          "en": "My Titan fought Eren’s Titan.",
+          "ka": "ჩემი ტიტანი ერენის ტიტანს ებრძოდა."
+        },
+        {
+          "en": "My Titan fought the Scouts in a city.",
+          "ka": "ჩემი ტიტანი ქალაქში მზვერავებს ებრძოდა."
+        }
+      ],
+      "prices": [
+        30,
+        50,
+        80
+      ]
+    },
+    {
+      "id": "aot-defence-shifter",
+      "label": {
+        "en": "Defence Titan shifter",
+        "ka": "დამცველი ტიტანის მფლობელი"
+      },
+      "title": {
+        "en": "Choose a Titan shifter for defence.",
+        "ka": "აირჩიე ტიტანის მფლობელი თავდაცვისთვის."
+      },
+      "prompt": {
+        "en": "Choose a Titan shifter for defence.",
+        "ka": "აირჩიე ტიტანის მფლობელი თავდაცვისთვის."
+      },
+      "effect": "positive",
+      "lots": [
+        {
+          "id": "aot-reiner",
+          "name": {
+            "en": "Reiner — Armored Titan",
+            "ka": "რაინერი — ჯავშნიანი ტიტანი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Heavy armor to hold the line.",
+            "ka": "მძიმე ჯავშანი პოზიციის შესანარჩუნებლად."
+          },
+          "price": 70
+        },
+        {
+          "id": "aot-lara",
+          "name": {
+            "en": "Lara Tybur — War Hammer Titan",
+            "ka": "ლარა ტაიბერი — საბრძოლო უროს ტიტანი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Create hardened weapons and barriers.",
+            "ka": "ქმნის გამყარებულ იარაღებსა და ბარიერებს."
+          },
+          "price": 50
+        },
+        {
+          "id": "aot-grisha",
+          "name": {
+            "en": "Grisha — Attack Titan",
+            "ka": "გრიშა — შემტევი ტიტანი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Raw Titan strength to guard your team.",
+            "ka": "ტიტანის ფიზიკური ძალა გუნდის დასაცავად."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "aot-bertholdt",
+          "name": {
+            "en": "Bertholdt — Colossal Titan",
+            "ka": "ბერტოლტი — კოლოსალური ტიტანი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Immense size and steam to keep enemies back.",
+            "ka": "უზარმაზარი ზომა და ორთქლი მტრის შესაკავებლად."
+          },
+          "explanations": [
+            {
+              "en": "Bertholdt hid that he was the Colossal Titan while training with Eren.",
+              "ka": "ბერტოლტი ერენთან ვარჯიშისას მალავდა, რომ კოლოსალური ტიტანი იყო."
+            },
+            {
+              "en": "Bertholdt and Reiner revealed their identities and fled with Eren.",
+              "ka": "ბერტოლტმა და რაინერმა ვინაობა გაამხილეს და ერენთან ერთად გაიქცნენ."
+            },
+            {
+              "en": "Armin ate Bertholdt after receiving the Titan serum and inherited the Colossal Titan.",
+              "ka": "ტიტანის შრატის მიღების შემდეგ არმინმა ბერტოლტი შეჭამა და კოლოსალური ტიტანის ძალა მიიღო."
+            }
+          ]
+        },
+        {
+          "id": "aot-ymir",
+          "name": {
+            "en": "Ymir — Jaw Titan",
+            "ka": "იმირი — ყბის ტიტანი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Agile and quick, but lightly protected.",
+            "ka": "მოქნილი და სწრაფი, თუმცა სუსტად დაცული."
+          },
+          "explanations": [
+            {
+              "en": "Ymir hid her ability to become a Titan while serving as a cadet.",
+              "ka": "იმირი კადეტობის დროს ტიტანად გადაქცევის უნარს მალავდა."
+            },
+            {
+              "en": "Ymir chose to leave with Reiner and Bertholdt after the rescue battle.",
+              "ka": "იმირმა სამაშველო ბრძოლის შემდეგ რაინერთან და ბერტოლტთან წასვლა გადაწყვიტა."
+            },
+            {
+              "en": "Porco ate Ymir in Marley and inherited the Jaw Titan.",
+              "ka": "პორკომ მარლიში იმირი შეჭამა და ყბის ტიტანის ძალა მიიღო."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "I joined the 104th Training Corps with a secret.",
+          "ka": "104-ე საწვრთნელ კორპუსს საიდუმლოთი შევუერთდი."
+        },
+        {
+          "en": "I left the Scouts with Reiner.",
+          "ka": "მზვერავები რაინერთან ერთად დავტოვე."
+        },
+        {
+          "en": "Another Eldian ate me and inherited my Titan.",
+          "ka": "სხვა ელდიელმა შემჭამა და ჩემი ტიტანის ძალა მიიღო."
+        }
+      ],
+      "prices": [
+        30,
+        50,
+        80
+      ]
+    }
+  ]
+}

@@ -44,10 +44,27 @@ async function openDarkExperience(){
 }
 window.addEventListener('pagehide',()=>{closeDarkExperience();clearDarkWaiting();});
 window.addEventListener('pageshow',event=>{if(event.persisted)updateDarkWaiting();});
+
+let aotExperience=null,aotLoadVersion=0;
+function closeAotExperience(focus=false){
+ aotLoadVersion++;aotExperience?.dispose();aotExperience=null;document.querySelector('#aot-hero')?.remove();
+ if(focus){const target=document.querySelector('#name')||document.querySelector('#explore-aot-lobby')||document.querySelector('#explore-aot');target?.focus({preventScroll:true});target?.scrollIntoView({block:'center',behavior:'instant'});}
+}
+async function openAotExperience(){
+ if(currentTheme().id!=='attack-on-titan'||(session&&state?.phase!=='lobby')||params.has('table'))return;
+ if(aotExperience)return;closeDarkExperience();const version=++aotLoadVersion;
+ document.querySelector('#aot-hero')?.remove();const root=document.createElement('section');root.id='aot-hero';root.className='aot-portal';
+ root.innerHTML='<p class="aot-pending">'+(language==='ka'?'ფორპოსტის მომზადება…':'Preparing the outpost…')+'</p>';document.body.append(root);
+ try{const {mountAotEntrance}=await import('./aot-entrance.js?v=aot-perf-20261014');if(version!==aotLoadVersion||!root.isConnected)return;
+  aotExperience=mountAotEntrance(root,{language,onExit:()=>closeAotExperience(true),onEnterGame:()=>closeAotExperience(true)});
+ }catch{if(version!==aotLoadVersion)return;closeAotExperience(true);document.body.style.overflow='';app.inert=false;notify(language==='ka'?'ფორპოსტი ვერ ჩაიტვირთა. ოთახში შესვლა მაინც შეგიძლია.':'The outpost could not load. You can still enter your room.');}
+}
+window.addEventListener('pagehide',()=>closeAotExperience());
+
 let pendingAction=null;
 let practiceReady=null,practiceTimer=null;
 const pendingBoxes=new Map();let savingBoxes=false;
-const localActions=new Set(['lineups','close-lineups','copy','home','save-card','explain-clues','close-explanations','dark-experience']);
+const localActions=new Set(['lineups','close-lineups','copy','home','save-card','explain-clues','close-explanations','dark-experience','aot-experience']);
 function showPending(){
   if(!pendingAction)return;
   for(const b of document.querySelectorAll('[data-action]')){
@@ -104,9 +121,9 @@ async function connect(){
   await new Promise(resolve=>setTimeout(resolve,connected?700:1500));
  }
 }
-function leave(){controller?.abort();controller=null;session=null;state=null;connected=false;lineupOpen=false;if(!localPractice){for(const url of imageCache.values())URL.revokeObjectURL(url);imageCache.clear();}sessionStorage.removeItem(storageKey);history.replaceState(null,'',location.pathname);render();}
+function leave(){closeAotExperience();controller?.abort();controller=null;session=null;state=null;connected=false;lineupOpen=false;if(!localPractice){for(const url of imageCache.values())URL.revokeObjectURL(url);imageCache.clear();}sessionStorage.removeItem(storageKey);history.replaceState(null,'',location.pathname);render();}
 function renderHome(){
-  closeDarkExperience();
+  closeDarkExperience();closeAotExperience();
   const draft={name:document.querySelector('#entry #name')?.value||'',code:document.querySelector('#entry #code')?.value||params.get('room')||''};
   document.body.dataset.theme=selectedTheme;
   const saved=storedJSON(storageKey),table=storedJSON('party-draft-table');
@@ -115,8 +132,9 @@ function renderHome(){
   const carousel=document.querySelector('.theme-carousel'),selectedCard=carousel?.querySelector('input:checked')?.closest('label');if(selectedCard)carousel.scrollLeft=selectedCard.getBoundingClientRect().left-carousel.getBoundingClientRect().left-2;
   document.querySelector('#name').value=draft.name;if(document.querySelector('#code'))document.querySelector('#code').value=draft.code;
   const explore=document.createElement('button');explore.id='explore-dark';explore.type='button';explore.className='dark-explore';explore.textContent=language==='ka'?'შეაბიჯე ვინდენში · ინტერაქტიული 3D':'Step into Winden · interactive 3D';explore.hidden=selectedTheme!=='dark';explore.onclick=openDarkExperience;document.querySelector('.intro').after(explore);
+  const aotExplore=document.createElement('button');aotExplore.id='explore-aot';aotExplore.type='button';aotExplore.className='aot-explore';aotExplore.textContent=language==='ka'?'ეწვიე ფორპოსტს':'Visit the outpost';aotExplore.hidden=selectedTheme!=='attack-on-titan';aotExplore.onclick=openAotExperience;explore.after(aotExplore);
   updateDarkWaiting();
-  bindLanguage();document.querySelectorAll('[name=theme]').forEach(input=>input.onchange=()=>{selectedTheme=input.value;document.body.dataset.theme=selectedTheme;document.querySelector('#theme-notice').textContent=themeText(currentTheme(),'notice');document.querySelector('.intro p').textContent=t('intro');document.querySelector('.foot').textContent=t('scope');explore.hidden=selectedTheme!=='dark';updateDarkWaiting();if(selectedTheme==='dark')openDarkExperience();else closeDarkExperience();});document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{homeMode=b.dataset.mode;renderHome();});
+  bindLanguage();document.querySelectorAll('[name=theme]').forEach(input=>input.onchange=()=>{selectedTheme=input.value;document.body.dataset.theme=selectedTheme;document.querySelector('#theme-notice').textContent=themeText(currentTheme(),'notice');document.querySelector('.intro p').textContent=t('intro');document.querySelector('.foot').textContent=t('scope');explore.hidden=selectedTheme!=='dark';updateDarkWaiting();aotExplore.hidden=selectedTheme!=='attack-on-titan';closeAotExperience();if(selectedTheme==='dark')openDarkExperience();else{closeDarkExperience();if(selectedTheme==='attack-on-titan')openAotExperience();}});document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{homeMode=b.dataset.mode;renderHome();});
   document.querySelector('#entry').onsubmit=async e=>{e.preventDefault();const submit=e.target.querySelector('button[type=submit]');if(submit.disabled)return;const originalLabel=submit.textContent;submit.disabled=true;submit.textContent=t('sending');submit.classList.add('action-pending');submit.setAttribute('aria-busy','true');
     try{const entered=new FormData(e.target),code=String(entered.get('code')||'').toUpperCase(),url=homeMode==='create'?'/api/rooms':`/api/rooms/${code}/join`;saveSeat(await request(url,{name:entered.get('name'),...(homeMode==='create'?{themeId:selectedTheme}:{})},false));history.replaceState(null,'',homeURL);history.pushState({partyDraft:true},'',`?room=${session.code}${panel!=='main'?'&panel='+encodeURIComponent(panel):''}`);render();connect();}catch(error){notify(t('errors.'+error.message));submit.disabled=false;submit.textContent=originalLabel;submit.classList.remove('action-pending');submit.removeAttribute('aria-busy');}};
   document.querySelector('#practice').onclick=makePractice;
@@ -230,13 +248,13 @@ function render(){
   document.body.dataset.theme=currentTheme().id;
   if(params.has('table')){clearDarkWaiting();renderTable();return;}if(!session){renderHome();return;}
   if(!state){app.innerHTML=`<main class="shell">${header()}<p class="note">${txt('connecting')}</p>${button(txt('home'),'home')}</main>`;updateDarkWaiting();bind();return;}
-  if(state.phase!=='lobby')clearDarkWaiting();
+  if(state.phase!=='lobby'){clearDarkWaiting();closeAotExperience();}
   if(state.phase!=='complete'||!state.answer)explanationsOpen=false;
   if(explanationsOpen){app.innerHTML=explanationPage();bind();loadImages();return;}
   const oldFocus=document.activeElement?.id;
   const nextPhaseKey=state.round+':'+state.positionIndex+':'+state.phase+':'+state.lotIndex,transition=phaseKey!==nextPhaseKey;phaseKey=nextPhaseKey;
   let content='';
-  if(state.phase==='lobby')content=lobby()+(state.theme.id==='dark'?`<button id="explore-dark-lobby" type="button" data-action="dark-experience" class="dark-explore">${language==='ka'?'მოლოდინისას შეაბიჯე ვინდენში':'Explore Winden while you wait'}</button>`:'');
+  if(state.phase==='lobby')content=lobby()+(state.theme.id==='dark'?`<button id="explore-dark-lobby" type="button" data-action="dark-experience" class="dark-explore">${language==='ka'?'მოლოდინისას შეაბიჯე ვინდენში':'Explore Winden while you wait'}</button>`:state.theme.id==='attack-on-titan'?`<button id="explore-aot-lobby" type="button" data-action="aot-experience" class="aot-explore">${language==='ka'?'მოლოდინისას გამოიკვლიე ფორპოსტი':'Explore the outpost while you wait'}</button>`:'');
   else if(state.phase==='ready')content=`<h1>${esc(local(state.position))}</h1>${hero(state.card)}${state.role==='narrator'?`<p>${esc(local(state.prompt))}</p>`:''}<p class="note">${txt('starting')} · ${money(state.card.price)}</p>${playerStrip()}${assignmentNotice()}${state.role==='narrator'?button(txt('open'),'open',{primary:true,disabled:!connected}):`<p class="note">${txt('waitingOpen')}</p>`}`;
   else if(state.phase==='auction')content=auction();
   else if(state.phase==='sold')content=`<section class="sale-confirmation" role="status"><span class="sale-check" aria-hidden="true">✓</span><div><h1>${txt(state.lastSale.automatic?'assigned':'sold',{name:name(state.lastSale.playerId)})}</h1><strong>${money(state.lastSale.price)}</strong><p>${esc(local(state.lastSale.card.name))}</p></div></section>${hero(state.lastSale.card)}<p class="note">${txt('paid',{amount:money(state.lastSale.price)})}${state.lastSale.automatic?' · '+txt('assignedReason'):''}</p>${playerStrip()}${state.role==='narrator'?button(txt(state.lotIndex===1?'nextChoice':'next'),'next',{primary:true,disabled:!connected}):`<p class="note">${txt('waitNext')}</p>`}`;
@@ -265,6 +283,7 @@ async function saveBoxSelections(){
  finally{savingBoxes=false;}
 }
 async function command(type){
+  if(type==='aot-experience'){openAotExperience();return;}
   if(type==='dark-experience'){openDarkExperience();return;}
   if(type==='explain-clues'){if(state?.phase==='complete'&&state.answer){explanationsOpen=true;render();document.querySelector('#explanations-heading')?.focus();window.scrollTo(0,0);}return;}
   if(type==='close-explanations'){explanationsOpen=false;render();document.querySelector('#explain-clues')?.focus();return;}
@@ -332,3 +351,5 @@ function updateClock(){const nodes=[...document.querySelectorAll('#timer,#lineup
 setInterval(updateClock,100);
 if(params.has('table'))renderTable();else{if(session&&params.get('room')&&session.code!==params.get('room')){session=null;state=null;}render();if(session)connect();}
 
+
+if(!session&&!params.has('table')&&selectedTheme==='attack-on-titan')openAotExperience();

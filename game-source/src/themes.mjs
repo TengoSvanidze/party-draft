@@ -1,0 +1,47 @@
+import missingKa from './missing-ka.json';
+import mcu from './pack.json';
+import naruto from './naruto-pack.json';
+import got from './got-pack.json';
+import dark from './dark-pack.json';
+import darkKa from './dark-ka.json';
+import aot from './aot-pack.json';
+import aotTheme from './aot-theme.json';
+
+export const packs={mcu,dark,'game-of-thrones':got,naruto,'attack-on-titan':aot};
+export const catalogue=[
+ {id:'mcu',name:'MCU',description:'Build your dream team.',scope:'Six roles · MCU films',badge:'In their prime',ui:{}},
+ {id:'dark',ka:darkKa,name:'DARK',description:'Build your life in Winden.',scope:'Six roles · DARK · All three seasons',badge:'Winden · DARK',notice:'Full spoilers for all three seasons. Characters are from Adam’s world—the world introduced in Season 1. Clues cover their whole lives.',ui:{
+  intro:'Six choices. Three friends. One narrator. Bid for your life in Winden—or risk what waits in the mystery box.',
+  prime:'Winden · DARK',
+  scope:'Six roles · DARK · All three seasons',
+  setupTitle:'Choose what is inside the boxes.',
+  setupText:'Choose one hidden option for each role. Players cannot see the options or your selections. Lock all six before starting; they stay fixed throughout this match.',
+  autoAssignNotice:'If nobody bids, {name} receives this lot for {amount}.',
+  noAffordableRecipient:'No eligible player can afford this lot. If nobody bids, it remains unassigned.',
+  unsold:'Nobody can afford this lot.',
+  unsoldText:'No eligible player can pay the starting price. The lot stays unassigned and no money is spent.',
+  draftFinished:'All six choices are complete. Compare your lives in Winden, defend your choices, and vote.',
+  voteTitle:'Who has the best life in Winden?',
+  voteText:'Compare the lineups and make your case. Each player votes for someone else. Votes stay hidden until everyone has voted.',
+  cardFooter:'Six choices. Three friends. DARK · PARTY DRAFT'
+ }}
+,{"id":"game-of-thrones","name":"Game of Thrones","startingBudget":2500,"description":"Build your life in Westeros.","scope":"13 rounds · Game of Thrones · €2,500 each","badge":"Westeros · Game of Thrones","notice":"Full spoilers for all eight seasons of the HBO series. Family roles and jobs are hypothetical assignments. Theme content is in English.","ui":{"intro":"Thirteen choices. Three friends. One narrator. Build your life in Westeros—or risk a mystery box.","prime":"Westeros · Game of Thrones","scope":"13 rounds · Game of Thrones · €2,500 each","lobbyText":"Three drafters. One narrator. €2,500 each. Auctions: 15 seconds. Mystery choice: 30 seconds.","setupTitle":"Choose what is inside the boxes.","setupText":"Choose one hidden option for each round. Players cannot see the options or your selections. Lock all 13 before starting; they stay fixed throughout this match.","setupLockedText":"All 13 boxes are sealed. These choices stay fixed for this match.","boxesLocked":"All 13 boxes locked","lockBoxes":"Lock all 13 boxes","errors.chooseAllBoxes":"Choose an option for all 13 boxes first.","errors.lockBoxesFirst":"Lock all 13 mystery boxes before starting.","draftFinished":"All 13 rounds are complete. Compare your lives in Westeros, defend your choices, and vote.","voteTitle":"Who has the best life in Westeros?","voteText":"Compare the lineups and make your case. Each player votes for someone else. Votes stay hidden until everyone has voted.","cardFooter":"13 choices. Three friends. GAME OF THRONES · PARTY DRAFT"},"ka":{"ui":{"intro":"Thirteen choices. Three friends. One narrator. Build your life in Westeros—or risk a mystery box.","prime":"Westeros · Game of Thrones","scope":"13 rounds · Game of Thrones · €2,500 each","lobbyText":"Three drafters. One narrator. €2,500 each. Auctions: 15 seconds. Mystery choice: 30 seconds.","setupTitle":"Choose what is inside the boxes.","setupText":"Choose one hidden option for each round. Players cannot see the options or your selections. Lock all 13 before starting; they stay fixed throughout this match.","setupLockedText":"All 13 boxes are sealed. These choices stay fixed for this match.","boxesLocked":"All 13 boxes locked","lockBoxes":"Lock all 13 boxes","errors.chooseAllBoxes":"Choose an option for all 13 boxes first.","errors.lockBoxesFirst":"Lock all 13 mystery boxes before starting.","draftFinished":"All 13 rounds are complete. Compare your lives in Westeros, defend your choices, and vote.","voteTitle":"Who has the best life in Westeros?","voteText":"Compare the lineups and make your case. Each player votes for someone else. Votes stay hidden until everyone has voted.","cardFooter":"13 choices. Three friends. GAME OF THRONES · PARTY DRAFT"}}}
+,{"id":"naruto","name":"Naruto","startingBudget":2500,"description":"Build your life as a shinobi.","scope":"15 rounds · Naruto & Shippuden · €2,500 each","badge":"Naruto · Shippuden","notice":"Naruto and Naruto Shippuden only. No Boruto or movies. Full spoilers. Family and mentor roles are hypothetical. Theme content is in English.","ui":{"intro":"Fifteen choices. Three friends. One narrator. Build your life as a shinobi—or risk a mystery box.","prime":"Naruto · Shippuden","scope":"15 rounds · Naruto & Shippuden · €2,500 each","lobbyText":"Three drafters. One narrator. €2,500 each. Auctions: 15 seconds. Mystery choice: 30 seconds.","setupTitle":"Choose what is inside the boxes.","setupText":"Choose one hidden option for each round. Players cannot see the options or your selections. Lock all 15 before starting; they stay fixed throughout this match.","setupLockedText":"All 15 boxes are sealed. These choices stay fixed for this match.","boxesLocked":"All 15 boxes locked","lockBoxes":"Lock all 15 boxes","errors.chooseAllBoxes":"Choose an option for all 15 boxes first.","errors.lockBoxesFirst":"Lock all 15 mystery boxes before starting.","draftFinished":"All 15 rounds are complete. Compare your shinobi lives, defend your choices, and vote.","voteTitle":"Who has the best life as a shinobi?","voteText":"Compare the lineups and make your case. Each player votes for someone else. Votes stay hidden until everyone has voted.","cardFooter":"15 choices. Three friends. NARUTO · PARTY DRAFT"},"ka":{"ui":{"intro":"Fifteen choices. Three friends. One narrator. Build your life as a shinobi—or risk a mystery box.","prime":"Naruto · Shippuden","scope":"15 rounds · Naruto & Shippuden · €2,500 each","lobbyText":"Three drafters. One narrator. €2,500 each. Auctions: 15 seconds. Mystery choice: 30 seconds.","setupTitle":"Choose what is inside the boxes.","setupText":"Choose one hidden option for each round. Players cannot see the options or your selections. Lock all 15 before starting; they stay fixed throughout this match.","setupLockedText":"All 15 boxes are sealed. These choices stay fixed for this match.","boxesLocked":"All 15 boxes locked","lockBoxes":"Lock all 15 boxes","errors.chooseAllBoxes":"Choose an option for all 15 boxes first.","errors.lockBoxesFirst":"Lock all 15 mystery boxes before starting.","draftFinished":"All 15 rounds are complete. Compare your shinobi lives, defend your choices, and vote.","voteTitle":"Who has the best life as a shinobi?","voteText":"Compare the lineups and make your case. Each player votes for someone else. Votes stay hidden until everyone has voted.","cardFooter":"15 choices. Three friends. NARUTO · PARTY DRAFT"}}}
+];
+catalogue.push(aotTheme);
+// Add only missing Georgian fields; preserve existing translations, including mixed text.
+for (const theme of catalogue) {
+ const added = missingKa[theme.id] || {};
+ theme.ka ??= {};
+ for (const [key, value] of Object.entries(added)) {
+  if (key === 'ui') {
+   theme.ka.ui ??= {};
+   for (const [label, text] of Object.entries(value))
+    if (!/[ა-ჰ]/u.test(theme.ka.ui[label] || '')) theme.ka.ui[label] = text;
+  } else if (!/[ა-ჰ]/u.test(theme.ka[key] || '')) theme.ka[key] = value;
+ }
+}
+export const themeFor=r=>catalogue.find(t=>t.id===(r.themeId||'mcu'))||catalogue[0];
+export const positionsFor=r=>packs[themeFor(r).id].positions;
+
+export const startingBudgetFor=r=>themeFor(r).startingBudget??1000;

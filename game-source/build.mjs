@@ -1,0 +1,34 @@
+import {build} from 'esbuild';
+import {mkdirSync,readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+await build({entryPoints:['src/practice.mjs'],bundle:true,format:'esm',platform:'browser',target:'es2022',outfile:'public/practice.js',minify:true});
+await build({entryPoints:['src/dark-portal.mjs'],bundle:true,format:'esm',platform:'browser',target:'es2022',outfile:'public/dark-portal.js',minify:true});
+await build({entryPoints:['src/dark-waiting.mjs'],bundle:true,external:['./dark-waiting-scene.js?v=dark-depth-20261012'],format:'esm',platform:'browser',target:'es2022',outfile:'public/dark-waiting.js',minify:true});
+await build({entryPoints:['src/dark-waiting-scene.mjs'],bundle:true,format:'esm',platform:'browser',target:'es2022',outfile:'public/dark-waiting-scene.js',minify:true});
+await build({entryPoints:['src/aot-entrance.mjs'],bundle:true,format:'esm',platform:'browser',target:'es2022',outfile:'public/aot-entrance.js',minify:true});
+const catalogueBuild=await build({stdin:{contents:"export {catalogue} from './src/themes.mjs';",resolveDir:process.cwd()},bundle:true,write:false,format:'esm',platform:'node'});
+const {catalogue}=await import('data:text/javascript;base64,'+Buffer.from(catalogueBuild.outputFiles[0].text).toString('base64'));
+writeFileSync('public/themes.json',JSON.stringify(catalogue));
+const files={};for(const [route,file,type] of [['/','index.html','text/html'],['/app.js','app.js','text/javascript'],['/polish.js','polish.js','text/javascript'],['/style.css','style.css','text/css'],['/strings.en.json','strings.en.json','application/json'],['/strings.ka.json','strings.ka.json','application/json']])files[route]={text:readFileSync('public/'+file,'utf8'),type:type+'; charset=utf-8'};
+files['/practice.js']={text:readFileSync('public/practice.js','utf8'),type:'text/javascript; charset=utf-8'};
+files['/dark-portal.js']={text:readFileSync('public/dark-portal.js','utf8'),type:'text/javascript; charset=utf-8'};
+files['/dark-portal.css']={text:readFileSync('public/dark-portal.css','utf8'),type:'text/css; charset=utf-8'};
+files['/dark-waiting.js']={text:readFileSync('public/dark-waiting.js','utf8'),type:'text/javascript; charset=utf-8'};
+files['/dark-waiting.css']={text:readFileSync('public/dark-waiting.css','utf8'),type:'text/css; charset=utf-8'};
+files['/dark-waiting-scene.js']={text:readFileSync('public/dark-waiting-scene.js','utf8'),type:'text/javascript; charset=utf-8'};
+files['/assets/dark/winden-depth.json']={text:readFileSync('public/assets/dark/winden-depth.json','utf8'),type:'application/json; charset=utf-8'};
+files['/assets/dark/winden-depth.bin']={base64:readFileSync('public/assets/dark/winden-depth.bin').toString('base64'),type:'application/octet-stream'};
+for(const size of [960,1920])for(const type of ['avif','webp']){
+ const file=`/assets/dark/winden-loading-${size}.${type}`;
+ files[file]={base64:readFileSync('public'+file).toString('base64'),type:`image/${type}`};
+}
+files['/assets/dark/winden.glb']={base64:readFileSync('public/assets/dark/winden.glb').toString('base64'),type:'model/gltf-binary'};
+for(const name of ['winden-cave.glb','winden-cave-mobile.glb'])files['/assets/dark/'+name]={base64:readFileSync('public/assets/dark/'+name).toString('base64'),type:'model/gltf-binary'};
+for(const name of ['aot-entrance.js','aot-portal.css'])files['/'+name]={text:readFileSync('public/'+name,'utf8'),type:(name.endsWith('.css')?'text/css':'text/javascript')+'; charset=utf-8'};
+for(const name of ['outpost-art.webp','passage.webp'])files['/assets/aot/'+name]={base64:readFileSync('public/assets/aot/'+name).toString('base64'),type:'image/webp'};
+files['/themes.json']={text:readFileSync('public/themes.json','utf8'),type:'application/json; charset=utf-8'};
+for(const file of Object.values(files))file.etag='"'+createHash('sha256').update(file.base64?Buffer.from(file.base64,'base64'):file.text).digest('hex').slice(0,24)+'"';
+writeFileSync('src/public-files.json',JSON.stringify(files));
+mkdirSync('dist/server',{recursive:true});
+await build({entryPoints:['src/worker.mjs'],bundle:true,format:'esm',platform:'browser',target:'es2022',outfile:'dist/server/index.js',minify:true});
+console.log('Built Party Draft worker.');

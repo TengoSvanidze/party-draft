@@ -1,0 +1,1971 @@
+{
+  "id": "naruto",
+  "continuity": "Naruto and Naruto Shippuden only. Full spoilers. No Boruto, movies or game-only lore.",
+  "positions": [
+    {
+      "id": "naruto-village",
+      "title": {
+        "en": "Which village are you from?",
+        "ka": "რომელი სოფლიდან ხარ?"
+      },
+      "label": {
+        "en": "Village",
+        "ka": "სოფელი"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Which village are you from?",
+        "ka": "რომელი სოფლიდან ხარ?"
+      },
+      "lots": [
+        {
+          "id": "naruto-hidden-leaf",
+          "name": {
+            "en": "Hidden Leaf",
+            "ka": "ფოთლებში დამალული სოფელი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "naruto-hidden-sand",
+          "name": {
+            "en": "Hidden Sand",
+            "ka": "ქვიშაში დამალული სოფელი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "naruto-hidden-mist",
+          "name": {
+            "en": "Hidden Mist",
+            "ka": "ნისლში დამალული სოფელი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "naruto-hidden-cloud",
+          "name": {
+            "en": "Hidden Cloud",
+            "ka": "ღრუბლებში დამალული სოფელი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "The Third Raikage was resurrected through Edo Tensei.",
+              "ka": "მესამე რაიკაგე ედო ტენსეის მეშვეობით გააცოცხლეს."
+            },
+            {
+              "en": "Cloud shinobi abducted Kushina to obtain her unusual chakra.",
+              "ka": "ღრუბლების სოფლის შინობებმა კუშინა მისი უჩვეულო ჩაკრის მოსაპოვებლად გაიტაცეს."
+            },
+            {
+              "en": "The Cloud delegation's peace treaty concealed the attempt to kidnap Hinata.",
+              "ka": "ღრუბლების სოფლის დელეგაციის სამშვიდობო შეთანხმება ჰინატას გატაცების მცდელობას ფარავდა."
+            }
+          ]
+        },
+        {
+          "id": "naruto-hidden-rain",
+          "name": {
+            "en": "Hidden Rain",
+            "ka": "წვიმაში დამალული სოფელი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Hanzō was resurrected through Edo Tensei.",
+              "ka": "ჰანზო ედო ტენსეის მეშვეობით გააცოცხლეს."
+            },
+            {
+              "en": "Pain, ruler of Rain, attacked the Leaf to capture Naruto and the Nine-Tails.",
+              "ka": "წვიმის სოფლის მმართველი პეინი ფოთლის სოფელს ნარუტოსა და ცხრაკუდას შესაპყრობად დაესხა თავს."
+            },
+            {
+              "en": "Hanzō offered cooperation to Yahiko's Akatsuki, then ambushed them.",
+              "ka": "ჰანზომ იაჰიკოს აკაცუკის თანამშრომლობა შესთავაზა, შემდეგ კი ჩასაფრება მოუწყო."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "One of my former rulers was brought back to fight in the Fourth War.",
+          "ka": "ჩემი ერთ-ერთი ყოფილი მმართველი მეოთხე ომში საბრძოლველად გააცოცხლეს."
+        },
+        {
+          "en": "People acting for my village pursued someone in the Leaf for the power they possessed.",
+          "ka": "ჩემი სოფლის სახელით მოქმედი ადამიანები ფოთლის სოფელში ვიღაცას მისი ძალის გამო დაედევნენ."
+        },
+        {
+          "en": "An offer of peace became cover for a betrayal.",
+          "ka": "მშვიდობის შეთავაზება ღალატის საფარად იქცა."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "naruto-clan",
+      "title": {
+        "en": "Which clan are you born into?",
+        "ka": "რომელ კლანში დაიბადე?"
+      },
+      "label": {
+        "en": "Clan",
+        "ka": "კლანი"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Which clan are you born into?",
+        "ka": "რომელ კლანში დაიბადე?"
+      },
+      "lots": [
+        {
+          "id": "naruto-uchiha",
+          "name": {
+            "en": "Uchiha",
+            "ka": "უჩიჰა"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "naruto-hyuga",
+          "name": {
+            "en": "Hyūga",
+            "ka": "ჰიუგა"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "naruto-nara",
+          "name": {
+            "en": "Nara",
+            "ka": "ნარა"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "naruto-uzumaki",
+          "name": {
+            "en": "Uzumaki",
+            "ka": "უზუმაკი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Red hair is a characteristic Uzumaki trait, though Naruto is an exception.",
+              "ka": "წითური თმა უზუმაკების დამახასიათებელი ნიშანია, თუმცა ნარუტო გამონაკლისია."
+            },
+            {
+              "en": "Naruto's life and eventual fighting partnership are tied to Kurama; this is not a hereditary clan ability.",
+              "ka": "ნარუტოს ცხოვრება და შემდგომი საბრძოლო პარტნიორობა კურამას უკავშირდება; ეს კლანის მემკვიდრეობითი უნარი არ არის."
+            },
+            {
+              "en": "Naruto's accidental fart disrupted Kiba's heightened sense of smell.",
+              "ka": "ნარუტოს შემთხვევით გაპარულმა გაზმა კიბას გამახვილებული ყნოსვა დაურღვია."
+            }
+          ]
+        },
+        {
+          "id": "naruto-inuzuka",
+          "name": {
+            "en": "Inuzuka",
+            "ka": "ინუზუკა"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Inuzuka members wear red fang markings on their cheeks.",
+              "ka": "ინუზუკას კლანის წევრებს ლოყებზე წითელი ეშვების ნიშნები აქვთ."
+            },
+            {
+              "en": "Kiba grows up and fights alongside Akamaru.",
+              "ka": "კიბა აკამარუსთან ერთად იზრდება და იბრძვის."
+            },
+            {
+              "en": "Kiba was the opponent whose sensitive nose worked against him.",
+              "ka": "კიბა ის მოწინააღმდეგე იყო, რომლის მგრძნობიარე ცხვირმაც მის წინააღმდეგ იმუშავა."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "Red is one way people recognise our family.",
+          "ka": "წითელი ფერი ჩვენი ოჯახის ამოცნობის ერთ-ერთი ნიშანია."
+        },
+        {
+          "en": "One of our young shinobi became inseparable from a powerful animal companion.",
+          "ka": "ჩვენი ერთ-ერთი ახალგაზრდა შინობი ძლიერ ცხოველ თანამგზავრთან განუყრელი გახდა."
+        },
+        {
+          "en": "One of our boys fought in a Chūnin Exam match where a bad smell changed the result.",
+          "ka": "ჩვენი ერთ-ერთი ბიჭი ჩუნინის გამოცდაზე ისეთ ორთაბრძოლაში მონაწილეობდა, რომლის შედეგიც ცუდმა სუნმა შეცვალა."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "naruto-father",
+      "title": {
+        "en": "Who is your father?",
+        "ka": "ვინ არის მამაშენი?"
+      },
+      "label": {
+        "en": "Father",
+        "ka": "მამა"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Who is your father?",
+        "ka": "ვინ არის მამაშენი?"
+      },
+      "lots": [
+        {
+          "id": "naruto-minato-namikaze",
+          "name": {
+            "en": "Minato Namikaze",
+            "ka": "მინატო ნამიკაზე"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "naruto-sakumo-hatake",
+          "name": {
+            "en": "Sakumo Hatake",
+            "ka": "საკუმო ჰატაკე"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "naruto-choza-akimichi",
+          "name": {
+            "en": "Chōza Akimichi",
+            "ka": "ჩოზა აკიმიჩი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "naruto-shikaku-nara",
+          "name": {
+            "en": "Shikaku Nara",
+            "ka": "შიკაკუ ნარა"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Shikaku and Shikamaru immobilise opponents with shadows.",
+              "ka": "შიკაკუ და შიკამარუ მოწინააღმდეგეებს ჩრდილებით აბამენ."
+            },
+            {
+              "en": "Shikamaru led the Sasuke recovery team.",
+              "ka": "შიკამარუ სასკეს დაბრუნების გუნდს ხელმძღვანელობდა."
+            },
+            {
+              "en": "Shikaku spoke to Shikamaru through the headquarters communication network before its destruction.",
+              "ka": "შტაბის განადგურებამდე შიკაკუ შიკამარუს მისი საკომუნიკაციო ქსელით ესაუბრა."
+            }
+          ]
+        },
+        {
+          "id": "naruto-rasa",
+          "name": {
+            "en": "Rasa",
+            "ka": "რასა"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Rasa restrains with gold dust; Gaara restrains with sand.",
+              "ka": "რასა ოქროს მტვრით აბამს, გაარა კი — ქვიშით."
+            },
+            {
+              "en": "Gaara commanded the Fourth Division and the Allied Shinobi Forces' main battle regiment.",
+              "ka": "გაარა მეოთხე დივიზიასა და შინობთა გაერთიანებული ძალების მთავარ საბრძოლო დანაყოფს მეთაურობდა."
+            },
+            {
+              "en": "Resurrected Rasa told Gaara the truth about Karura before being sealed.",
+              "ka": "გაცოცხლებულმა რასამ გაარას კარურას შესახებ სიმართლე უთხრა, სანამ დაბეჭდავდნენ."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "My son and I could both stop enemies in their tracks without touching them.",
+          "ka": "მე და ჩემს ვაჟს ორივეს შეგვეძლო მტრის ადგილზე გაჩერება შეხების გარეშე."
+        },
+        {
+          "en": "My son was trusted to command other shinobi while still a teenager.",
+          "ka": "ჩემს ვაჟს სხვა შინობების მეთაურობა ჯერ კიდევ მოზარდობაში ანდეს."
+        },
+        {
+          "en": "The Fourth War gave my son a final conversation with me.",
+          "ka": "მეოთხე ომმა ჩემს ვაჟს ჩემთან უკანასკნელი საუბრის საშუალება მისცა."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "naruto-mother",
+      "title": {
+        "en": "Who is your mother?",
+        "ka": "ვინ არის დედაშენი?"
+      },
+      "label": {
+        "en": "Mother",
+        "ka": "დედა"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Who is your mother?",
+        "ka": "ვინ არის დედაშენი?"
+      },
+      "lots": [
+        {
+          "id": "naruto-konan",
+          "name": {
+            "en": "Konan",
+            "ka": "კონანი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "naruto-kushina-uzumaki",
+          "name": {
+            "en": "Kushina Uzumaki",
+            "ka": "კუშინა უზუმაკი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "naruto-shizune",
+          "name": {
+            "en": "Shizune",
+            "ka": "შიზუნე"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "naruto-karura",
+          "name": {
+            "en": "Karura",
+            "ka": "კარურა"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Karura was the mother of Kankurō and Gaara, as well as Temari.",
+              "ka": "კარურა კანკუროს, გაარასა და თემარის დედა იყო."
+            },
+            {
+              "en": "Karura's will continued to protect Gaara through his sand.",
+              "ka": "კარურას ნება გაარას მისი ქვიშის მეშვეობით კვლავ იცავდა."
+            },
+            {
+              "en": "Rasa revealed that Karura loved Gaara, contradicting Yashamaru's cruel lie.",
+              "ka": "რასამ გაამხილა, რომ კარურას გაარა უყვარდა, რითაც იაშამარუს სასტიკი ტყუილი უარყო."
+            }
+          ]
+        },
+        {
+          "id": "naruto-kaguya-otsutsuki",
+          "name": {
+            "en": "Kaguya Ōtsutsuki",
+            "ka": "კაგუია ოცუცუკი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Kaguya was the mother of Hagoromo and Hamura.",
+              "ka": "კაგუია ჰაგორომოსა და ჰამურას დედა იყო."
+            },
+            {
+              "en": "Black Zetsu embodied Kaguya's will and worked toward her revival.",
+              "ka": "შავი ზეცუ კაგუიას ნების განსახიერება იყო და მის აღსადგენად მოქმედებდა."
+            },
+            {
+              "en": "Black Zetsu revealed his true origin and manipulation of events to revive Kaguya.",
+              "ka": "შავმა ზეცუმ თავისი ნამდვილი წარმოშობა და კაგუიას გასაცოცხლებლად მოვლენებზე მანიპულირება გაამხილა."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "I had more than one son.",
+          "ka": "ერთზე მეტი ვაჟი მყავდა."
+        },
+        {
+          "en": "My will kept acting after I could no longer act for myself.",
+          "ka": "ჩემი ნება მოქმედებას მაშინაც განაგრძობდა, როცა მე თვითონ ეს აღარ შემეძლო."
+        },
+        {
+          "en": "During the Fourth War, a story hiding the truth about me finally fell apart.",
+          "ka": "მეოთხე ომის დროს ამბავი, რომელიც ჩემზე სიმართლეს მალავდა, საბოლოოდ დაინგრა."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "naruto-best-friend",
+      "title": {
+        "en": "Who is your best friend?",
+        "ka": "ვინ არის შენი საუკეთესო მეგობარი?"
+      },
+      "label": {
+        "en": "Best friend",
+        "ka": "საუკეთესო მეგობარი"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Who is your best friend?",
+        "ka": "ვინ არის შენი საუკეთესო მეგობარი?"
+      },
+      "lots": [
+        {
+          "id": "naruto-naruto-uzumaki",
+          "name": {
+            "en": "Naruto Uzumaki",
+            "ka": "ნარუტო უზუმაკი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "naruto-shikamaru-nara",
+          "name": {
+            "en": "Shikamaru Nara",
+            "ka": "შიკამარუ ნარა"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "naruto-shino-aburame",
+          "name": {
+            "en": "Shino Aburame",
+            "ka": "შინო აბურამე"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "naruto-rock-lee",
+          "name": {
+            "en": "Rock Lee",
+            "ka": "როკ ლი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Tsunade's surgery let Lee continue his ninja career after Gaara's attack.",
+              "ka": "ცუნადეს ოპერაციამ ლის გაარას თავდასხმის შემდეგ ნინძის კარიერის გაგრძელების საშუალება მისცა."
+            },
+            {
+              "en": "Lee deliberately emulates Guy's appearance and dedication.",
+              "ka": "ლი შეგნებულად ჰბაძავს გაის გარეგნობასა და თავდადებას."
+            },
+            {
+              "en": "Lee fought the terminally ill Kimimaro during the Sasuke recovery mission.",
+              "ka": "სასკეს დაბრუნების მისიის დროს ლი უკურნებელი სენით დაავადებულ კიმიმაროს ებრძოდა."
+            }
+          ]
+        },
+        {
+          "id": "naruto-kabuto-yakushi",
+          "name": {
+            "en": "Kabuto Yakushi",
+            "ka": "კაბუტო იაკუში"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Nonō treated the injured, amnesiac Kabuto and later taught him medical ninjutsu.",
+              "ka": "ნონომ დაჭრილ, მეხსიერებადაკარგულ კაბუტოს უმკურნალა და მოგვიანებით სამედიცინო ნინძუცუ ასწავლა."
+            },
+            {
+              "en": "Kabuto increasingly modelled himself on Orochimaru and incorporated his remains.",
+              "ka": "კაბუტო სულ უფრო მეტად ემსგავსებოდა ოროჩიმარუს და მის ნაშთებს საკუთარ სხეულშიც აერთიანებდა."
+            },
+            {
+              "en": "Kabuto treated Kimimaro but could not cure his illness.",
+              "ka": "კაბუტო კიმიმაროს მკურნალობდა, მაგრამ მისი დაავადების განკურნება ვერ შეძლო."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "Medical care gave me a chance to keep walking the shinobi path.",
+          "ka": "სამედიცინო დახმარებამ შინობის გზის გაგრძელების შანსი მომცა."
+        },
+        {
+          "en": "I shaped myself after someone I admired.",
+          "ka": "თავს იმ ადამიანს ვამსგავსებდი, რომლითაც აღფრთოვანებული ვიყავი."
+        },
+        {
+          "en": "I dealt with Kimimaro while his body was already failing.",
+          "ka": "კიმიმაროსთან საქმე მაშინ მქონდა, როცა მისი სხეული უკვე მწყობრიდან გამოდიოდა."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "naruto-sensei",
+      "title": {
+        "en": "Who is your sensei?",
+        "ka": "ვინ არის შენი სენსეი?"
+      },
+      "label": {
+        "en": "Sensei",
+        "ka": "სენსეი"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Who is your sensei?",
+        "ka": "ვინ არის შენი სენსეი?"
+      },
+      "lots": [
+        {
+          "id": "naruto-jiraiya",
+          "name": {
+            "en": "Jiraiya",
+            "ka": "ჯირაია"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "naruto-kakashi-hatake",
+          "name": {
+            "en": "Kakashi Hatake",
+            "ka": "კაკაში ჰატაკე"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "naruto-iruka-umino",
+          "name": {
+            "en": "Iruka Umino",
+            "ka": "ირუკა უმინო"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "naruto-orochimaru",
+          "name": {
+            "en": "Orochimaru",
+            "ka": "ოროჩიმარუ"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Orochimaru offered Sasuke power while intending to take his body.",
+              "ka": "ოროჩიმარუ სასკეს ძალას სთავაზობდა, სინამდვილეში კი მისი სხეულის ხელში ჩაგდება სურდა."
+            },
+            {
+              "en": "Orochimaru secretly experimented on people before deserting the village.",
+              "ka": "სოფლის დატოვებამდე ოროჩიმარუ ადამიანებზე ფარულ ექსპერიმენტებს ატარებდა."
+            },
+            {
+              "en": "Hiruzen used the Reaper Death Seal to take the use of Orochimaru's arms.",
+              "ka": "ჰირუზენმა სიკვდილის ღმერთის ბეჭდით ოროჩიმარუს ხელების გამოყენების უნარი წაართვა."
+            }
+          ]
+        },
+        {
+          "id": "naruto-mizuki",
+          "name": {
+            "en": "Mizuki",
+            "ka": "მიზუკი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Mizuki promised Naruto a way to graduate while using him to steal the Scroll of Seals.",
+              "ka": "მიზუკი ნარუტოს აკადემიის დამთავრების გზას ჰპირდებოდა, ამ დროს კი მას ბეჭდების გრაგნილის მოსაპარად იყენებდა."
+            },
+            {
+              "en": "Mizuki betrayed his position as an Academy instructor.",
+              "ka": "მიზუკიმ აკადემიის ინსტრუქტორის მოვალეობას უღალატა."
+            },
+            {
+              "en": "Naruto used Multiple Shadow Clone Technique to defeat Mizuki after Iruka protected him.",
+              "ka": "მას შემდეგ, რაც ირუკამ დაიცვა, ნარუტომ მიზუკი მრავალი ჩრდილის კლონის ტექნიკით დაამარცხა."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "I offered a young ninja a shortcut, while hiding my own purpose.",
+          "ka": "ახალგაზრდა ნინძას იოლ გზას ვთავაზობდი, ჩემს ნამდვილ მიზანს კი ვმალავდი."
+        },
+        {
+          "en": "The Leaf's trust in me was badly misplaced.",
+          "ka": "ფოთლის სოფელი ძალიან შეცდა, როცა მენდო."
+        },
+        {
+          "en": "A forbidden technique turned a confrontation with a Leaf teacher against me.",
+          "ka": "აკრძალულმა ტექნიკამ ფოთლის სოფლის მასწავლებელთან დაპირისპირება ჩემ საწინააღმდეგოდ შემოაბრუნა."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "naruto-teammate",
+      "title": {
+        "en": "Who is your teammate?",
+        "ka": "ვინ არის შენი თანაგუნდელი?"
+      },
+      "label": {
+        "en": "Teammate",
+        "ka": "თანაგუნდელი"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Who is your teammate?",
+        "ka": "ვინ არის შენი თანაგუნდელი?"
+      },
+      "lots": [
+        {
+          "id": "naruto-naruto-uzumaki",
+          "name": {
+            "en": "Naruto Uzumaki",
+            "ka": "ნარუტო უზუმაკი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "naruto-gaara",
+          "name": {
+            "en": "Gaara",
+            "ka": "გაარა"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "naruto-kabuto-yakushi",
+          "name": {
+            "en": "Kabuto Yakushi",
+            "ka": "კაბუტო იაკუში"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "naruto-shikamaru-nara",
+          "name": {
+            "en": "Shikamaru Nara",
+            "ka": "შიკამარუ ნარა"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Shikamaru lost his teacher Asuma.",
+              "ka": "შიკამარუმ თავისი მასწავლებელი ასუმა დაკარგა."
+            },
+            {
+              "en": "Shikamaru used Asuma's chakra blades with his shadow technique.",
+              "ka": "შიკამარუ ასუმას ჩაკრის პირებს თავის ჩრდილის ტექნიკასთან ერთად იყენებდა."
+            },
+            {
+              "en": "Shikamaru outmanoeuvred Temari but forfeited.",
+              "ka": "შიკამარუმ თემარის ტაქტიკურად აჯობა, თუმცა ბრძოლა დათმო."
+            }
+          ]
+        },
+        {
+          "id": "naruto-tenten",
+          "name": {
+            "en": "Tenten",
+            "ka": "ტენტენი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Tenten lost her teammate Neji.",
+              "ka": "ტენტენმა თანაგუნდელი ნეჯი დაკარგა."
+            },
+            {
+              "en": "Tenten used the recovered Bashōsen, which consumed her chakra.",
+              "ka": "ტენტენმა მოპოვებული ბაშოსენი გამოიყენა, რომელიც მის ჩაკრას ხარჯავდა."
+            },
+            {
+              "en": "Tenten lost her preliminary match to Temari.",
+              "ka": "ტენტენმა წინასწარი ორთაბრძოლა თემარისთან წააგო."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "My team lost someone whose place could never really be filled.",
+          "ka": "ჩემმა გუნდმა დაკარგა ადამიანი, რომლის ადგილსაც ბოლომდე ვერავინ დაიკავებდა."
+        },
+        {
+          "en": "I turned a weapon once carried by someone else into a channel for my chakra.",
+          "ka": "სხვის მიერ ადრე ნახმარი იარაღი ჩემი ჩაკრის გამტარად ვაქციე."
+        },
+        {
+          "en": "I faced Temari in the Chūnin Exams, but left without a recorded victory.",
+          "ka": "ჩუნინის გამოცდაზე თემარის დავუპირისპირდი, მაგრამ ოფიციალური გამარჯვების გარეშე წამოვედი."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "naruto-signature-jutsu",
+      "title": {
+        "en": "What is your signature jutsu?",
+        "ka": "რომელია შენი საფირმო ძუცუ?"
+      },
+      "label": {
+        "en": "Signature jutsu",
+        "ka": "საფირმო ძუცუ"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "What is your signature jutsu?",
+        "ka": "რომელია შენი საფირმო ძუცუ?"
+      },
+      "lots": [
+        {
+          "id": "naruto-tsukuyomi",
+          "name": {
+            "en": "Tsukuyomi",
+            "ka": "ცუკუიომი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "naruto-rasengan",
+          "name": {
+            "en": "Rasengan",
+            "ka": "რასენგანი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "naruto-mind-body-switch-technique",
+          "name": {
+            "en": "Mind–Body Switch Technique",
+            "ka": "გონებისა და სხეულის გადატანის ტექნიკა"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "naruto-truth-seeking-balls",
+          "name": {
+            "en": "Truth-Seeking Balls",
+            "ka": "ჭეშმარიტების მაძიებელი სფეროები"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "The orbs can be reshaped into staffs, shields and other forms.",
+              "ka": "სფეროებს ფორმის შეცვლა შეუძლიათ — კვერთხებად, ფარებად და სხვა საგნებად იქცევიან."
+            },
+            {
+              "en": "A user can reshape an orb into a staff.",
+              "ka": "მომხმარებელს სფეროს კვერთხად გადაქცევა შეუძლია."
+            },
+            {
+              "en": "Naruto used the orbs in his Tailed Beast Ball Rasenshuriken.",
+              "ka": "ნარუტომ სფეროები კუდიანი მხეცის ბურთის რასენშურიკენში გამოიყენა."
+            }
+          ]
+        },
+        {
+          "id": "naruto-transformation-technique",
+          "name": {
+            "en": "Transformation Technique",
+            "ka": "გარდასახვის ტექნიკა"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "The technique changes a user's form into another person, animal or object.",
+              "ka": "ეს ტექნიკა მომხმარებელს სხვა ადამიანის, ცხოველის ან საგნის სახეს აძლევს."
+            },
+            {
+              "en": "Naruto transformed into a fūma shuriken that Sasuke could hold and throw.",
+              "ka": "ნარუტო ფუმა შურიკენად გარდაისახა, რომლის დაჭერა და სროლაც სასკეს შეეძლო."
+            },
+            {
+              "en": "Naruto's transformed fūma shuriken was thrown during the fight with Zabuza.",
+              "ka": "ნარუტოს გარდასახული ფუმა შურიკენი ზაბუზასთან ბრძოლისას ისროლეს."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "The shape you see is not the only shape I can take.",
+          "ka": "ფორმა, რომელსაც ხედავ, ერთადერთი არ არის, რომლის მიღებაც შემიძლია."
+        },
+        {
+          "en": "I can put a weapon into someone's hands without a blacksmith making it.",
+          "ka": "შემიძლია ვინმეს ხელში იარაღი გავუჩინო ისე, რომ მჭედელს მისი გამოჭედვა არ დასჭირდეს."
+        },
+        {
+          "en": "Naruto has used me to send something shaped like a shuriken into battle.",
+          "ka": "ნარუტოს ჩემი დახმარებით შურიკენის ფორმის რაღაც ბრძოლაში გაუგზავნია."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "naruto-greatest-enemy",
+      "title": {
+        "en": "Who is your greatest enemy?",
+        "ka": "ვინ არის შენი უდიდესი მტერი?"
+      },
+      "label": {
+        "en": "Greatest enemy",
+        "ka": "უდიდესი მტერი"
+      },
+      "effect": "negative",
+      "prompt": {
+        "en": "Who is your greatest enemy?",
+        "ka": "ვინ არის შენი უდიდესი მტერი?"
+      },
+      "lots": [
+        {
+          "id": "naruto-kabuto-yakushi-regular-pre-sage",
+          "name": {
+            "en": "Kabuto Yakushi (regular, pre-Sage)",
+            "ka": "კაბუტო იაკუში (ჩვეულებრივი, ბრძენის რეჟიმამდე)"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid for the enemy you would rather face.",
+            "ka": "დადე ფსონი იმ მტერზე, რომელსაც გირჩევნია დაუპირისპირდე."
+          },
+          "price": 70
+        },
+        {
+          "id": "naruto-orochimaru",
+          "name": {
+            "en": "Orochimaru",
+            "ka": "ოროჩიმარუ"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid for the enemy you would rather face.",
+            "ka": "დადე ფსონი იმ მტერზე, რომელსაც გირჩევნია დაუპირისპირდე."
+          },
+          "price": 50
+        },
+        {
+          "id": "naruto-pain",
+          "name": {
+            "en": "Pain",
+            "ka": "პეინი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "naruto-zabuza-momochi",
+          "name": {
+            "en": "Zabuza Momochi",
+            "ka": "ზაბუზა მომოჩი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Haku's staged killing removed Zabuza from the first confrontation; he returned to fight on the bridge.",
+              "ka": "ჰაკუს მიერ დადგმულმა მკვლელობამ ზაბუზა პირველი დაპირისპირებიდან გაიყვანა; ის ხიდზე საბრძოლველად დაბრუნდა."
+            },
+            {
+              "en": "Kakashi, Naruto, Sasuke and Sakura were involved in the Land of Waves confrontation.",
+              "ka": "ტალღების ქვეყანაში დაპირისპირებაში კაკაში, ნარუტო, სასკე და საკურა მონაწილეობდნენ."
+            },
+            {
+              "en": "Zabuza confined Kakashi inside Water Prison.",
+              "ka": "ზაბუზამ კაკაში წყლის საპყრობილეში მოაქცია."
+            }
+          ]
+        },
+        {
+          "id": "naruto-kaguya-otsutsuki",
+          "name": {
+            "en": "Kaguya Ōtsutsuki",
+            "ka": "კაგუია ოცუცუკი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Kaguya returned after her ancient sealing.",
+              "ka": "კაგუია უძველესი დაბეჭდვის შემდეგ დაბრუნდა."
+            },
+            {
+              "en": "The reunited Team 7 fought Kaguya.",
+              "ka": "კვლავ გაერთიანებული მეშვიდე გუნდი კაგუიას ებრძოდა."
+            },
+            {
+              "en": "Kaguya stranded Sasuke in a separate desert dimension.",
+              "ka": "კაგუიამ სასკე უდაბნოს ცალკე განზომილებაში დატოვა."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "Being removed from the fight once did not stop me from returning.",
+          "ka": "ბრძოლიდან ერთხელ გამოთიშვამ დაბრუნებაში ხელი ვერ შემიშალა."
+        },
+        {
+          "en": "Kakashi and all three of his original students stood against me.",
+          "ka": "კაკაში და მისი თავდაპირველი სამივე მოსწავლე ჩემ წინააღმდეგ იდგნენ."
+        },
+        {
+          "en": "I trapped one member of that team where the others could not simply stand beside them.",
+          "ka": "ამ გუნდის ერთი წევრი ისეთ ადგილას გამოვამწყვდიე, სადაც სხვები მას უბრალოდ გვერდით ვერ დაუდგებოდნენ."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "naruto-protector",
+      "title": {
+        "en": "Who is your protector?",
+        "ka": "ვინ არის შენი მცველი?"
+      },
+      "label": {
+        "en": "Protector",
+        "ka": "მცველი"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Who is your protector?",
+        "ka": "ვინ არის შენი მცველი?"
+      },
+      "lots": [
+        {
+          "id": "naruto-hashirama-senju",
+          "name": {
+            "en": "Hashirama Senju",
+            "ka": "ჰაშირამა სენჯუ"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "naruto-might-guy",
+          "name": {
+            "en": "Might Guy",
+            "ka": "მაით გაი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "naruto-yamato",
+          "name": {
+            "en": "Yamato",
+            "ka": "იამატო"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "naruto-itachi-uchiha",
+          "name": {
+            "en": "Itachi Uchiha",
+            "ka": "იტაჩი უჩიჰა"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Itachi watched over his younger brother Sasuke, son of the Uchiha clan leader.",
+              "ka": "იტაჩი თავის უმცროს ძმას, სასკეს, უჩიჰას კლანის ლიდერის ვაჟს, მფარველობდა."
+            },
+            {
+              "en": "Itachi initially confronted Naruto as an Akatsuki member; later he helped him during the war.",
+              "ka": "იტაჩი თავდაპირველად ნარუტოს აკაცუკის წევრად დაუპირისპირდა; მოგვიანებით, ომის დროს, დაეხმარა."
+            },
+            {
+              "en": "Itachi fought the resurrected Nagato.",
+              "ka": "იტაჩი გაცოცხლებულ ნაგატოს ებრძოდა."
+            }
+          ]
+        },
+        {
+          "id": "naruto-ebisu",
+          "name": {
+            "en": "Ebisu",
+            "ka": "ებისუ"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Ebisu tutored Konohamaru, grandson of the Third Hokage.",
+              "ka": "ებისუ მესამე ჰოკაგეს შვილიშვილის, კონოჰამარუს, მასწავლებელი იყო."
+            },
+            {
+              "en": "Ebisu initially opposed Naruto's influence on Konohamaru, then helped train Naruto.",
+              "ka": "ებისუ თავდაპირველად კონოჰამარუზე ნარუტოს გავლენას ეწინააღმდეგებოდა, შემდეგ კი ნარუტოს წვრთნაში დაეხმარა."
+            },
+            {
+              "en": "Ebisu faced Pain's Naraka Path and refused to reveal Naruto's whereabouts.",
+              "ka": "ებისუ პეინის ნარაკას გზას დაუპირისპირდა და ნარუტოს ადგილსამყოფელის გამხელაზე უარი თქვა."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "A child I watched over came from an influential Leaf family.",
+          "ka": "ბავშვი, რომელსაც ვმფარველობდი, ფოთლის სოფლის გავლენიანი ოჯახიდან იყო."
+        },
+        {
+          "en": "Naruto met me as an obstacle before he knew me as an ally.",
+          "ka": "ნარუტომ ჯერ დაბრკოლებად გამიცნო, შემდეგ კი — მოკავშირედ."
+        },
+        {
+          "en": "I stood against an opponent who had the Rinnegan.",
+          "ka": "დავუპირისპირდი მოწინააღმდეგეს, რომელსაც რინეგანი ჰქონდა."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "naruto-village-leader",
+      "title": {
+        "en": "Who is your village leader?",
+        "ka": "ვინ არის შენი სოფლის ლიდერი?"
+      },
+      "label": {
+        "en": "Village leader",
+        "ka": "სოფლის ლიდერი"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Who is your village leader?",
+        "ka": "ვინ არის შენი სოფლის ლიდერი?"
+      },
+      "lots": [
+        {
+          "id": "naruto-hashirama-senju",
+          "name": {
+            "en": "Hashirama Senju",
+            "ka": "ჰაშირამა სენჯუ"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "naruto-minato-namikaze",
+          "name": {
+            "en": "Minato Namikaze",
+            "ka": "მინატო ნამიკაზე"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "naruto-tsunade",
+          "name": {
+            "en": "Tsunade",
+            "ka": "ცუნადე"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "naruto-hiruzen-sarutobi",
+          "name": {
+            "en": "Hiruzen Sarutobi",
+            "ka": "ჰირუზენ სარუტობი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Tobirama acted as a decoy so Hiruzen and the rest of the squad could escape.",
+              "ka": "ტობირამამ მტერი თავისკენ მიიზიდა, რათა ჰირუზენსა და დანარჩენ რაზმს გაქცევა შეძლებოდათ."
+            },
+            {
+              "en": "Hiruzen sought a negotiated solution to the planned coup, but failed to prevent the massacre.",
+              "ka": "ჰირუზენი დაგეგმილი გადატრიალების მოლაპარაკებით მოგვარებას ცდილობდა, თუმცა ხოცვა-ჟლეტა ვერ აღკვეთა."
+            },
+            {
+              "en": "Hiruzen used the Reaper Death Seal against Orochimaru.",
+              "ka": "ჰირუზენმა ოროჩიმარუს წინააღმდეგ სიკვდილის ღმერთის ბეჭედი გამოიყენა."
+            }
+          ]
+        },
+        {
+          "id": "naruto-danzo-shimura",
+          "name": {
+            "en": "Danzō Shimura",
+            "ka": "დანზო შიმურა"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Danzō was in the same squad that Tobirama saved.",
+              "ka": "დანზო იმავე რაზმში იყო, რომელიც ტობირამამ გადაარჩინა."
+            },
+            {
+              "en": "Danzō pushed Itachi toward the massacre.",
+              "ka": "დანზომ იტაჩის ხოცვა-ჟლეტისკენ უბიძგა."
+            },
+            {
+              "en": "Danzō activated the Reverse Four Symbols Sealing in an unsuccessful attempt to take Sasuke and Obito with him.",
+              "ka": "დანზომ ოთხი სიმბოლოს შებრუნებული ბეჭედი გაააქტიურა, რათა სასკე და ობიტო თან წაეყოლებინა, თუმცა მცდელობა უშედეგო აღმოჩნდა."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "I survived because the Second Hokage stayed behind.",
+          "ka": "გადავრჩი, რადგან მეორე ჰოკაგე უკან დარჩა."
+        },
+        {
+          "en": "My decisions helped shape the fate of the Uchiha clan.",
+          "ka": "ჩემმა გადაწყვეტილებებმა უჩიჰას კლანის ბედის ჩამოყალიბებაში წვლილი შეიტანა."
+        },
+        {
+          "en": "At the end of my life, I tried to take an enemy with me through a sealing technique.",
+          "ka": "სიცოცხლის ბოლოს დაბეჭდვის ტექნიკით მტრის თან წაყოლება ვცადე."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "naruto-tailed-beast",
+      "title": {
+        "en": "Which tailed beast do you receive?",
+        "ka": "რომელი კუდიანი მხეცი გერგება?"
+      },
+      "label": {
+        "en": "Tailed beast",
+        "ka": "კუდიანი მხეცი"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Which tailed beast do you receive?",
+        "ka": "რომელი კუდიანი მხეცი გერგება?"
+      },
+      "lots": [
+        {
+          "id": "naruto-kurama-nine-tails",
+          "name": {
+            "en": "Kurama (Nine-Tails)",
+            "ka": "კურამა (ცხრაკუდა)"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "naruto-gyuki-eight-tails",
+          "name": {
+            "en": "Gyūki (Eight-Tails)",
+            "ka": "გიუკი (რვაკუდა)"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "naruto-matatabi-two-tails",
+          "name": {
+            "en": "Matatabi (Two-Tails)",
+            "ka": "მატატაბი (ორკუდა)"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "naruto-ten-tails",
+          "name": {
+            "en": "Ten-Tails",
+            "ka": "ათკუდა"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Obito initially struggled to control the Ten-Tails after becoming its jinchūriki.",
+              "ka": "მისი ჯინჩურიკი გახდომის შემდეგ ობიტოს თავდაპირველად ათკუდას კონტროლი უჭირდა."
+            },
+            {
+              "en": "Naruto fought the enormous Ten-Tails during the war.",
+              "ka": "ომის დროს ნარუტო უზარმაზარ ათკუდას ებრძოდა."
+            },
+            {
+              "en": "Madara sealed the Ten-Tails inside himself.",
+              "ka": "მადარამ ათკუდა საკუთარ სხეულში დაბეჭდა."
+            }
+          ]
+        },
+        {
+          "id": "naruto-shukaku-one-tail",
+          "name": {
+            "en": "Shukaku (One-Tail)",
+            "ka": "შუკაკუ (ერთკუდა)"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Gaara feared losing control to Shukaku, particularly through sleep.",
+              "ka": "გაარას ეშინოდა, რომ შუკაკუ კონტროლს წაართმევდა, განსაკუთრებით ძილის დროს."
+            },
+            {
+              "en": "Naruto confronted Shukaku with Gamabunta during the invasion of the Leaf.",
+              "ka": "ფოთლის სოფელზე თავდასხმისას ნარუტო შუკაკუს გამაბუნტასთან ერთად დაუპირისპირდა."
+            },
+            {
+              "en": "Madara captured Shukaku and sealed him into the Demonic Statue as part of restoring the Ten-Tails.",
+              "ka": "მადარამ შუკაკუ დაიჭირა და დემონურ ქანდაკებაში დაბეჭდა, როგორც ათკუდას აღდგენის ნაწილი."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "Putting me inside a human did not guarantee that human could control me.",
+          "ka": "ადამიანში ჩემი მოთავსება არ ნიშნავდა, რომ ის ჩემს გაკონტროლებას შეძლებდა."
+        },
+        {
+          "en": "Naruto faced me when my body towered over his.",
+          "ka": "ნარუტო მაშინ დამიპირისპირდა, როცა ჩემი სხეული მისას ბევრად აღემატებოდა."
+        },
+        {
+          "en": "Madara sought my power and used sealing to claim it.",
+          "ka": "მადარას ჩემი ძალა სურდა და მის მისატაცებლად დაბეჭდვა გამოიყენა."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "naruto-kekkei-genkai",
+      "title": {
+        "en": "What is your kekkei genkai?",
+        "ka": "რა არის შენი კეკეი გენკაი?"
+      },
+      "label": {
+        "en": "Kekkei genkai",
+        "ka": "კეკეი გენკაი"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "What is your kekkei genkai?",
+        "ka": "რა არის შენი კეკეი გენკაი?"
+      },
+      "lots": [
+        {
+          "id": "naruto-rinnegan",
+          "name": {
+            "en": "Rinnegan",
+            "ka": "რინეგანი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "naruto-sharingan",
+          "name": {
+            "en": "Sharingan",
+            "ka": "შარინგანი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "naruto-wood-release",
+          "name": {
+            "en": "Wood Release",
+            "ka": "ხის სტიქია"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "naruto-ice-release",
+          "name": {
+            "en": "Ice Release",
+            "ka": "ყინულის სტიქია"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Haku's father turned on him after discovering his inherited Ice Release.",
+              "ka": "ჰაკუს მამა მას აუმხედრდა, როცა მისი მემკვიდრეობითი ყინულის სტიქია აღმოაჩინა."
+            },
+            {
+              "en": "Haku moved between his Demonic Mirroring Ice Crystals.",
+              "ka": "ჰაკუ თავის დემონურ სარკისებრ ყინულის კრისტალებს შორის გადაადგილდებოდა."
+            },
+            {
+              "en": "Haku died protecting Zabuza and was later resurrected.",
+              "ka": "ჰაკუ ზაბუზას დაცვისას დაიღუპა, მოგვიანებით კი გააცოცხლეს."
+            }
+          ]
+        },
+        {
+          "id": "naruto-dead-bone-pulse-shikotsumyaku",
+          "name": {
+            "en": "Dead Bone Pulse (Shikotsumyaku)",
+            "ka": "მკვდარი ძვლის პულსი (შიკოცუმიაკუ)"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Kimimaro's clan feared his rare ability and kept him confined.",
+              "ka": "კიმიმაროს კლანს მისი იშვიათი უნარის ეშინოდა და გამოკეტილი ჰყავდა."
+            },
+            {
+              "en": "Kimimaro could merge with and travel through the bones of his Dance of the Seedling Fern.",
+              "ka": "კიმიმაროს შეეძლო თავისი „გვიმრის ყლორტის ცეკვის“ ძვლებს შერწყმოდა და მათში გადაადგილებულიყო."
+            },
+            {
+              "en": "Kimimaro died pursuing Orochimaru's objective and was later resurrected.",
+              "ka": "კიმიმარო ოროჩიმარუს მიზნის შესრულების მცდელობისას დაიღუპა, მოგვიანებით კი გააცოცხლეს."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "A boy famous for using me grew up feared for the power he inherited.",
+          "ka": "ჩემი გამოყენებით ცნობილი ბიჭი ისე გაიზარდა, რომ მისი მემკვიდრეობითი ძალის ეშინოდათ."
+        },
+        {
+          "en": "I can fill the battlefield with structures my user can move through.",
+          "ka": "შემიძლია ბრძოლის ველი ისეთი წარმონაქმნებით ავავსო, რომლებშიც ჩემი მომხმარებელი გადაადგილდება."
+        },
+        {
+          "en": "That boy died serving a rogue ninja, then returned to fight in the Fourth War.",
+          "ka": "ის ბიჭი სოფლისგან განდგომილი ნინძის სამსახურში დაიღუპა, შემდეგ კი მეოთხე ომში საბრძოლველად დაბრუნდა."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "naruto-forbidden-technique",
+      "title": {
+        "en": "What is your forbidden technique?",
+        "ka": "რა არის შენი აკრძალული ტექნიკა?"
+      },
+      "label": {
+        "en": "Forbidden technique",
+        "ka": "აკრძალული ტექნიკა"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "What is your forbidden technique?",
+        "ka": "რა არის შენი აკრძალული ტექნიკა?"
+      },
+      "lots": [
+        {
+          "id": "naruto-edo-tensei",
+          "name": {
+            "en": "Edo Tensei",
+            "ka": "ედო ტენსეი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "naruto-eight-gates",
+          "name": {
+            "en": "Eight Gates",
+            "ka": "რვა კარიბჭე"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "naruto-reaper-death-seal",
+          "name": {
+            "en": "Reaper Death Seal",
+            "ka": "სიკვდილის ღმერთის ბეჭედი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "naruto-izanagi",
+          "name": {
+            "en": "Izanagi",
+            "ka": "იზანაგი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Danzō used Izanagi with a body modified through Orochimaru's research.",
+              "ka": "დანზო იზანაგის იყენებდა სხეულით, რომელიც ოროჩიმარუს კვლევების მეშვეობით იყო შეცვლილი."
+            },
+            {
+              "en": "Danzō used Izanagi while fighting Sasuke.",
+              "ka": "დანზომ იზანაგი სასკესთან ბრძოლისას გამოიყენა."
+            },
+            {
+              "en": "Izanagi permanently blinds the eye used to cast it.",
+              "ka": "იზანაგი სამუდამოდ აბრმავებს იმ თვალს, რომლითაც მას ასრულებენ."
+            }
+          ]
+        },
+        {
+          "id": "naruto-twin-snake-sacrifice-jutsu",
+          "name": {
+            "en": "Twin Snake Sacrifice Jutsu",
+            "ka": "ორი გველის მსხვერპლშეწირვის ძუცუ"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Anko, who bore Orochimaru's cursed seal, attempted the Twin Snake technique.",
+              "ka": "ანკომ, რომელსაც ოროჩიმარუს წყევლის ბეჭედი ჰქონდა, ორი გველის ტექნიკის გამოყენება სცადა."
+            },
+            {
+              "en": "Anko attempted the technique against Orochimaru.",
+              "ka": "ანკომ ტექნიკის გამოყენება ოროჩიმარუს წინააღმდეგ სცადა."
+            },
+            {
+              "en": "The Twin Snake technique is intended to cost the user's life along with the target's. Anko's attempt was interrupted; no successful execution is assumed.",
+              "ka": "ორი გველის ტექნიკამ სამიზნესთან ერთად მომხმარებლის სიცოცხლეც უნდა შეიწიროს. ანკოს მცდელობა შეწყდა; ტექნიკის წარმატებით შესრულება აქ არ იგულისხმება."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "A shinobi altered by Orochimaru's experiments turned to me.",
+          "ka": "ოროჩიმარუს ექსპერიმენტებით შეცვლილმა შინობმა მომმართა."
+        },
+        {
+          "en": "I was attempted against someone who had deserted the Leaf.",
+          "ka": "ჩემი გამოყენება ფოთლის სოფლიდან განდგომილის წინააღმდეგ სცადეს."
+        },
+        {
+          "en": "My price is more than chakra: my user gives up something that a night's rest cannot restore.",
+          "ka": "ჩემი ფასი ჩაკრაზე მეტია: მომხმარებელი თმობს იმას, რასაც ერთი ღამის დასვენება ვერ აღადგენს."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "naruto-secret-mentor",
+      "title": {
+        "en": "Who is your secret mentor?",
+        "ka": "ვინ არის შენი საიდუმლო მენტორი?"
+      },
+      "label": {
+        "en": "Secret mentor",
+        "ka": "საიდუმლო მენტორი"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Who is your secret mentor?",
+        "ka": "ვინ არის შენი საიდუმლო მენტორი?"
+      },
+      "lots": [
+        {
+          "id": "naruto-jiraiya",
+          "name": {
+            "en": "Jiraiya",
+            "ka": "ჯირაია"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "naruto-killer-b",
+          "name": {
+            "en": "Killer B",
+            "ka": "კილერ ბი"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Bid to add this choice to your life as a shinobi.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი შენი შინობის ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "naruto-iruka-umino",
+          "name": {
+            "en": "Iruka Umino",
+            "ka": "ირუკა უმინო"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "naruto-tobirama-senju",
+          "name": {
+            "en": "Tobirama Senju",
+            "ka": "ტობირამა სენჯუ"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Tobirama established the Chūnin Exams.",
+              "ka": "ტობირამამ ჩუნინის გამოცდები დააარსა."
+            },
+            {
+              "en": "Tobirama stayed behind as a decoy to save his squad.",
+              "ka": "ტობირამა რაზმის გადასარჩენად უკან დარჩა და მტერი თავისკენ მიიზიდა."
+            },
+            {
+              "en": "Orochimaru resurrected Tobirama through Edo Tensei.",
+              "ka": "ოროჩიმარუმ ტობირამა ედო ტენსეის მეშვეობით გააცოცხლა."
+            }
+          ]
+        },
+        {
+          "id": "naruto-anko-mitarashi",
+          "name": {
+            "en": "Anko Mitarashi",
+            "ka": "ანკო მიტარაში"
+          },
+          "hasImage": true,
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Anko served as examiner for the Forest of Death stage.",
+              "ka": "ანკო სიკვდილის ტყის ეტაპზე გამომცდელი იყო."
+            },
+            {
+              "en": "Anko was prepared to use a technique intended to kill both herself and Orochimaru.",
+              "ka": "ანკო მზად იყო გამოეყენებინა ტექნიკა, რომელსაც თავადაც უნდა მოეკლა და ოროჩიმარუც."
+            },
+            {
+              "en": "Orochimaru was restored from the cursed seal on Anko's body.",
+              "ka": "ოროჩიმარუ ანკოს სხეულზე არსებული წყევლის ბეჭდიდან აღდგა."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "I helped the Leaf decide which young shinobi were ready to advance.",
+          "ka": "ფოთლის სოფელს ვეხმარებოდი გადაეწყვიტა, რომელი ახალგაზრდა შინობი იყო წინსვლისთვის მზად."
+        },
+        {
+          "en": "I was willing to die rather than let a dangerous enemy go unchallenged.",
+          "ka": "სიკვდილისთვის მზად ვიყავი, ოღონდ სახიფათო მტერი წინააღმდეგობის გარეშე არ დამეტოვებინა."
+        },
+        {
+          "en": "My connection to Orochimaru includes an unnatural return to life.",
+          "ka": "ოროჩიმარუსთან ჩემი კავშირი სიცოცხლეში არაბუნებრივ დაბრუნებასაც მოიცავს."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    }
+  ]
+}

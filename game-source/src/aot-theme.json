@@ -1,0 +1,52 @@
+{
+  "id": "attack-on-titan",
+  "name": "Attack on Titan",
+  "startingBudget": 2500,
+  "description": "Build your team. Win the fight.",
+  "scope": "7 rounds · Full anime · €2,500 each",
+  "badge": "Beyond the Walls",
+  "notice": "Full anime spoilers. Build a team across different eras. Each shifter gets the named Titan power. Debate the fight, then vote for another team.",
+  "ui": {
+    "intro": "Seven picks. Three teams. One narrator. Choose your regiment, captain, teammates and two Titan shifters.",
+    "prime": "Attack on Titan",
+    "scope": "7 rounds · Full anime · €2,500 each",
+    "lobbyText": "Three drafters. One narrator. €2,500 each. Auctions: 15 seconds. Mystery choice: 30 seconds.",
+    "setupTitle": "Seal the secrets beyond the Walls.",
+    "setupText": "Choose one hidden answer for each of the 7 rounds. Both answers fit the same three clues. Only the narrator sees them before the reveal. Lock your choices for this match.",
+    "setupLockedText": "All 7 boxes are sealed for this match.",
+    "boxesLocked": "All 7 boxes locked",
+    "lockBoxes": "Lock all 7 boxes",
+    "errors.chooseAllBoxes": "Choose an answer for all 7 boxes first.",
+    "errors.lockBoxesFirst": "Lock all 7 mystery boxes before starting.",
+    "autoAssignNotice": "If nobody bids, {name} receives this choice for {amount}.",
+    "draftFinished": "Your team is ready. Compare your captain, teammates and Titan powers. Explain how your team wins the fight.",
+    "voteTitle": "Whose team wins the fight?",
+    "voteText": "Consider the whole team: leadership, strategy, attack and defence. Each player votes for another team. Votes stay hidden until everyone has voted.",
+    "cardFooter": "7 picks. Three teams. ATTACK ON TITAN · PARTY DRAFT"
+  },
+  "ka": {
+    "name": "ტიტანებზე შეტევა",
+    "description": "ააწყვე გუნდი. მოიგე ბრძოლა.",
+    "scope": "7 რაუნდი · სრული ანიმე · €2,500 თითოეულს",
+    "badge": "კედლების მიღმა",
+    "notice": "მთელი ანიმეს სპოილერები. ააწყვე გუნდი სხვადასხვა ეპოქის პერსონაჟებით. ტიტანის თითოეულ მფლობელს მხოლოდ მითითებული ძალა აქვს. განიხილეთ ბრძოლა და ხმა სხვა გუნდს მიეცით.",
+    "ui": {
+      "intro": "შვიდი არჩევანი. სამი გუნდი. ერთი ნარატორი. აირჩიე დანაყოფი, კაპიტანი, თანაგუნდელები და ტიტანის ორი მფლობელი.",
+      "prime": "ტიტანებზე შეტევა",
+      "scope": "7 რაუნდი · სრული ანიმე · €2,500 თითოეულს",
+      "lobbyText": "სამი მოთამაშე. ერთი ნარატორი. თითოეულს €2,500. აუქციონი: 15 წამი. მისტერი ბოქსის არჩევა: 30 წამი.",
+      "setupTitle": "დალუქე კედლების მიღმა დამალული საიდუმლოებები.",
+      "setupText": "7-ვე რაუნდისთვის თითო დამალული პასუხი აირჩიე. ორივე პასუხს ერთი და იგივე სამი მინიშნება შეესაბამება. გახსნამდე მათ მხოლოდ ნარატორი ხედავს. ჩაკეტე არჩევანი ამ თამაშისთვის.",
+      "setupLockedText": "7-ვე ბოქსი ამ თამაშისთვის დალუქულია.",
+      "boxesLocked": "7-ვე ბოქსი ჩაკეტილია",
+      "lockBoxes": "ჩაკეტე 7-ვე ბოქსი",
+      "errors.chooseAllBoxes": "ჯერ 7-ვე ბოქსისთვის აირჩიე პასუხი.",
+      "errors.lockBoxesFirst": "თამაშის დაწყებამდე ჩაკეტე 7-ვე მისტერი ბოქსი.",
+      "autoAssignNotice": "თუ ფსონს არავინ დადებს, {name} ამ ვარიანტს {amount}-ად მიიღებს.",
+      "draftFinished": "შენი გუნდი მზადაა. შეადარეთ კაპიტნები, თანაგუნდელები და ტიტანების ძალები. ახსენით, როგორ მოიგებს თქვენი გუნდი ბრძოლას.",
+      "voteTitle": "ვისი გუნდი მოიგებს ბრძოლას?",
+      "voteText": "შეაფასე მთელი გუნდი: ხელმძღვანელობა, სტრატეგია, შეტევა და თავდაცვა. თითოეული მოთამაშე ხმას სხვა გუნდს აძლევს. ხმები მანამდე არ ჩანს, სანამ ყველა არ აირჩევს.",
+      "cardFooter": "7 არჩევანი. სამი გუნდი. ტიტანებზე შეტევა · PARTY DRAFT"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "tool": "Built-in image_gen",
+  "styleReference": "../attack-on-titan-background.png",
+  "output": "public/assets/aot/passage.webp",
+  "sourcePng": "../attack-on-titan-passage.png",
+  "prompt": "Use the supplied image ONLY as a reference for photographic style, weathered stone materials and amber dusk lighting. Create one separate environment image for the interior behind its central arched gate, to be used while the camera enters. Portrait composition, approximately 3:5 aspect ratio. A truly photorealistic old medieval stone barrel-vault passage, viewed straight ahead from the entrance, eye height, centered one-point perspective. The near opening fills the image. Thick irregular worn limestone and dark grey stone walls, a continuous curved rough stone vault, deep mortar cracks and damp patches. Wet, uneven cobblestone floor leads into darkness. Soft amber dusk light enters from BEHIND the camera, illuminating only the entrance edges and the first few meters of floor; subtle haze and much deeper, nearly black shadows down the corridor. The far passage is fully dark with no visible sun or outdoor exit. Wide enough for a two-leaf fortress gate. Cinematic realistic photographic textures with granular stone detail; avoid smooth vector arches, repeated concentric rings, plastic or videogame materials. NO doors, NO text, NO icons, NO people, NO Titan, NO UI, NO watermark. No separate torches or lantern props. Match the reference's sophisticated, grounded cinematic realism. This is the passage interior only, not the entire reference scene."
+}

@@ -1,0 +1,739 @@
+{
+  "id": "mcu-six-prime-v1",
+  "continuity": "MCU feature films only; all characters in their prime",
+  "positions": [
+    {
+      "id": "strategy",
+      "title": {
+        "en": "Who Makes Your Plan?",
+        "ka": "სტრატეგი"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Choose who fills this role in your team. Everyone is in their prime.",
+        "ka": "აირჩიე, ვინ დაიკავებს ამ როლს შენს გუნდში. ყველა თავისი შესაძლებლობების მწვერვალზეა."
+      },
+      "lots": [
+        {
+          "id": "tony-stark",
+          "name": {
+            "en": "Iron Man",
+            "ka": "რკინის კაცი"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "price": 70
+        },
+        {
+          "id": "nick-fury",
+          "name": {
+            "en": "Nick Fury",
+            "ka": "ნიკ ფიური"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "price": 50
+        },
+        {
+          "id": "mantis",
+          "name": {
+            "en": "Mantis",
+            "ka": "მანტისი"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "price": 20
+        }
+      ],
+      "clues": [
+        {
+          "en": "My confidence has put other people in danger.",
+          "ka": "ჩემმა თავდაჯერებულობამ სხვა ადამიანები საფრთხეში ჩააგდო."
+        },
+        {
+          "en": "I helped hold an enemy in place so someone else could act.",
+          "ka": "მტრის შეკავებაში დავეხმარე, რომ სხვას ემოქმედა."
+        },
+        {
+          "en": "I was gone for years without growing older.",
+          "ka": "წლების განმავლობაში გავუჩინარდი ისე, რომ არ დავბერებულვარ."
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "doctor-strange",
+          "name": {
+            "en": "Doctor Strange",
+            "ka": "დოქტორ სტრეინჯი"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "explanations": [
+            {
+              "en": "Strange attempts the memory spell despite the risks and interruptions, helping cause the multiverse crisis.",
+              "ka": "Strange მიუხედავად რისკებისა და ხელისშეშლისა, ცდილობს მეხსიერების შელოცვის შესრულებას, რითაც ხელს უწყობს მულტივერსის კრიზისის წარმოქმნას."
+            },
+            {
+              "en": "Strange restrains Thanos with magical bands during the attempt to remove the gauntlet.",
+              "ka": "ხელთათმანის წართმევის მცდელობისას, Strange ჯადოსნური სახვევებით აკავებს Thanos-ს"
+            },
+            {
+              "en": "Strange disappears in the Snap and returns five years later.",
+              "ka": "Strange უჩინარდება \"Snap\"-ის (თითის ტკაცუინის) დროს და ხუთი წლის შემდეგ ბრუნდება."
+            }
+          ]
+        },
+        {
+          "id": "drax",
+          "name": {
+            "en": "Drax",
+            "ka": "დრაქსი"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "explanations": [
+            {
+              "en": "Drax summons Ronan to Knowhere, endangering the Guardians.",
+              "ka": "Drax იძახებს Ronan-ს Knowhere-ში, რითაც Guardians-ს საფრთხეში აგდებს."
+            },
+            {
+              "en": "Drax holds Thanos’s leg during the same attempt.",
+              "ka": "Drax იჭერს Thanos-ის ფეხს."
+            },
+            {
+              "en": "Drax disappears in the Snap and returns five years later.",
+              "ka": "Drax უჩინარდება Snap-ის დროს და ხუთი წლის შემდეგ ბრუნდება."
+            }
+          ]
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "defender",
+      "title": {
+        "en": "Who Defends You?",
+        "ka": "მცველი"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Choose who fills this role in your team. Everyone is in their prime.",
+        "ka": "აირჩიე, ვინ დაიკავებს ამ როლს შენს გუნდში. ყველა თავისი შესაძლებლობების მწვერვალზეა."
+      },
+      "lots": [
+        {
+          "id": "hulk",
+          "name": {
+            "en": "Hulk",
+            "ka": "ჰალკი"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "price": 70
+        },
+        {
+          "id": "black-panther",
+          "name": {
+            "en": "Black Panther",
+            "ka": "შავი პანტერა"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "price": 50
+        },
+        {
+          "id": "falcon",
+          "name": {
+            "en": "Falcon",
+            "ka": "ფალკონი"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "price": 20
+        }
+      ],
+      "clues": [
+        {
+          "en": "Someone far richer than me trusted me with important work.",
+          "ka": "ჩემზე გაცილებით მდიდარმა ადამიანმა მნიშვნელოვანი საქმე მანდო."
+        },
+        {
+          "en": "Some of my most useful equipment came from someone else’s workshop.",
+          "ka": "ჩემი ყველაზე გამოსადეგი აღჭურვილობა სხვისი სახელოსნოდან მოვიდა."
+        },
+        {
+          "en": "I tried to keep young people alive when a trip went badly wrong.",
+          "ka": "ვცდილობდი ახალგაზრდების გადარჩენას, როცა მოგზაურობა ცუდად წავიდა."
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "spider-man",
+          "name": {
+            "en": "Peter Parker / Spider-Man",
+            "ka": "პიტერ პარკერი / ადამიანი ობობა"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "explanations": [
+            {
+              "en": "Tony trusts Peter with hero work, equipment, and eventually his legacy.",
+              "ka": "ტონი ანდობს პიტერს გმირულ საქმეს, აღჭურვილობას და საბოლოოდ თავის მემკვიდრეობას."
+            },
+            {
+              "en": "Peter uses technology developed by Stark.",
+              "ka": "პიტერი იყენებს Stark-ის მიერ შექმნილ ტექნოლოგიას."
+            },
+            {
+              "en": "Peter protects his classmates during their European trip.",
+              "ka": "პიტერი იცავს თავის კლასელებს ევროპული მოგზაურობის დროს"
+            }
+          ]
+        },
+        {
+          "id": "happy-hogan",
+          "name": {
+            "en": "Happy Hogan",
+            "ka": "ჰეპი ჰოგანი"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "explanations": [
+            {
+              "en": "Tony trusts Happy as his bodyguard and security associate.",
+              "ka": "Tony ენდობა Happy-ს, როგორც თავის პირად მცველს."
+            },
+            {
+              "en": "Happy uses Stark equipment, including the jet.",
+              "ka": "Happy იყენებს Stark-ის აღჭურვილობას, მათ შორის თვითმფრინავს."
+            },
+            {
+              "en": "Happy shelters Peter’s school friends during the London attack.",
+              "ka": "Happy იფარებს Peter-ის სკოლის მეგობრებს ლონდონის თავდასხმის დროს."
+            }
+          ]
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "attacker",
+      "title": {
+        "en": "Who Attacks Your Opponent?",
+        "ka": "შემტევი"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Choose who fills this role in your team. Everyone is in their prime.",
+        "ka": "აირჩიე, ვინ დაიკავებს ამ როლს შენს გუნდში. ყველა თავისი შესაძლებლობების მწვერვალზეა."
+      },
+      "lots": [
+        {
+          "id": "thor",
+          "name": {
+            "en": "Thor",
+            "ka": "თორი"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "price": 70
+        },
+        {
+          "id": "tony-stark",
+          "name": {
+            "en": "Iron Man",
+            "ka": "რკინის კაცი"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "price": 50
+        },
+        {
+          "id": "black-widow",
+          "name": {
+            "en": "Black Widow",
+            "ka": "შავი ქვრივი"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "price": 20
+        }
+      ],
+      "clues": [
+        {
+          "en": "I was on the wrong side before fighting beside the heroes.",
+          "ka": "გმირებთან ერთად ბრძოლამდე, არასწორ მხარეს ვიყავი."
+        },
+        {
+          "en": "After losing family, I became someone people had reason to fear.",
+          "ka": "ოჯახის დაკარგვის შემდეგ, გავხდი ისეთი რომ ადამიანებს ჩემი შიშის საფუძველი მივეცი"
+        },
+        {
+          "en": "I have fought friends because I believed I was on the right side.",
+          "ka": "მეგობრებს ვებრძოდი, რადგან მჯეროდა, რომ სწორ მხარეს ვიყავი."
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "scarlet-witch",
+          "name": {
+            "en": "Scarlet Witch",
+            "ka": "ალისფერი ჯადოქარი"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "explanations": [
+            {
+              "en": "Wanda initially works with HYDRA and Ultron before joining the Avengers.",
+              "ka": "Wanda თავდაპირველად HYDRA-სთან და Ultron-თან თანამშრომლობს, სანამ Avengers-ს შეუერთდება."
+            },
+            {
+              "en": "Wanda’s grief over her lost children drives her violent pursuit of America Chavez in the film Multiverse of Madness.",
+              "ka": "დაკარგული შვილების გამო Wanda-ს მწუხარება ფილმში Multiverse of Madness განაპირობებს მის მიერ America Chavez-ის ძალადობრივ დევნას."
+            },
+            {
+              "en": "Wanda fights former Avengers teammates during the airport battle.",
+              "ka": "აეროპორტის ბრძოლის დროს Wanda ებრძვის Avengers-ის ყოფილ თანაგუნდელებს."
+            }
+          ]
+        },
+        {
+          "id": "hawkeye",
+          "name": {
+            "en": "Hawkeye",
+            "ka": "ქორის თვალი"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "explanations": [
+            {
+              "en": "Clint serves Loki while under the sceptre’s control before rejoining the Avengers.",
+              "ka": "სკიპტრის გავლენის ქვეშ ყოფნისას Clint ემსახურება Loki-ს "
+            },
+            {
+              "en": "After his family is erased, Clint becomes the lethal vigilante Ronin.",
+              "ka": "მას შემდეგ, რაც მისი ოჯახი გაქრება, Clint ხდება მომაკვდინებელი კრიმინალებზე მონადირე."
+            },
+            {
+              "en": "Clint fights former Avengers teammates during the airport battle.",
+              "ka": "აეროპორტის ბრძოლის დროს Clint ებრძვის Avengers-ის ყოფილ თანაგუნდელებს."
+            }
+          ]
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "boyfriend",
+      "title": {
+        "en": "Your Boyfriend",
+        "ka": "შეყვარებული"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Choose who fills this role in your team. Everyone is in their prime.",
+        "ka": "აირჩიე, ვინ დაიკავებს ამ როლს შენს გუნდში. ყველა თავისი შესაძლებლობების მწვერვალზეა."
+      },
+      "lots": [
+        {
+          "id": "star-lord",
+          "name": {
+            "en": "Star-Lord",
+            "ka": "ვარსკვლავთა მბრძანებელი"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "price": 70
+        },
+        {
+          "id": "captain-america",
+          "name": {
+            "en": "Captain America",
+            "ka": "კაპიტანი ამერიკა"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "price": 50
+        },
+        {
+          "id": "war-machine",
+          "name": {
+            "en": "War Machine",
+            "ka": "საბრძოლო მანქანა"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "price": 20
+        }
+      ],
+      "clues": [
+        {
+          "en": "Other people had a purpose in mind for me before I could choose one.",
+          "ka": "სანამ თავად ავირჩევდი, სხვებს ჩემთვის ცხოვრების მიზანი უკვე მოფიქრებული ჰქონდათ."
+        },
+        {
+          "en": "I decided for myself what the world needed.",
+          "ka": "მე ჩემით გადავწყვიტე, რა სჭირდებოდა სამყაროს."
+        },
+        {
+          "en": "I ended up fighting the person whose ideas helped make me.",
+          "ka": "იმ ადამიანს ვებრძოდი, ვის გამოც ცოცხალი ვარ."
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "vision",
+          "name": {
+            "en": "Vision",
+            "ka": "ვიჟენი"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "explanations": [
+            {
+              "en": "Vision’s body is intended for Ultron; Stark and Banner then plan to integrate J.A.R.V.I.S. into it.",
+              "ka": "Vision-ის სხეული განკუთვნილია Ultron-ისთვის; Stark-ი და Banner-ი შემდეგ გეგმავენ მასში J.A.R.V.I.S.-ის ინტეგრირებას."
+            },
+            {
+              "en": "Vision chooses to protect life and oppose Ultron.",
+              "ka": "Vision ირჩევს სიცოცხლის დაცვას და Ultron-ის წინააღმდეგ წასვლას."
+            },
+            {
+              "en": "Vision fights Ultron, who designed the synthetic body he inhabits.",
+              "ka": "Vision ებრძვის Ultron-ს, რომელმაც შექმნა ის სინთეტიკური სხეული, რომელშიც ის იმყოფება."
+            }
+          ]
+        },
+        {
+          "id": "ultron",
+          "name": {
+            "en": "Ultron",
+            "ka": "ულტრონი"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "explanations": [
+            {
+              "en": "Stark and Banner intend Ultron to be a peacekeeping program.",
+              "ka": "Stark-ი და Banner-ი მიზნად ისახავენ, რომ Ultron სამშვიდობო პროგრამა იყოს."
+            },
+            {
+              "en": "Ultron decides humanity must be eliminated in order to achieve peace.",
+              "ka": "Ultron გადაწყვეტს, რომ მშვიდობის მისაღწევად კაცობრიობა უნდა განადგურდეს."
+            },
+            {
+              "en": "Ultron fights Tony Stark, whose peacekeeping project brought him into being.",
+              "ka": "Ultron ებრძვის Tony Stark-ს, რომლის სამშვიდობო პროექტმაც ის შექმნა."
+            }
+          ]
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "best-friend",
+      "title": {
+        "en": "Your Best Friend",
+        "ka": "საუკეთესო მეგობარი"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Choose who fills this role in your team. Everyone is in their prime.",
+        "ka": "აირჩიე, ვინ დაიკავებს ამ როლს შენს გუნდში. ყველა თავისი შესაძლებლობების მწვერვალზეა."
+      },
+      "lots": [
+        {
+          "id": "spider-man",
+          "name": {
+            "en": "Peter Parker / Spider-Man",
+            "ka": "პიტერ პარკერი / ადამიანი ობობა"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "price": 70
+        },
+        {
+          "id": "ant-man",
+          "name": {
+            "en": "Ant-Man",
+            "ka": "ადამიანი ჭიანჭველა"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "price": 50
+        },
+        {
+          "id": "rocket",
+          "name": {
+            "en": "Rocket",
+            "ka": "როკეტი"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "price": 20
+        }
+      ],
+      "clues": [
+        {
+          "en": "I was turned into something I never chose to become.",
+          "ka": "ისეთ რამედ მაქციეს, როგორიც არასდროს მსურდა ვყოფილიყავი"
+        },
+        {
+          "en": "I once took orders from people I later turned against.",
+          "ka": "ოდესღაც იმ ადამიანებისგან ვიღებდი ბრძანებებს, რომელთა წინააღმდეგაც მოგვიანებით წავედი."
+        },
+        {
+          "en": "Someone I once fought eventually fought on my side.",
+          "ka": "ვიღაც, ვისაც ადრე ვებრძოდი, საბოლოოდ ჩემს მხარეს იბრძოდა."
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "bucky",
+          "name": {
+            "en": "Bucky Barnes",
+            "ka": "ბაკი ბარნსი"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "explanations": [
+            {
+              "en": "HYDRA turns Bucky into its brainwashed assassin.",
+              "ka": "HYDRA-მ ბაკი ტვინგამორეცხილ მკვლელად აქცია."
+            },
+            {
+              "en": "Bucky serves HYDRA under conditioning, then fights against its control.",
+              "ka": "თავიდან ბაკი ემსახურება HYDRA-ს, შემდეგ კი ებრძვის მათ."
+            },
+            {
+              "en": "Bucky fights Steve and Sam before becoming their ally.",
+              "ka": "ბაკი ებრძვის სტივს და სემს, სანამ მათი მოკავშირე გახდება."
+            }
+          ]
+        },
+        {
+          "id": "nebula",
+          "name": {
+            "en": "Nebula",
+            "ka": "ნებულა"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "explanations": [
+            {
+              "en": "Thanos forcibly rebuilds Nebula and trains her as a weapon.",
+              "ka": "თანოსი, ძალის გამოყენებით არემონტებს ნებულას და იარაღად ამზადებს."
+            },
+            {
+              "en": "Nebula serves Thanos, then turns against him.",
+              "ka": "ნებულა ემსახურება თანოსს, შემდეგ კი მის წინააღმდეგ მიდის."
+            },
+            {
+              "en": "Nebula fights Gamora and the Guardians before becoming their ally.",
+              "ka": "ნებულა ებრძვის გამორას და გარდიანებს, სანამ მათი მოკავშირე გახდება."
+            }
+          ]
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "nemesis",
+      "title": {
+        "en": "Who Attacks You?",
+        "ka": "მტერი"
+      },
+      "effect": "negative",
+      "prompt": {
+        "en": "This character attacks YOU. A less dangerous enemy is a better pick.",
+        "ka": "ეს პერსონაჟი შენ გიტევს. ნაკლებად სახიფათო მტერი ჯობია."
+      },
+      "lots": [
+        {
+          "id": "green-goblin",
+          "name": {
+            "en": "Green Goblin",
+            "ka": "მწვანე გობლინი"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "price": 70
+        },
+        {
+          "id": "ronan-the-accuser",
+          "name": {
+            "en": "Ronan the Accuser",
+            "ka": "რონან ბრალმდებელი"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "price": 50
+        },
+        {
+          "id": "ego",
+          "name": {
+            "en": "Ego",
+            "ka": "ეგო"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "price": 20
+        }
+      ],
+      "clues": [
+        {
+          "en": "I have led others who were willing to fight.",
+          "ka": "ვუძღვებოდი სხვებს, რომლებიც მზად იყვნენ საბრძოლველად."
+        },
+        {
+          "en": "I have taken up arms for a future I thought was better.",
+          "ka": "იარაღი ავიღე მომავლისთვის, რომელიც უკეთესი მეგონა."
+        },
+        {
+          "en": "I was there when a battle changed the fate of almost everyone.",
+          "ka": "იქ ვიყავი, როცა ბრძოლამ თითქმის ყველას ბედი შეცვალა."
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "korg",
+          "name": {
+            "en": "Korg",
+            "ka": "კორგი"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "explanations": [
+            {
+              "en": "Korg organises a rebellion among the gladiators on Sakaar.",
+              "ka": "Korg აორგანიზებს აჯანყებას გლადიატორებს შორის Sakaar-ზე."
+            },
+            {
+              "en": "Korg fights for freedom from the Grandmaster and later against Thanos.",
+              "ka": "Korg იბრძვის გრანდმასტერისგან თავისუფლებისთვის და მოგვიანებით თანოსის წინააღმდეგ."
+            },
+            {
+              "en": "Korg fights in the final battle at the Avengers compound.",
+              "ka": "Korg მონაწილეობს Avengers-ის გამართულ ფინალურ ბრძოლაში."
+            }
+          ]
+        },
+        {
+          "id": "thanos",
+          "name": {
+            "en": "Thanos",
+            "ka": "თანოსი"
+          },
+          "pitch": {
+            "en": "",
+            "ka": null
+          },
+          "explanations": [
+            {
+              "en": "Thanos commands armies who fight for him.",
+              "ka": "თანოსი მეთაურობს არმიებს, რომლებიც მისთვის იბრძვიან."
+            },
+            {
+              "en": "Thanos fights to impose the future he believes his plan will create.",
+              "ka": "თანოსი იბრძვის იმ მომავლის დასამკვიდრებლად, რომელიც, მისი რწმენით, მისი გეგმით შეიქმნება."
+            },
+            {
+              "en": "Thanos fights in that same final battle.",
+              "ka": "თანოსი იბრძვის იმავე ფინალურ ბრძოლაში."
+            }
+          ]
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    }
+  ],
+  "clueVersion": 2
+}

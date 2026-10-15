@@ -1,0 +1,743 @@
+{
+  "id": "naruto",
+  "name": "Naruto",
+  "status": "Approved lineups; new mystery clues drafted for review, not deployed",
+  "continuity": "Naruto and Naruto Shippuden only. Full spoilers. No Boruto, movies or game-only lore.",
+  "language": "en",
+  "rules": {
+    "mystery": "All three clues fit either hidden outcome. Candidate names and explanations are narrator-only until reveal.",
+    "casting": "Family and mentor roles are hypothetical assignments. Clues describe the characters' actual histories.",
+    "ordering": "Read clues in order. They are intended to become more specific; difficulty has not yet been playtested."
+  },
+  "rounds": [
+    {
+      "id": "village",
+      "title": "Which village are you from?",
+      "effect": "positive",
+      "auction": [
+        "Hidden Leaf",
+        "Hidden Sand"
+      ],
+      "known": "Hidden Mist",
+      "outcomes": [
+        "Hidden Cloud",
+        "Hidden Rain"
+      ],
+      "clues": [
+        {
+          "text": "One of my former rulers was brought back to fight in the Fourth War.",
+          "explanations": [
+            "The Third Raikage was resurrected through Edo Tensei.",
+            "Hanzō was resurrected through Edo Tensei."
+          ]
+        },
+        {
+          "text": "People acting for my village pursued someone in the Leaf for the power they possessed.",
+          "explanations": [
+            "Cloud shinobi abducted Kushina to obtain her unusual chakra.",
+            "Pain, ruler of Rain, attacked the Leaf to capture Naruto and the Nine-Tails."
+          ]
+        },
+        {
+          "text": "An offer of peace became cover for a betrayal.",
+          "explanations": [
+            "The Cloud delegation's peace treaty concealed the attempt to kidnap Hinata.",
+            "Hanzō offered cooperation to Yahiko's Akatsuki, then ambushed them."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Kumogakure",
+          "url": "https://naruto.fandom.com/wiki/Kumogakure"
+        },
+        {
+          "title": "Amegakure",
+          "url": "https://naruto.fandom.com/wiki/Amegakure"
+        },
+        {
+          "title": "Hanzō",
+          "url": "https://naruto.fandom.com/wiki/Hanz%C5%8D"
+        }
+      ]
+    },
+    {
+      "id": "clan",
+      "title": "Which clan are you born into?",
+      "effect": "positive",
+      "auction": [
+        "Uchiha",
+        "Hyūga"
+      ],
+      "known": "Nara",
+      "outcomes": [
+        "Uzumaki",
+        "Inuzuka"
+      ],
+      "clues": [
+        {
+          "text": "Red is one way people recognise our family.",
+          "explanations": [
+            "Red hair is a characteristic Uzumaki trait, though Naruto is an exception.",
+            "Inuzuka members wear red fang markings on their cheeks."
+          ]
+        },
+        {
+          "text": "One of our young shinobi became inseparable from a powerful animal companion.",
+          "explanations": [
+            "Naruto's life and eventual fighting partnership are tied to Kurama; this is not a hereditary clan ability.",
+            "Kiba grows up and fights alongside Akamaru."
+          ]
+        },
+        {
+          "text": "One of our boys fought in a Chūnin Exam match where a bad smell changed the result.",
+          "explanations": [
+            "Naruto's accidental fart disrupted Kiba's heightened sense of smell.",
+            "Kiba was the opponent whose sensitive nose worked against him."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Uzumaki Clan",
+          "url": "https://naruto.fandom.com/wiki/Uzumaki_Clan"
+        },
+        {
+          "title": "Inuzuka Clan",
+          "url": "https://naruto.fandom.com/wiki/Inuzuka_Clan"
+        },
+        {
+          "title": "Kiba Inuzuka",
+          "url": "https://naruto.fandom.com/wiki/Kiba_Inuzuka"
+        }
+      ]
+    },
+    {
+      "id": "father",
+      "title": "Who is your father?",
+      "effect": "positive",
+      "auction": [
+        "Minato Namikaze",
+        "Sakumo Hatake"
+      ],
+      "known": "Chōza Akimichi",
+      "outcomes": [
+        "Shikaku Nara",
+        "Rasa"
+      ],
+      "clues": [
+        {
+          "text": "My son and I could both stop enemies in their tracks without touching them.",
+          "explanations": [
+            "Shikaku and Shikamaru immobilise opponents with shadows.",
+            "Rasa restrains with gold dust; Gaara restrains with sand."
+          ]
+        },
+        {
+          "text": "My son was trusted to command other shinobi while still a teenager.",
+          "explanations": [
+            "Shikamaru led the Sasuke recovery team.",
+            "Gaara commanded the Fourth Division and the Allied Shinobi Forces' main battle regiment."
+          ]
+        },
+        {
+          "text": "The Fourth War gave my son a final conversation with me.",
+          "explanations": [
+            "Shikaku spoke to Shikamaru through the headquarters communication network before its destruction.",
+            "Resurrected Rasa told Gaara the truth about Karura before being sealed."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Shikaku Nara",
+          "url": "https://naruto.fandom.com/wiki/Shikaku_Nara"
+        },
+        {
+          "title": "Rasa",
+          "url": "https://naruto.fandom.com/wiki/Rasa"
+        }
+      ]
+    },
+    {
+      "id": "mother",
+      "title": "Who is your mother?",
+      "effect": "positive",
+      "auction": [
+        "Konan",
+        "Kushina Uzumaki"
+      ],
+      "known": "Shizune",
+      "outcomes": [
+        "Karura",
+        "Kaguya Ōtsutsuki"
+      ],
+      "clues": [
+        {
+          "text": "I had more than one son.",
+          "explanations": [
+            "Karura was the mother of Kankurō and Gaara, as well as Temari.",
+            "Kaguya was the mother of Hagoromo and Hamura."
+          ]
+        },
+        {
+          "text": "My will kept acting after I could no longer act for myself.",
+          "explanations": [
+            "Karura's will continued to protect Gaara through his sand.",
+            "Black Zetsu embodied Kaguya's will and worked toward her revival."
+          ]
+        },
+        {
+          "text": "During the Fourth War, a story hiding the truth about me finally fell apart.",
+          "explanations": [
+            "Rasa revealed that Karura loved Gaara, contradicting Yashamaru's cruel lie.",
+            "Black Zetsu revealed his true origin and manipulation of events to revive Kaguya."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Karura",
+          "url": "https://naruto.fandom.com/wiki/Karura"
+        },
+        {
+          "title": "Kaguya Ōtsutsuki",
+          "url": "https://naruto.fandom.com/wiki/Kaguya_%C5%8Ctsutsuki"
+        },
+        {
+          "title": "Black Zetsu",
+          "url": "https://naruto.fandom.com/wiki/Black_Zetsu"
+        }
+      ]
+    },
+    {
+      "id": "best-friend",
+      "title": "Who is your best friend?",
+      "effect": "positive",
+      "auction": [
+        "Naruto Uzumaki",
+        "Shikamaru Nara"
+      ],
+      "known": "Shino Aburame",
+      "outcomes": [
+        "Rock Lee",
+        "Kabuto Yakushi"
+      ],
+      "clues": [
+        {
+          "text": "Medical care gave me a chance to keep walking the shinobi path.",
+          "explanations": [
+            "Tsunade's surgery let Lee continue his ninja career after Gaara's attack.",
+            "Nonō treated the injured, amnesiac Kabuto and later taught him medical ninjutsu."
+          ]
+        },
+        {
+          "text": "I shaped myself after someone I admired.",
+          "explanations": [
+            "Lee deliberately emulates Guy's appearance and dedication.",
+            "Kabuto increasingly modelled himself on Orochimaru and incorporated his remains."
+          ]
+        },
+        {
+          "text": "I dealt with Kimimaro while his body was already failing.",
+          "explanations": [
+            "Lee fought the terminally ill Kimimaro during the Sasuke recovery mission.",
+            "Kabuto treated Kimimaro but could not cure his illness."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Rock Lee",
+          "url": "https://naruto.fandom.com/wiki/Rock_Lee"
+        },
+        {
+          "title": "Kabuto Yakushi",
+          "url": "https://naruto.fandom.com/wiki/Kabuto_Yakushi"
+        },
+        {
+          "title": "Kimimaro",
+          "url": "https://naruto.fandom.com/wiki/Kimimaro"
+        }
+      ]
+    },
+    {
+      "id": "sensei",
+      "title": "Who is your sensei?",
+      "effect": "positive",
+      "auction": [
+        "Jiraiya",
+        "Kakashi Hatake"
+      ],
+      "known": "Iruka Umino",
+      "outcomes": [
+        "Orochimaru",
+        "Mizuki"
+      ],
+      "clues": [
+        {
+          "text": "I offered a young ninja a shortcut, while hiding my own purpose.",
+          "explanations": [
+            "Orochimaru offered Sasuke power while intending to take his body.",
+            "Mizuki promised Naruto a way to graduate while using him to steal the Scroll of Seals."
+          ]
+        },
+        {
+          "text": "The Leaf's trust in me was badly misplaced.",
+          "explanations": [
+            "Orochimaru secretly experimented on people before deserting the village.",
+            "Mizuki betrayed his position as an Academy instructor."
+          ]
+        },
+        {
+          "text": "A forbidden technique turned a confrontation with a Leaf teacher against me.",
+          "explanations": [
+            "Hiruzen used the Reaper Death Seal to take the use of Orochimaru's arms.",
+            "Naruto used Multiple Shadow Clone Technique to defeat Mizuki after Iruka protected him."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Orochimaru",
+          "url": "https://naruto.fandom.com/wiki/Orochimaru"
+        },
+        {
+          "title": "Mizuki",
+          "url": "https://naruto.fandom.com/wiki/Mizuki"
+        }
+      ]
+    },
+    {
+      "id": "teammate",
+      "title": "Who is your teammate?",
+      "effect": "positive",
+      "auction": [
+        "Naruto Uzumaki",
+        "Gaara"
+      ],
+      "known": "Kabuto Yakushi",
+      "outcomes": [
+        "Shikamaru Nara",
+        "Tenten"
+      ],
+      "clues": [
+        {
+          "text": "My team lost someone whose place could never really be filled.",
+          "explanations": [
+            "Shikamaru lost his teacher Asuma.",
+            "Tenten lost her teammate Neji."
+          ]
+        },
+        {
+          "text": "I turned a weapon once carried by someone else into a channel for my chakra.",
+          "explanations": [
+            "Shikamaru used Asuma's chakra blades with his shadow technique.",
+            "Tenten used the recovered Bashōsen, which consumed her chakra."
+          ]
+        },
+        {
+          "text": "I faced Temari in the Chūnin Exams, but left without a recorded victory.",
+          "explanations": [
+            "Shikamaru outmanoeuvred Temari but forfeited.",
+            "Tenten lost her preliminary match to Temari."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Shikamaru Nara",
+          "url": "https://naruto.fandom.com/wiki/Shikamaru_Nara"
+        },
+        {
+          "title": "Tenten",
+          "url": "https://naruto.fandom.com/wiki/Tenten"
+        },
+        {
+          "title": "Bashōsen",
+          "url": "https://naruto.fandom.com/wiki/Bash%C5%8Dsen"
+        }
+      ]
+    },
+    {
+      "id": "signature-jutsu",
+      "title": "What is your signature jutsu?",
+      "effect": "positive",
+      "auction": [
+        "Tsukuyomi",
+        "Rasengan"
+      ],
+      "known": "Mind–Body Switch Technique",
+      "outcomes": [
+        "Truth-Seeking Balls",
+        "Transformation Technique"
+      ],
+      "clues": [
+        {
+          "text": "The shape you see is not the only shape I can take.",
+          "explanations": [
+            "The orbs can be reshaped into staffs, shields and other forms.",
+            "The technique changes a user's form into another person, animal or object."
+          ]
+        },
+        {
+          "text": "I can put a weapon into someone's hands without a blacksmith making it.",
+          "explanations": [
+            "A user can reshape an orb into a staff.",
+            "Naruto transformed into a fūma shuriken that Sasuke could hold and throw."
+          ]
+        },
+        {
+          "text": "Naruto has used me to send something shaped like a shuriken into battle.",
+          "explanations": [
+            "Naruto used the orbs in his Tailed Beast Ball Rasenshuriken.",
+            "Naruto's transformed fūma shuriken was thrown during the fight with Zabuza."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Truth-Seeking Ball",
+          "url": "https://naruto.fandom.com/wiki/Truth-Seeking_Ball"
+        },
+        {
+          "title": "Transformation Technique",
+          "url": "https://naruto.fandom.com/wiki/Transformation_Technique"
+        }
+      ]
+    },
+    {
+      "id": "greatest-enemy",
+      "title": "Who is your greatest enemy?",
+      "effect": "negative",
+      "auction": [
+        "Kabuto Yakushi (regular, pre-Sage)",
+        "Orochimaru"
+      ],
+      "known": "Pain",
+      "outcomes": [
+        "Zabuza Momochi",
+        "Kaguya Ōtsutsuki"
+      ],
+      "clues": [
+        {
+          "text": "Being removed from the fight once did not stop me from returning.",
+          "explanations": [
+            "Haku's staged killing removed Zabuza from the first confrontation; he returned to fight on the bridge.",
+            "Kaguya returned after her ancient sealing."
+          ]
+        },
+        {
+          "text": "Kakashi and all three of his original students stood against me.",
+          "explanations": [
+            "Kakashi, Naruto, Sasuke and Sakura were involved in the Land of Waves confrontation.",
+            "The reunited Team 7 fought Kaguya."
+          ]
+        },
+        {
+          "text": "I trapped one member of that team where the others could not simply stand beside them.",
+          "explanations": [
+            "Zabuza confined Kakashi inside Water Prison.",
+            "Kaguya stranded Sasuke in a separate desert dimension."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Zabuza Momochi",
+          "url": "https://naruto.fandom.com/wiki/Zabuza_Momochi"
+        },
+        {
+          "title": "Kaguya Ōtsutsuki",
+          "url": "https://naruto.fandom.com/wiki/Kaguya_%C5%8Ctsutsuki"
+        }
+      ]
+    },
+    {
+      "id": "protector",
+      "title": "Who is your protector?",
+      "effect": "positive",
+      "auction": [
+        "Hashirama Senju",
+        "Might Guy"
+      ],
+      "known": "Yamato",
+      "outcomes": [
+        "Itachi Uchiha",
+        "Ebisu"
+      ],
+      "clues": [
+        {
+          "text": "A child I watched over came from an influential Leaf family.",
+          "explanations": [
+            "Itachi watched over his younger brother Sasuke, son of the Uchiha clan leader.",
+            "Ebisu tutored Konohamaru, grandson of the Third Hokage."
+          ]
+        },
+        {
+          "text": "Naruto met me as an obstacle before he knew me as an ally.",
+          "explanations": [
+            "Itachi initially confronted Naruto as an Akatsuki member; later he helped him during the war.",
+            "Ebisu initially opposed Naruto's influence on Konohamaru, then helped train Naruto."
+          ]
+        },
+        {
+          "text": "I stood against an opponent who had the Rinnegan.",
+          "explanations": [
+            "Itachi fought the resurrected Nagato.",
+            "Ebisu faced Pain's Naraka Path and refused to reveal Naruto's whereabouts."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Itachi Uchiha",
+          "url": "https://naruto.fandom.com/wiki/Itachi_Uchiha"
+        },
+        {
+          "title": "Ebisu",
+          "url": "https://naruto.fandom.com/wiki/Ebisu"
+        }
+      ]
+    },
+    {
+      "id": "village-leader",
+      "title": "Who is your village leader?",
+      "effect": "positive",
+      "auction": [
+        "Hashirama Senju",
+        "Minato Namikaze"
+      ],
+      "known": "Tsunade",
+      "outcomes": [
+        "Hiruzen Sarutobi",
+        "Danzō Shimura"
+      ],
+      "clues": [
+        {
+          "text": "I survived because the Second Hokage stayed behind.",
+          "explanations": [
+            "Tobirama acted as a decoy so Hiruzen and the rest of the squad could escape.",
+            "Danzō was in the same squad that Tobirama saved."
+          ]
+        },
+        {
+          "text": "My decisions helped shape the fate of the Uchiha clan.",
+          "explanations": [
+            "Hiruzen sought a negotiated solution to the planned coup, but failed to prevent the massacre.",
+            "Danzō pushed Itachi toward the massacre."
+          ]
+        },
+        {
+          "text": "At the end of my life, I tried to take an enemy with me through a sealing technique.",
+          "explanations": [
+            "Hiruzen used the Reaper Death Seal against Orochimaru.",
+            "Danzō activated the Reverse Four Symbols Sealing in an unsuccessful attempt to take Sasuke and Obito with him."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Hiruzen Sarutobi",
+          "url": "https://naruto.fandom.com/wiki/Hiruzen_Sarutobi"
+        },
+        {
+          "title": "Danzō Shimura",
+          "url": "https://naruto.fandom.com/wiki/Danz%C5%8D_Shimura"
+        }
+      ]
+    },
+    {
+      "id": "tailed-beast",
+      "title": "Which tailed beast do you receive?",
+      "effect": "positive",
+      "auction": [
+        "Kurama (Nine-Tails)",
+        "Gyūki (Eight-Tails)"
+      ],
+      "known": "Matatabi (Two-Tails)",
+      "outcomes": [
+        "Ten-Tails",
+        "Shukaku (One-Tail)"
+      ],
+      "clues": [
+        {
+          "text": "Putting me inside a human did not guarantee that human could control me.",
+          "explanations": [
+            "Obito initially struggled to control the Ten-Tails after becoming its jinchūriki.",
+            "Gaara feared losing control to Shukaku, particularly through sleep."
+          ]
+        },
+        {
+          "text": "Naruto faced me when my body towered over his.",
+          "explanations": [
+            "Naruto fought the enormous Ten-Tails during the war.",
+            "Naruto confronted Shukaku with Gamabunta during the invasion of the Leaf."
+          ]
+        },
+        {
+          "text": "Madara sought my power and used sealing to claim it.",
+          "explanations": [
+            "Madara sealed the Ten-Tails inside himself.",
+            "Madara captured Shukaku and sealed him into the Demonic Statue as part of restoring the Ten-Tails."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Ten-Tails",
+          "url": "https://naruto.fandom.com/wiki/Ten-Tails"
+        },
+        {
+          "title": "Shukaku",
+          "url": "https://naruto.fandom.com/wiki/Shukaku"
+        }
+      ]
+    },
+    {
+      "id": "kekkei-genkai",
+      "title": "What is your kekkei genkai?",
+      "effect": "positive",
+      "auction": [
+        "Rinnegan",
+        "Sharingan"
+      ],
+      "known": "Wood Release",
+      "outcomes": [
+        "Ice Release",
+        "Dead Bone Pulse (Shikotsumyaku)"
+      ],
+      "clues": [
+        {
+          "text": "A boy famous for using me grew up feared for the power he inherited.",
+          "explanations": [
+            "Haku's father turned on him after discovering his inherited Ice Release.",
+            "Kimimaro's clan feared his rare ability and kept him confined."
+          ]
+        },
+        {
+          "text": "I can fill the battlefield with structures my user can move through.",
+          "explanations": [
+            "Haku moved between his Demonic Mirroring Ice Crystals.",
+            "Kimimaro could merge with and travel through the bones of his Dance of the Seedling Fern."
+          ]
+        },
+        {
+          "text": "That boy died serving a rogue ninja, then returned to fight in the Fourth War.",
+          "explanations": [
+            "Haku died protecting Zabuza and was later resurrected.",
+            "Kimimaro died pursuing Orochimaru's objective and was later resurrected."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Haku",
+          "url": "https://naruto.fandom.com/wiki/Haku"
+        },
+        {
+          "title": "Kimimaro",
+          "url": "https://naruto.fandom.com/wiki/Kimimaro"
+        }
+      ]
+    },
+    {
+      "id": "forbidden-technique",
+      "title": "What is your forbidden technique?",
+      "effect": "positive",
+      "auction": [
+        "Edo Tensei",
+        "Eight Gates"
+      ],
+      "known": "Reaper Death Seal",
+      "outcomes": [
+        "Izanagi",
+        "Twin Snake Sacrifice Jutsu"
+      ],
+      "clues": [
+        {
+          "text": "A shinobi altered by Orochimaru's experiments turned to me.",
+          "explanations": [
+            "Danzō used Izanagi with a body modified through Orochimaru's research.",
+            "Anko, who bore Orochimaru's cursed seal, attempted the Twin Snake technique."
+          ]
+        },
+        {
+          "text": "I was attempted against someone who had deserted the Leaf.",
+          "explanations": [
+            "Danzō used Izanagi while fighting Sasuke.",
+            "Anko attempted the technique against Orochimaru."
+          ]
+        },
+        {
+          "text": "My price is more than chakra: my user gives up something that a night's rest cannot restore.",
+          "explanations": [
+            "Izanagi permanently blinds the eye used to cast it.",
+            "The Twin Snake technique is intended to cost the user's life along with the target's. Anko's attempt was interrupted; no successful execution is assumed."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Izanagi",
+          "url": "https://naruto.fandom.com/wiki/Izanagi"
+        },
+        {
+          "title": "Twin Snakes Mutual Death Technique",
+          "url": "https://naruto.fandom.com/wiki/Twin_Snakes_Mutual_Death_Technique"
+        },
+        {
+          "title": "Danzō Shimura",
+          "url": "https://naruto.fandom.com/wiki/Danz%C5%8D_Shimura"
+        }
+      ]
+    },
+    {
+      "id": "secret-mentor",
+      "title": "Who is your secret mentor?",
+      "effect": "positive",
+      "auction": [
+        "Jiraiya",
+        "Killer B"
+      ],
+      "known": "Iruka Umino",
+      "outcomes": [
+        "Tobirama Senju",
+        "Anko Mitarashi"
+      ],
+      "clues": [
+        {
+          "text": "I helped the Leaf decide which young shinobi were ready to advance.",
+          "explanations": [
+            "Tobirama established the Chūnin Exams.",
+            "Anko served as examiner for the Forest of Death stage."
+          ]
+        },
+        {
+          "text": "I was willing to die rather than let a dangerous enemy go unchallenged.",
+          "explanations": [
+            "Tobirama stayed behind as a decoy to save his squad.",
+            "Anko was prepared to use a technique intended to kill both herself and Orochimaru."
+          ]
+        },
+        {
+          "text": "My connection to Orochimaru includes an unnatural return to life.",
+          "explanations": [
+            "Orochimaru resurrected Tobirama through Edo Tensei.",
+            "Orochimaru was restored from the cursed seal on Anko's body."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Tobirama Senju",
+          "url": "https://naruto.fandom.com/wiki/Tobirama_Senju"
+        },
+        {
+          "title": "Anko Mitarashi",
+          "url": "https://naruto.fandom.com/wiki/Anko_Mitarashi"
+        }
+      ]
+    }
+  ]
+}

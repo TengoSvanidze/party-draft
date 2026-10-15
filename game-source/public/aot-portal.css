@@ -1,0 +1,58 @@
+.aot-portal{position:fixed;inset:0;z-index:100;width:100%;height:100dvh;isolation:isolate;overflow:hidden;background:#161a1b;color:#eee8db;font-family:Arial,sans-serif}
+.aot-portal *{box-sizing:border-box}.aot-portal [hidden]{display:none!important}
+.aot-portal canvas{display:block;width:100%;height:100%;touch-action:none}
+.aot-portal button{font:inherit;cursor:pointer;color:inherit;border:1px solid #ffffff25;background:#202529dc;border-radius:12px;min-width:48px;min-height:48px;padding:12px 16px;touch-action:manipulation;letter-spacing:normal;text-transform:none}
+.aot-portal button:disabled{opacity:.5;cursor:wait}.aot-portal :is(button,canvas):focus-visible{outline:3px solid #d5b77c;outline-offset:3px}
+.aot-shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(#080e1855,transparent 22%,transparent 65%,#070a0bdd),radial-gradient(ellipse,transparent 45%,#05070948);z-index:1}
+.aot-top{position:absolute;top:max(14px,env(safe-area-inset-top));left:14px;right:14px;display:flex;align-items:center;gap:8px;z-index:4}
+.aot-top button{padding:8px 12px;backdrop-filter:blur(12px)}.aot-portal [data-aot=back]{font-size:34px;line-height:1}.aot-brand{flex:1;text-align:center;font-size:10px;letter-spacing:.18em}.aot-portal [data-aot=sound]{font-size:13px;white-space:nowrap}.aot-portal [data-aot=settings]{font-size:25px}
+.aot-title{position:absolute;top:25%;left:8%;right:8%;text-align:center;pointer-events:none;z-index:2;text-shadow:0 3px 18px #000;background:radial-gradient(ellipse,#06090955,transparent 73%)}
+.aot-title h1{font-family:Impact,'Arial Narrow',sans-serif;font-size:clamp(43px,13vw,75px);font-weight:900;line-height:.93;margin:0;letter-spacing:-.02em;color:#eee8db}
+.aot-title p{font-family:Georgia,serif;font-size:clamp(16px,4vw,23px);margin:13px 0 0;letter-spacing:.05em;color:#eee8db}
+.aot-bottom{position:absolute;bottom:calc(env(safe-area-inset-bottom) + 34px);left:7%;right:7%;z-index:4;text-align:center}
+.aot-portal [data-aot=hint]{font-family:Georgia,serif;font-size:16px;text-shadow:0 2px 8px #000;margin:0 0 18px;color:#eee8db}
+.aot-portal [data-aot=enter]{display:flex;align-items:center;justify-content:space-between;width:100%;min-height:58px;background:linear-gradient(135deg,#bca16b,#a58b59);border:1px solid #e0c98e;color:#171914;border-radius:9px;box-shadow:0 8px 32px #0006;font-weight:700;font-size:21px;padding:14px 22px}.aot-portal [data-aot=enter] span{font-size:29px}
+.aot-portal [data-aot=loading]{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:18px;background:#12191bea;z-index:3;pointer-events:none}.aot-portal [data-aot=loading] span{font-size:12px;letter-spacing:.15em}.aot-portal progress{accent-color:#bca16b;width:65%;max-width:300px;height:7px}.aot-portal small{color:#b8b9b5}
+.aot-portal dialog{position:fixed;top:auto;bottom:0;margin:0 auto;width:min(100%,520px);max-height:90dvh;overflow:auto;background:#1c2427;color:#eee8db;border:1px solid #bda06a55;border-radius:22px 22px 0 0;padding:24px 24px calc(24px + env(safe-area-inset-bottom));z-index:9}.aot-portal dialog::backdrop{background:#0008;backdrop-filter:blur(5px)}.aot-portal dialog button{display:block;width:100%;margin-top:10px}.aot-portal dialog h2{margin:0 0 20px;font-family:Georgia,serif;color:inherit}
+.aot-portal [data-aot=note]{position:absolute;bottom:6px;left:10px;right:10px;text-align:center;font-size:12px;color:#d1c8b5;z-index:7;pointer-events:none}.aot-portal [data-aot=skip]{position:absolute;right:14px;bottom:calc(env(safe-area-inset-bottom) + 34px);z-index:5}
+.aot-portal[data-mode=travel] :is(.aot-title,.aot-bottom){opacity:0;pointer-events:none;transition:opacity .4s}.aot-pending{padding:30px}
+.aot-explore{width:100%;min-height:56px;margin:12px 0 22px;background:linear-gradient(130deg,#3d3c30,#1b2020);border:1px solid #c4ae7566;color:#e0d6b9;border-radius:4px;font-size:14px;cursor:pointer}
+@media(min-width:700px){.aot-title{left:30%;right:30%;top:23%}.aot-title h1{font-size:70px}.aot-bottom{left:calc(50% - 190px);right:auto;width:380px}.aot-brand{font-size:12px}}
+@media(max-width:350px){.aot-brand{display:none}.aot-portal [data-aot=back]{margin-right:auto}.aot-title{top:26%}.aot-title h1{font-size:47px}.aot-portal [data-aot=hint]{font-size:14px}.aot-bottom{bottom:calc(env(safe-area-inset-bottom) + 24px)}}
+@media(max-height:500px) and (orientation:landscape){.aot-title{top:25%;left:4%;right:auto;width:220px}.aot-title h1{font-size:43px}.aot-title p{font-size:16px}.aot-bottom{left:auto;right:25px;width:250px;bottom:24px}.aot-portal [data-aot=hint]{font-size:13px}.aot-top{top:10px}}
+@media(prefers-reduced-motion:reduce){.aot-portal *{transition:none!important;animation:none!important}}
+.aot-ambience,.aot-picture{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.aot-ambience{filter:blur(24px) brightness(.42);transform:scale(1.12)}
+.aot-picture{object-position:50% 50%;transform-origin:50% 57%;transition:transform .42s ease-in,filter .42s ease-in}
+.aot-art-entrance .aot-title{top:22%;text-shadow:0 3px 18px #000,0 1px 3px #000;background:radial-gradient(ellipse,#14110d65,transparent 75%)}
+.aot-art-entrance .aot-title h1{color:#e6d2ad;font-size:clamp(48px,14vw,78px);line-height:.94;letter-spacing:.005em}
+.aot-art-entrance .aot-title p{font-size:clamp(17px,4.5vw,24px);color:#f0e5d1}
+.aot-art-entrance .aot-bottom{bottom:calc(env(safe-area-inset-bottom) + 40px)}
+.aot-art-entrance [data-aot=loading]{background:#12191b95;transition:opacity .2s}
+.aot-art-entrance[data-mode=entering] .aot-picture{transform:scale(1.09);filter:brightness(.55)}
+.aot-art-entrance[data-mode=entering] :is(.aot-title,.aot-bottom){opacity:0;transition:opacity .3s}
+@media(min-aspect-ratio:3/4){.aot-picture{object-fit:contain}.aot-art-entrance .aot-title{left:calc(50% - 180px);right:auto;width:360px;top:22%}.aot-art-entrance .aot-title h1{font-size:54px}}
+@media(max-height:500px) and (orientation:landscape){.aot-art-entrance .aot-title{left:4%;right:auto;width:220px;top:28%}.aot-art-entrance .aot-title h1{font-size:43px}.aot-art-entrance .aot-title p{font-size:16px}.aot-art-entrance .aot-bottom{bottom:24px}}
+.aot-world{position:absolute;transform-origin:49.9413% 56.4735%}
+.aot-world .aot-picture{object-fit:fill;transition:none;transform:none!important;filter:none!important}
+.aot-gate{position:absolute;left:41.0798%;top:49.7291%;width:17.723%;height:13.4886%;perspective:360px;visibility:hidden;isolation:isolate}
+.aot-passage{position:absolute;inset:0;width:100%;height:100%;display:block}
+.aot-gate-leaf{position:absolute;top:0;width:50%;height:100%;overflow:hidden;backface-visibility:hidden;will-change:transform;transform-style:preserve-3d}
+.aot-gate-left{left:0;transform-origin:left center;clip-path:polygon(100% 0,65% 3%,30% 11%,8% 21%,0 29%,0 100%,100% 100%)}
+.aot-gate-right{left:50%;transform-origin:right center;clip-path:polygon(0 0,35% 3%,70% 11%,92% 21%,100% 29%,100% 100%,0 100%)}
+.aot-gate-leaf img{position:absolute;width:1128.477%;height:741.3655%;max-width:none;top:-368.6747%;pointer-events:none}
+.aot-gate-left img{left:-463.5762%}.aot-gate-right img{left:-563.5762%}
+.aot-entry-dark{position:absolute;inset:0;background:#030405;opacity:0;pointer-events:none;z-index:3}
+.aot-art-entrance[data-mode=entering] .aot-top{opacity:0;pointer-events:none;transition:opacity .3s}
+.aot-art-entrance[data-mode=entering] [data-aot=note]{bottom:calc(env(safe-area-inset-bottom) + 104px);color:#eee2c8;text-shadow:0 2px 8px #000}
+.aot-portal .aot-door-target{position:absolute;left:49.9413%;top:49.7291%;width:17.723%;height:13.4886%;transform:translateX(-50%);min-width:48px;min-height:48px;background:transparent;border:0;border-radius:45% 45% 0 0;padding:0;z-index:1}
+.aot-art-entrance[data-mode=entering] .aot-door-target{visibility:hidden}
+.aot-entry-passage{position:absolute;z-index:2;opacity:0;pointer-events:none;overflow:hidden;transform-origin:0 0;border-radius:50% 50% 0 0 / 29% 29% 0 0;background:#020304}
+.aot-portal[data-mode=entering] :is(.aot-world,.aot-entry-passage){will-change:transform,opacity}
+@media(max-aspect-ratio:3/4){.aot-ambience{display:none}}
+.aot-entry-passage img{display:block;width:100%;height:100%;object-fit:cover;filter:brightness(.7)}
+.aot-top{left:max(14px,env(safe-area-inset-left));right:max(14px,env(safe-area-inset-right))}
+.aot-portal [data-aot=skip]{right:max(14px,env(safe-area-inset-right))}
+.aot-art-entrance[data-mode=preparing] :is(.aot-top,.aot-bottom){visibility:hidden}
+.aot-art-entrance[data-mode=preparing] [data-aot=note]{bottom:calc(env(safe-area-inset-bottom) + 104px);color:#eee2c8;text-shadow:0 2px 8px #000}
+@media(max-height:500px) and (orientation:landscape){.aot-top{top:max(10px,env(safe-area-inset-top))}.aot-art-entrance .aot-bottom{right:max(25px,env(safe-area-inset-right));bottom:calc(24px + env(safe-area-inset-bottom))}.aot-art-entrance .aot-title{left:max(4%,env(safe-area-inset-left))}}

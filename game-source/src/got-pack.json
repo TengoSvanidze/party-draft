@@ -1,0 +1,1644 @@
+{
+  "id": "game-of-thrones",
+  "continuity": "HBO Game of Thrones, seasons 1-8. Full spoilers. Show continuity only.",
+  "positions": [
+    {
+      "id": "got-house",
+      "title": {
+        "en": "Which house are you born into?",
+        "ka": "რომელ საგვარეულოში დაიბადე?"
+      },
+      "label": {
+        "en": "House",
+        "ka": "საგვარეულო"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Which house are you born into?",
+        "ka": "რომელ საგვარეულოში დაიბადე?"
+      },
+      "lots": [
+        {
+          "id": "got-house-stark",
+          "name": {
+            "en": "House Stark",
+            "ka": "სტარკების საგვარეულო"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "got-house-greyjoy",
+          "name": {
+            "en": "House Greyjoy",
+            "ka": "გრეიჯოების საგვარეულო"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "got-house-tyrell",
+          "name": {
+            "en": "House Tyrell",
+            "ka": "ტირელების საგვარეულო"
+          },
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "got-house-targaryen",
+          "name": {
+            "en": "House Targaryen",
+            "ka": "ტარგარიენების საგვარეულო"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Viserys arranged Daenerys's marriage to Khal Drogo in exchange for the prospect of Dothraki support.",
+              "ka": "ვისერისმა დეინერისის ქორწინება ხალ დროგოსთან დოთრაკების მხარდაჭერის იმედით მოაწყო."
+            },
+            {
+              "en": "Daenerys seized King's Landing from Cersei and House Lannister.",
+              "ka": "დეინერისმა მეფის სავანე სერსეისა და ლანისტერების საგვარეულოს წაართვა."
+            },
+            {
+              "en": "Jon stabbed Daenerys while embracing her in the throne room.",
+              "ka": "ჯონმა დეინერისს სატახტო დარბაზში, ჩახუტებისას, დანა ჩაარტყა."
+            }
+          ]
+        },
+        {
+          "id": "got-house-frey",
+          "name": {
+            "en": "House Frey",
+            "ka": "ფრეების საგვარეულო"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Robb's promised marriage to a Frey daughter was part of the agreement for Walder's crossing and troops.",
+              "ka": "რობი ფრეის ქალიშვილზე ქორწინებას დაჰპირდა — ეს უოლდერის გადასასვლელითა და ჯარით სარგებლობის შეთანხმების ნაწილი იყო."
+            },
+            {
+              "en": "After the Red Wedding, the Freys received Riverrun at House Tully's expense.",
+              "ka": "წითელი ქორწილის შემდეგ ფრეებმა ტალების საგვარეულოს კუთვნილი რივერანი მიიღეს."
+            },
+            {
+              "en": "Arya approached Walder disguised as a serving girl and killed him at the Twins.",
+              "ka": "მსახურად გადაცმული არია უოლდერს მიუახლოვდა და ტყუპების ციხესიმაგრეში მოკლა."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "My family used marriage to negotiate a military alliance.",
+          "ka": "ჩემი ოჯახი სამხედრო კავშირის შესაქმნელად ქორწინებას იყენებდა."
+        },
+        {
+          "en": "My family gained power when another ruling house lost it.",
+          "ka": "ჩემმა ოჯახმა ძალაუფლება მოიპოვა, როცა სხვა მმართველმა საგვარეულომ ის დაკარგა."
+        },
+        {
+          "en": "A leader of my family was killed at close range by someone they let near them.",
+          "ka": "ჩემი ოჯახის ერთ-ერთი ლიდერი ახლო მანძილიდან მოკლა ადამიანმა, რომელიც თვითონვე მიუშვა ახლოს."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "got-castle",
+      "title": {
+        "en": "Which castle do you rule?",
+        "ka": "რომელ ციხესიმაგრეს მართავ?"
+      },
+      "label": {
+        "en": "Castle",
+        "ka": "ციხესიმაგრე"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Which castle do you rule?",
+        "ka": "რომელ ციხესიმაგრეს მართავ?"
+      },
+      "lots": [
+        {
+          "id": "got-winterfell",
+          "name": {
+            "en": "Winterfell",
+            "ka": "ვინტერფელი"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "got-the-eyrie",
+          "name": {
+            "en": "The Eyrie",
+            "ka": "არწივის ბუდე"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "got-riverrun",
+          "name": {
+            "en": "Riverrun",
+            "ka": "რივერანი"
+          },
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "got-highgarden",
+          "name": {
+            "en": "Highgarden",
+            "ka": "ჰაიგარდენი"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Jaime's forces captured Highgarden in season 7.",
+              "ka": "ჯეიმის ჯარმა ჰაიგარდენი მეშვიდე სეზონში აიღო."
+            },
+            {
+              "en": "Jaime spoke with Olenna after the fall of Highgarden and heard her confession about Joffrey.",
+              "ka": "ჰაიგარდენის დაცემის შემდეგ ჯეიმი ოლენას ესაუბრა და ჯოფრის შესახებ მისი აღიარება მოისმინა."
+            },
+            {
+              "en": "Bronn rose from sellsword to Lord of Highgarden by the series finale.",
+              "ka": "სერიალის ფინალისთვის ბრონი დაქირავებული მებრძოლიდან ჰაიგარდენის ლორდად იქცა."
+            }
+          ]
+        },
+        {
+          "id": "got-harrenhal",
+          "name": {
+            "en": "Harrenhal",
+            "ka": "ჰარენჰოლი"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Harrenhal served as a Lannister stronghold after its capture during the War of the Five Kings.",
+              "ka": "ხუთი მეფის ომის დროს აღების შემდეგ ჰარენჰოლი ლანისტერების საყრდენ ციხესიმაგრედ იქცა."
+            },
+            {
+              "en": "Tywin spoke with Arya, his disguised cupbearer, while based at Harrenhal.",
+              "ka": "ჰარენჰოლში ყოფნისას ტაივინი არიას ესაუბრებოდა, რომელიც მის მერიქიფედ იყო შენიღბული."
+            },
+            {
+              "en": "Littlefinger rose from a minor house to receive the title of Lord of Harrenhal.",
+              "ka": "ნეკა მცირე საგვარეულოდან ჰარენჰოლის ლორდის ტიტულამდე აღზევდა."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "My walls were not enough to keep an enemy army out.",
+          "ka": "ჩემი კედლები მტრის ჯარის შესაჩერებლად საკმარისი არ აღმოჩნდა."
+        },
+        {
+          "en": "A Lannister commander used me as the setting for an important conversation.",
+          "ka": "ლანისტერების ერთ-ერთმა სარდალმა მნიშვნელოვანი საუბარი ჩემში გამართა."
+        },
+        {
+          "en": "A man who rose far above his beginnings was awarded my lordship.",
+          "ka": "ჩემი მბრძანებლის ტიტული კაცს ერგო, რომელიც თავის საწყის მდგომარეობაზე ბევრად მაღლა აღზევდა."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "got-father",
+      "title": {
+        "en": "Who is your father?",
+        "ka": "ვინ არის მამაშენი?"
+      },
+      "label": {
+        "en": "Father",
+        "ka": "მამა"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Who is your father?",
+        "ka": "ვინ არის მამაშენი?"
+      },
+      "lots": [
+        {
+          "id": "got-eddard-ned-stark",
+          "name": {
+            "en": "Eddard (Ned) Stark",
+            "ka": "ედარდ (ნედ) სტარკი"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "got-tywin-lannister",
+          "name": {
+            "en": "Tywin Lannister",
+            "ka": "ტაივინ ლანისტერი"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "got-stannis-baratheon",
+          "name": {
+            "en": "Stannis Baratheon",
+            "ka": "სტანის ბარათეონი"
+          },
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "got-davos-seaworth",
+          "name": {
+            "en": "Davos Seaworth",
+            "ka": "დავოს სივორთი"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Davos smuggled provisions into the besieged Storm's End.",
+              "ka": "დავოსმა ალყაშემორტყმულ შტორმის დასასრულში სურსათი ფარულად შეიტანა."
+            },
+            {
+              "en": "Davos spent time at Castle Black and worked with Jon and his supporters.",
+              "ka": "დავოსი შავ ციხესიმაგრეში იმყოფებოდა და ჯონთან და მის მხარდამჭერებთან თანამშრომლობდა."
+            },
+            {
+              "en": "Davos lost Matthos in the wildfire explosion at the Battle of the Blackwater.",
+              "ka": "დავოსმა ბლექუოთერის ბრძოლაში, ველური ცეცხლის აფეთქებისას, მათოსი დაკარგა."
+            }
+          ]
+        },
+        {
+          "id": "got-craster",
+          "name": {
+            "en": "Craster",
+            "ka": "კრასტერი"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Craster provided shelter and supplies to ranging members of the Night's Watch.",
+              "ka": "კრასტერი ღამის გუშაგების მზვერავებს თავშესაფარსა და მარაგს აძლევდა."
+            },
+            {
+              "en": "Craster hosted Jeor Mormont's expedition north of the Wall.",
+              "ka": "კრასტერმა კედლის ჩრდილოეთით ჯეორ მორმონტის ექსპედიციას უმასპინძლა."
+            },
+            {
+              "en": "Craster surrendered newborn sons to the White Walkers; the show reveals that a baby is transformed into one.",
+              "ka": "კრასტერი ახალშობილ ვაჟებს თეთრ მოხეტიალეებს გადასცემდა; სერიალში ჩანს, როგორ იქცევა ჩვილი ერთ-ერთ მათგანად."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "Armed men have depended on me for food or shelter.",
+          "ka": "შეიარაღებული კაცები საკვებისა თუ თავშესაფრისთვის ჩემზე იყვნენ დამოკიდებული."
+        },
+        {
+          "en": "I dealt directly with men of the Night's Watch.",
+          "ka": "ღამის გუშაგებთან უშუალო ურთიერთობა მქონდა."
+        },
+        {
+          "en": "A son of mine was lost to something more dangerous than an ordinary blade.",
+          "ka": "ჩემი ვაჟი ჩვეულებრივ ხმალზე უფრო სახიფათო ძალამ შეიწირა."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "got-mother",
+      "title": {
+        "en": "Who is your mother?",
+        "ka": "ვინ არის დედაშენი?"
+      },
+      "label": {
+        "en": "Mother",
+        "ka": "დედა"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Who is your mother?",
+        "ka": "ვინ არის დედაშენი?"
+      },
+      "lots": [
+        {
+          "id": "got-catelyn-stark",
+          "name": {
+            "en": "Catelyn Stark",
+            "ka": "კეიტლინ სტარკი"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "got-cersei-lannister",
+          "name": {
+            "en": "Cersei Lannister",
+            "ka": "სერსეი ლანისტერი"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "got-lysa-arryn",
+          "name": {
+            "en": "Lysa Arryn",
+            "ka": "ლაიზა არენი"
+          },
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "got-olenna-tyrell",
+          "name": {
+            "en": "Olenna Tyrell",
+            "ka": "ოლენა ტირელი"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Olenna worked to secure Margaery's place as queen.",
+              "ka": "ოლენა მარჯერის დედოფლის პოზიციის განმტკიცებას ცდილობდა."
+            },
+            {
+              "en": "The Faith Militant imprisoned Olenna's grandchildren Margaery and Loras.",
+              "ka": "სარწმუნოების მებრძოლებმა ოლენას შვილიშვილები, მარჯერი და ლორასი, დააპატიმრეს."
+            },
+            {
+              "en": "Olenna survived her son and grandchildren, who died when Cersei destroyed the Sept of Baelor with wildfire.",
+              "ka": "ოლენამ თავის შვილსა და შვილიშვილებზე მეტხანს იცოცხლა — ისინი დაიღუპნენ, როცა სერსეიმ ბეილორის სეპტა ველური ცეცხლით გაანადგურა."
+            }
+          ]
+        },
+        {
+          "id": "got-selyse-baratheon",
+          "name": {
+            "en": "Selyse Baratheon",
+            "ka": "სელის ბარათეონი"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Selyse supported her husband Stannis's claim to the Iron Throne.",
+              "ka": "სელისი მხარს უჭერდა თავისი ქმრის, სტანისის, პრეტენზიას რკინის ტახტზე."
+            },
+            {
+              "en": "Melisandre's religious influence helped lead Stannis and Selyse to sacrifice Shireen.",
+              "ka": "მელისანდრეს რელიგიურმა გავლენამ სტანისისა და სელისის მიერ შირინის მსხვერპლად შეწირვას შეუწყო ხელი."
+            },
+            {
+              "en": "Selyse was still alive when Shireen was burned; she tried to stop the sacrifice after it had begun.",
+              "ka": "სელისი ცოცხალი იყო, როცა შირინი დაწვეს; მან მსხვერპლშეწირვის შეჩერება მისი დაწყების შემდეგ სცადა."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "My family's future was tied to someone wearing a crown.",
+          "ka": "ჩემი ოჯახის მომავალი გვირგვინოსან ადამიანს უკავშირდებოდა."
+        },
+        {
+          "en": "Religious power put members of my family in danger.",
+          "ka": "რელიგიურმა ძალაუფლებამ ჩემი ოჯახის წევრები საფრთხეში ჩააგდო."
+        },
+        {
+          "en": "I outlived a younger member of my family who died in flames.",
+          "ka": "ჩემზე უმცროსი ოჯახის წევრი ცეცხლში დაიღუპა, მე კი მასზე მეტხანს ვიცოცხლე."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "got-sibling",
+      "title": {
+        "en": "Who is your sibling?",
+        "ka": "ვინ არის შენი და ან ძმა?"
+      },
+      "label": {
+        "en": "Sibling",
+        "ka": "და / ძმა"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Who is your sibling?",
+        "ka": "ვინ არის შენი და ან ძმა?"
+      },
+      "lots": [
+        {
+          "id": "got-jon-snow",
+          "name": {
+            "en": "Jon Snow",
+            "ka": "ჯონ სნოუ"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "got-theon-greyjoy",
+          "name": {
+            "en": "Theon Greyjoy",
+            "ka": "თეონ გრეიჯოი"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "got-sansa-stark",
+          "name": {
+            "en": "Sansa Stark",
+            "ka": "სანსა სტარკი"
+          },
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "got-arya-stark",
+          "name": {
+            "en": "Arya Stark",
+            "ka": "არია სტარკი"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Ned's arrest and death forced Arya to flee King's Landing and live in hiding.",
+              "ka": "ნედის დაპატიმრებამ და სიკვდილმა არია აიძულა, მეფის სავანიდან გაქცეულიყო და დამალულიყო."
+            },
+            {
+              "en": "Arya lived and trained in Braavos.",
+              "ka": "არია ბრაავოსში ცხოვრობდა და წვრთნას გადიოდა."
+            },
+            {
+              "en": "Sansa's betrothal to Joffrey was intended to join the Stark family to the royal family.",
+              "ka": "სანსას ჯოფრიზე დანიშვნას სტარკების სამეფო ოჯახთან დაკავშირება უნდა უზრუნველეყო."
+            }
+          ]
+        },
+        {
+          "id": "got-viserys-targaryen",
+          "name": {
+            "en": "Viserys Targaryen",
+            "ka": "ვისერის ტარგარიენი"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "The fall of the Targaryen dynasty left Viserys in exile.",
+              "ka": "ტარგარიენების დინასტიის დაცემის შემდეგ ვისერისი დევნილობაში აღმოჩნდა."
+            },
+            {
+              "en": "Viserys lived in Essos, including at Illyrio's home in Pentos.",
+              "ka": "ვისერისი ესოსში ცხოვრობდა, მათ შორის ილირიოს სახლში, პენტოსში."
+            },
+            {
+              "en": "Daenerys's marriage to Drogo was intended to bring Viserys military support.",
+              "ka": "დეინერისის დროგოზე ქორწინებას ვისერისისთვის სამხედრო მხარდაჭერა უნდა მოეტანა."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "My family's fall forced me away from the life I was born into.",
+          "ka": "ჩემი ოჯახის დაცემამ იმ ცხოვრებას მომწყვიტა, რომელშიც დავიბადე."
+        },
+        {
+          "en": "I lived across the Narrow Sea.",
+          "ka": "ვიწრო ზღვის გაღმა ვცხოვრობდი."
+        },
+        {
+          "en": "A sibling's promised marriage was meant to strengthen a political alliance.",
+          "ka": "ჩემი და-ძმის დაპირებულ ქორწინებას პოლიტიკური კავშირი უნდა განემტკიცებინა."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "got-best-friend",
+      "title": {
+        "en": "Who is your best friend?",
+        "ka": "ვინ არის შენი საუკეთესო მეგობარი?"
+      },
+      "label": {
+        "en": "Best friend",
+        "ka": "საუკეთესო მეგობარი"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Who is your best friend?",
+        "ka": "ვინ არის შენი საუკეთესო მეგობარი?"
+      },
+      "lots": [
+        {
+          "id": "got-tyrion-lannister",
+          "name": {
+            "en": "Tyrion Lannister",
+            "ka": "ტირიონ ლანისტერი"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "got-samwell-tarly",
+          "name": {
+            "en": "Samwell Tarly",
+            "ka": "სემუელ ტარლი"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "got-bronn",
+          "name": {
+            "en": "Bronn",
+            "ka": "ბრონი"
+          },
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "got-brienne-of-tarth",
+          "name": {
+            "en": "Brienne of Tarth",
+            "ka": "ბრიენა ტართელი"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Brienne served in Renly Baratheon's Kingsguard.",
+              "ka": "ბრიენა რენლი ბარათეონის სამეფო გვარდიაში მსახურობდა."
+            },
+            {
+              "en": "Brienne loved Renly, whose romantic relationship was with Loras.",
+              "ka": "ბრიენას რენლი უყვარდა, რენლის კი რომანტიკული ურთიერთობა ლორასთან ჰქონდა."
+            },
+            {
+              "en": "Brienne rescued Sansa and Theon from Bolton pursuers after their escape from Winterfell.",
+              "ka": "ვინტერფელიდან გაქცევის შემდეგ ბრიენამ სანსა და თეონი ბოლტონების მდევრებისგან იხსნა."
+            }
+          ]
+        },
+        {
+          "id": "got-petyr-baelish-littlefinger",
+          "name": {
+            "en": "Petyr Baelish (Littlefinger)",
+            "ka": "პეტირ ბეილიში (ნეკა)"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Littlefinger served Robert and Joffrey as Master of Coin.",
+              "ka": "ნეკა რობერტისა და ჯოფრის დროს ხაზინადარი იყო."
+            },
+            {
+              "en": "Littlefinger loved Catelyn, who did not return his romantic feelings.",
+              "ka": "ნეკას კეიტლინი უყვარდა, თუმცა კეიტლინი მის გრძნობებს არ იზიარებდა."
+            },
+            {
+              "en": "Littlefinger arranged Sansa's escape from King's Landing after Joffrey's poisoning, although his later choices endangered her again.",
+              "ka": "ნეკამ ჯოფრის მოწამვლის შემდეგ სანსას მეფის სავანიდან გაქცევა მოაწყო, თუმცა მოგვიანებით თავისი გადაწყვეტილებებით კვლავ საფრთხეში ჩააგდო."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "I served someone who claimed a crown.",
+          "ka": "ვემსახურებოდი ადამიანს, რომელიც გვირგვინზე აცხადებდა პრეტენზიას."
+        },
+        {
+          "en": "I loved someone who did not love me in the same way.",
+          "ka": "მიყვარდა ადამიანი, რომელსაც ჩემ მიმართ იგივე გრძნობა არ ჰქონდა."
+        },
+        {
+          "en": "I helped Sansa Stark get away from immediate danger.",
+          "ka": "სანსა სტარკს უშუალო საფრთხისგან თავის დაღწევაში დავეხმარე."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "got-protector",
+      "title": {
+        "en": "Who is your sworn protector?",
+        "ka": "ვინ გიცავს ფიცით?"
+      },
+      "label": {
+        "en": "Protector",
+        "ka": "მცველი"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Who is your sworn protector?",
+        "ka": "ვინ გიცავს ფიცით?"
+      },
+      "lots": [
+        {
+          "id": "got-brienne-of-tarth",
+          "name": {
+            "en": "Brienne of Tarth",
+            "ka": "ბრიენა ტართელი"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "got-bronn",
+          "name": {
+            "en": "Bronn",
+            "ka": "ბრონი"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "got-samwell-tarly",
+          "name": {
+            "en": "Samwell Tarly",
+            "ka": "სემუელ ტარლი"
+          },
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "got-barristan-selmy",
+          "name": {
+            "en": "Barristan Selmy",
+            "ka": "ბარისტან სელმი"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Barristan was Lord Commander of the Kingsguard.",
+              "ka": "ბარისტანი სამეფო გვარდიის ლორდ-მეთაური იყო."
+            },
+            {
+              "en": "After Robert died, Joffrey dismissed Barristan from the Kingsguard.",
+              "ka": "რობერტის სიკვდილის შემდეგ ჯოფრიმ ბარისტანი სამეფო გვარდიიდან დაითხოვა."
+            },
+            {
+              "en": "Barristan died fighting the Sons of the Harpy in Meereen.",
+              "ka": "ბარისტანი მიირინში ჰარპიის შვილებთან ბრძოლაში დაიღუპა."
+            }
+          ]
+        },
+        {
+          "id": "got-joffrey-baratheon",
+          "name": {
+            "en": "Joffrey Baratheon",
+            "ka": "ჯოფრი ბარათეონი"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Joffrey grew up as the heir and then became king.",
+              "ka": "ჯოფრი ტახტის მემკვიდრედ იზრდებოდა, შემდეგ კი მეფე გახდა."
+            },
+            {
+              "en": "After Robert died, Joffrey took the throne.",
+              "ka": "რობერტის სიკვდილის შემდეგ ტახტი ჯოფრიმ დაიკავა."
+            },
+            {
+              "en": "Joffrey was poisoned at his wedding feast in King's Landing.",
+              "ka": "ჯოფრი მეფის სავანეში, საკუთარი ქორწილის ნადიმზე, მოწამლეს."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "My position placed me close to the centre of royal power.",
+          "ka": "ჩემი თანამდებობა სამეფო ძალაუფლების ცენტრთან ახლოს მაყენებდა."
+        },
+        {
+          "en": "Robert Baratheon's death changed my place at court.",
+          "ka": "რობერტ ბარათეონის სიკვდილმა სამეფო კარზე ჩემი ადგილი შეცვალა."
+        },
+        {
+          "en": "An attack inside a city ended my life.",
+          "ka": "ქალაქის შიგნით მომხდარმა თავდასხმამ ჩემი სიცოცხლე შეიწირა."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "got-spies",
+      "title": {
+        "en": "Who is your master of spies?",
+        "ka": "ვინ არის შენი ჯაშუშების უფროსი?"
+      },
+      "label": {
+        "en": "Master of spies",
+        "ka": "ჯაშუშების უფროსი"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Who is your master of spies?",
+        "ka": "ვინ არის შენი ჯაშუშების უფროსი?"
+      },
+      "lots": [
+        {
+          "id": "got-varys",
+          "name": {
+            "en": "Varys",
+            "ka": "ვარისი"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "got-petyr-baelish-littlefinger",
+          "name": {
+            "en": "Petyr Baelish (Littlefinger)",
+            "ka": "პეტირ ბეილიში (ნეკა)"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "got-qyburn",
+          "name": {
+            "en": "Qyburn",
+            "ka": "ქაიბერნი"
+          },
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "got-bran-stark",
+          "name": {
+            "en": "Bran Stark",
+            "ka": "ბრან სტარკი"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Bran's inability to walk did not prevent him from gaining the powers of the Three-Eyed Raven.",
+              "ka": "სიარულის უუნარობამ ბრანს ხელი ვერ შეუშალა სამთვალა ყორნის ძალების მოპოვებაში."
+            },
+            {
+              "en": "Before the Battle of Winterfell, Tyrion asked Bran to tell him his story.",
+              "ka": "ვინტერფელის ბრძოლამდე ტირიონმა ბრანს სთხოვა, თავისი ამბავი მოეყოლა."
+            },
+            {
+              "en": "As king, Bran attended the meeting of his new Small Council in the finale.",
+              "ka": "ფინალში ბრანი, უკვე მეფე, თავისი ახალი მცირე საბჭოს სხდომას დაესწრო."
+            }
+          ]
+        },
+        {
+          "id": "got-pycelle",
+          "name": {
+            "en": "Pycelle",
+            "ka": "პაისელი"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Pycelle presented himself as more frail and harmless than he really was.",
+              "ka": "პაისელი თავს იმაზე სუსტად და უვნებლად წარმოაჩენდა, ვიდრე სინამდვილეში იყო."
+            },
+            {
+              "en": "Tyrion questioned Pycelle and exposed his loyalty to Cersei.",
+              "ka": "ტირიონმა პაისელი დაკითხა და სერსეისადმი მისი ერთგულება გამოააშკარავა."
+            },
+            {
+              "en": "Pycelle sat on the Small Council as Grand Maester.",
+              "ka": "პაისელი მცირე საბჭოში დიდი მეისტერის სტატუსით შედიოდა."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "My physical appearance could make people underestimate me.",
+          "ka": "ჩემს გარეგნობას შეეძლო, ხალხს ჩემი შესაძლებლობები სათანადოდ ვერ შეეფასებინა."
+        },
+        {
+          "en": "Tyrion Lannister wanted answers from me.",
+          "ka": "ტირიონ ლანისტერი ჩემგან პასუხებს ელოდა."
+        },
+        {
+          "en": "I took part in a council that governed the realm.",
+          "ka": "სამეფოს მმართველ საბჭოში ვმონაწილეობდი."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "got-gold",
+      "title": {
+        "en": "Who manages your gold?",
+        "ka": "ვინ განაგებს შენს ოქროს?"
+      },
+      "label": {
+        "en": "Master of coin",
+        "ka": "ხაზინადარი"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Who manages your gold?",
+        "ka": "ვინ განაგებს შენს ოქროს?"
+      },
+      "lots": [
+        {
+          "id": "got-tyrion-lannister",
+          "name": {
+            "en": "Tyrion Lannister",
+            "ka": "ტირიონ ლანისტერი"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "got-tywin-lannister",
+          "name": {
+            "en": "Tywin Lannister",
+            "ka": "ტაივინ ლანისტერი"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "got-bronn",
+          "name": {
+            "en": "Bronn",
+            "ka": "ბრონი"
+          },
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "got-petyr-baelish-littlefinger",
+          "name": {
+            "en": "Petyr Baelish (Littlefinger)",
+            "ka": "პეტირ ბეილიში (ნეკა)"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Littlefinger's unreturned love for Catelyn influenced his ambitions and actions.",
+              "ka": "კეიტლინისადმი ნეკას უპასუხო სიყვარული მის ამბიციებსა და მოქმედებებზე გავლენას ახდენდა."
+            },
+            {
+              "en": "Littlefinger's betrayal of Ned helped Joffrey retain the throne.",
+              "ka": "ნეკას მიერ ნედის ღალატი ჯოფრის ტახტის შენარჩუნებაში დაეხმარა."
+            },
+            {
+              "en": "Littlefinger's work as Master of Coin relied heavily on borrowing, which Tyrion discovered when he took over.",
+              "ka": "ხაზინადრად მუშაობისას ნეკა დიდწილად სესხებს ეყრდნობოდა, რაც ტირიონმა მისი თანამდებობის დაკავების შემდეგ აღმოაჩინა."
+            }
+          ]
+        },
+        {
+          "id": "got-robert-baratheon",
+          "name": {
+            "en": "Robert Baratheon",
+            "ka": "რობერტ ბარათეონი"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Robert remained obsessed with Lyanna, who had loved Rhaegar rather than him.",
+              "ka": "რობერტი ლიანაზე ფიქრს ვერ ეშვებოდა, ლიანას კი მის ნაცვლად რეიგარი უყვარდა."
+            },
+            {
+              "en": "Robert's rebellion overthrew the Targaryen dynasty and made him king.",
+              "ka": "რობერტის აჯანყებამ ტარგარიენების დინასტია დაამხო და ის მეფედ აქცია."
+            },
+            {
+              "en": "Royal spending during Robert's reign left the Crown heavily in debt.",
+              "ka": "რობერტის მმართველობის დროს სამეფო ხარჯებმა გვირგვინი მძიმე ვალებში ჩააგდო."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "My feelings for a woman I could not have shaped my life.",
+          "ka": "ჩემი ცხოვრება იმ ქალისადმი გრძნობამ განსაზღვრა, რომელთანაც ვერ ვიქნებოდი."
+        },
+        {
+          "en": "I helped decide who would hold royal power.",
+          "ka": "გავლენა მოვახდინე იმაზე, თუ ვის ექნებოდა სამეფო ძალაუფლება."
+        },
+        {
+          "en": "The Crown built up heavy debts while I helped run it.",
+          "ka": "როცა სამეფოს მართვაში ვმონაწილეობდი, გვირგვინს დიდი ვალები დაუგროვდა."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "got-army",
+      "title": {
+        "en": "Which army fights for you?",
+        "ka": "რომელი ჯარი იბრძვის შენთვის?"
+      },
+      "label": {
+        "en": "Army",
+        "ka": "ჯარი"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Which army fights for you?",
+        "ka": "რომელი ჯარი იბრძვის შენთვის?"
+      },
+      "lots": [
+        {
+          "id": "got-the-unsullied",
+          "name": {
+            "en": "The Unsullied",
+            "ka": "უმწიკვლოები"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "got-the-lannister-army",
+          "name": {
+            "en": "The Lannister army",
+            "ka": "ლანისტერების ჯარი"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "got-the-free-folk",
+          "name": {
+            "en": "The Free Folk",
+            "ka": "თავისუფალი ხალხი"
+          },
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "got-the-dothraki",
+          "name": {
+            "en": "The Dothraki",
+            "ka": "დოთრაკები"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "A khal's command depends on strength and followers; a weak heir does not automatically inherit a united khalasar.",
+              "ka": "ხალის ძალაუფლება ძალასა და მიმდევრებზეა დამოკიდებული; სუსტი მემკვიდრე გაერთიანებულ ხალასარს ავტომატურად ვერ იღებს."
+            },
+            {
+              "en": "Drogo's khalasar broke apart when he could no longer lead it.",
+              "ka": "დროგოს ხალასარი დაიშალა, როცა მას ხელმძღვანელობა აღარ შეეძლო."
+            },
+            {
+              "en": "Daenerys's Dothraki charged the dead at the Battle of Winterfell.",
+              "ka": "ვინტერფელის ბრძოლაში დეინერისის დოთრაკები მკვდრებს შეუტიეს."
+            }
+          ]
+        },
+        {
+          "id": "got-the-depleted-remnants-of-the-nights-watch",
+          "name": {
+            "en": "The depleted remnants of the Night's Watch",
+            "ka": "ღამის გუშაგების შეთხელებული ნარჩენები"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "The Night's Watch elects its Lord Commander.",
+              "ka": "ღამის გუშაგები თავიანთ ლორდ-მეთაურს ირჩევენ."
+            },
+            {
+              "en": "The killing of Jon divided the Watch between mutineers and his remaining supporters.",
+              "ka": "ჯონის მკვლელობამ ღამის გუშაგები ამბოხებულებად და მის დარჩენილ მხარდამჭერებად გაყო."
+            },
+            {
+              "en": "The Watch fought the dead beyond the Wall; surviving brothers also fought at Winterfell.",
+              "ka": "ღამის გუშაგები მკვდრებს კედლის მიღმა ებრძოდნენ; გადარჩენილი ძმები ვინტერფელთანაც იბრძოდნენ."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "Our leader does not simply inherit command as a king's eldest son.",
+          "ka": "ჩვენი ლიდერი მეთაურობას მეფის უფროსი ვაჟივით უბრალოდ მემკვიდრეობით არ იღებს."
+        },
+        {
+          "en": "The loss of a leader left our people divided.",
+          "ka": "ლიდერის დაკარგვამ ჩვენი ხალხი დაყო."
+        },
+        {
+          "en": "Our fighters have faced the army of the dead in the North.",
+          "ka": "ჩვენი მებრძოლები ჩრდილოეთში მკვდრების არმიას დაუპირისპირდნენ."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "got-enemy",
+      "title": {
+        "en": "Who is your greatest enemy?",
+        "ka": "ვინ არის შენი უდიდესი მტერი?"
+      },
+      "label": {
+        "en": "Enemy",
+        "ka": "მტერი"
+      },
+      "effect": "negative",
+      "prompt": {
+        "en": "Who is your greatest enemy?",
+        "ka": "ვინ არის შენი უდიდესი მტერი?"
+      },
+      "lots": [
+        {
+          "id": "got-joffrey-baratheon",
+          "name": {
+            "en": "Joffrey Baratheon",
+            "ka": "ჯოფრი ბარათეონი"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "got-ramsay-bolton",
+          "name": {
+            "en": "Ramsay Bolton",
+            "ka": "რემზი ბოლტონი"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "got-cersei-lannister",
+          "name": {
+            "en": "Cersei Lannister",
+            "ka": "სერსეი ლანისტერი"
+          },
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "got-viserys-targaryen",
+          "name": {
+            "en": "Viserys Targaryen",
+            "ka": "ვისერის ტარგარიენი"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Viserys claimed the kingship in exile but never regained the throne.",
+              "ka": "ვისერისი დევნილობაში თავს მეფედ აცხადებდა, თუმცა ტახტი ვერასდროს დაიბრუნა."
+            },
+            {
+              "en": "Viserys threatened Daenerys's unborn child while confronting her and Drogo.",
+              "ka": "დეინერისთან და დროგოსთან დაპირისპირებისას ვისერისი დეინერისის ჯერ არდაბადებულ შვილს დაემუქრა."
+            },
+            {
+              "en": "Viserion was named after Viserys.",
+              "ka": "ვისერიონს სახელი ვისერისის პატივსაცემად დაარქვეს."
+            }
+          ]
+        },
+        {
+          "id": "got-the-night-king",
+          "name": {
+            "en": "The Night King",
+            "ka": "ღამის მეფე"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "The Night King led the dead and never ruled from the Iron Throne.",
+              "ka": "ღამის მეფე მკვდრებს წინამძღოლობდა და რკინის ტახტიდან არასდროს უმართავს."
+            },
+            {
+              "en": "Daenerys saw the Night King attack her dragons during the rescue beyond the Wall.",
+              "ka": "კედლის მიღმა სამაშველო მისიის დროს დეინერისმა დაინახა, როგორ შეუტია ღამის მეფემ მის დრაკონებს."
+            },
+            {
+              "en": "The Night King killed and reanimated Viserion, then used him as his mount.",
+              "ka": "ღამის მეფემ ვისერიონი მოკლა, გააცოცხლა და შემდეგ მასზე ამხედრდა."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "I was called a king, but I never sat on the Iron Throne.",
+          "ka": "მეფეს მეძახდნენ, მაგრამ რკინის ტახტზე არასდროს ვმჯდარვარ."
+        },
+        {
+          "en": "Daenerys saw me threaten someone she wanted to protect.",
+          "ka": "დეინერისმა დაინახა, როგორ დავემუქრე მას, ვისი დაცვაც სურდა."
+        },
+        {
+          "en": "One of Daenerys's dragons has a direct connection to me.",
+          "ka": "დეინერისის ერთ-ერთი დრაკონი ჩემთან პირდაპირაა დაკავშირებული."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "got-trial-by-combat",
+      "title": {
+        "en": "Who represents you in a trial by combat?",
+        "ka": "ვინ იბრძვის შენ ნაცვლად სასამართლო ორთაბრძოლაში?"
+      },
+      "label": {
+        "en": "Trial by combat",
+        "ka": "სასამართლო ორთაბრძოლა"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Who represents you in a trial by combat?",
+        "ka": "ვინ იბრძვის შენ ნაცვლად სასამართლო ორთაბრძოლაში?"
+      },
+      "lots": [
+        {
+          "id": "got-jaime-lannister-with-both-hands",
+          "name": {
+            "en": "Jaime Lannister (with both hands)",
+            "ka": "ჯეიმი ლანისტერი (ორივე ხელით)"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "got-jorah-mormont",
+          "name": {
+            "en": "Jorah Mormont",
+            "ka": "ჯორა მორმონტი"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "got-lancel-lannister",
+          "name": {
+            "en": "Lancel Lannister",
+            "ka": "ლანსელ ლანისტერი"
+          },
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "got-gregor-clegane-the-mountain",
+          "name": {
+            "en": "Gregor Clegane (The Mountain)",
+            "ka": "გრეგორ კლეგეინი (მთა)"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Gregor is exceptionally large and is known as the Mountain.",
+              "ka": "გრეგორი უჩვეულოდ დიდია და „მთის“ სახელითაა ცნობილი."
+            },
+            {
+              "en": "Gregor served House Lannister and later protected Cersei.",
+              "ka": "გრეგორი ლანისტერების საგვარეულოს ემსახურებოდა, მოგვიანებით კი სერსეის იცავდა."
+            },
+            {
+              "en": "Qyburn's treatment after Gregor's poisoning returned him to service as Cersei's fearsome guard.",
+              "ka": "მოწამვლის შემდეგ ქაიბერნის მკურნალობამ გრეგორი სამსახურში დააბრუნა, როგორც სერსეის შემაძრწუნებელი მცველი."
+            }
+          ]
+        },
+        {
+          "id": "got-hodor",
+          "name": {
+            "en": "Hodor",
+            "ka": "ჰოდორი"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Hodor towers over most of the people around him.",
+              "ka": "ჰოდორი გარშემო მყოფთა უმეტესობაზე გაცილებით მაღალია."
+            },
+            {
+              "en": "Hodor served the Starks and carried Bran on his journey.",
+              "ka": "ჰოდორი სტარკებს ემსახურებოდა და მოგზაურობისას ბრანს ზურგით ატარებდა."
+            },
+            {
+              "en": "Bran warged into Hodor and made him fight, including killing Locke to escape captivity.",
+              "ka": "ბრანი ჰოდორის სხეულს ეუფლებოდა და ბრძოლას აიძულებდა; მათ შორის, ტყვეობიდან გასაქცევად ლოკი მოაკვლევინა."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "My size makes me stand out in a crowd.",
+          "ka": "ჩემი ზომა ხალხში გამორჩეულს მხდის."
+        },
+        {
+          "en": "I used my strength in the service of a powerful family.",
+          "ka": "ჩემს ძალას ძლევამოსილი ოჯახის სამსახურში ვიყენებდი."
+        },
+        {
+          "en": "Someone else used extraordinary means to make me fight.",
+          "ka": "სხვამ ზებუნებრივი საშუალებები გამოიყენა, რომ ბრძოლა ეიძულებინა ჩემთვის."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    },
+    {
+      "id": "got-ruler",
+      "title": {
+        "en": "Who sits on the Iron Throne during your lifetime?",
+        "ka": "ვინ ზის რკინის ტახტზე შენი სიცოცხლის განმავლობაში?"
+      },
+      "label": {
+        "en": "Ruler",
+        "ka": "მმართველი"
+      },
+      "effect": "positive",
+      "prompt": {
+        "en": "Who sits on the Iron Throne during your lifetime?",
+        "ka": "ვინ ზის რკინის ტახტზე შენი სიცოცხლის განმავლობაში?"
+      },
+      "lots": [
+        {
+          "id": "got-eddard-ned-stark",
+          "name": {
+            "en": "Eddard (Ned) Stark",
+            "ka": "ედარდ (ნედ) სტარკი"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 70
+        },
+        {
+          "id": "got-margaery-tyrell",
+          "name": {
+            "en": "Margaery Tyrell",
+            "ka": "მარჯერი ტირელი"
+          },
+          "pitch": {
+            "en": "Bid to add this choice to your life in Westeros.",
+            "ka": "დადე ფსონი, რომ ეს არჩევანი ვესტეროსში შენი ცხოვრების ნაწილი გახდეს."
+          },
+          "price": 50
+        },
+        {
+          "id": "got-the-high-sparrow",
+          "name": {
+            "en": "The High Sparrow",
+            "ka": "უზენაესი ბეღურა"
+          },
+          "pitch": {
+            "en": "Your known option for this round.",
+            "ka": "ამ რაუნდის ცნობილი ვარიანტი."
+          },
+          "price": 20
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "got-tommen-baratheon",
+          "name": {
+            "en": "Tommen Baratheon",
+            "ka": "ტომენ ბარათეონი"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Tommen was publicly treated as Robert's son, although Jaime was his biological father.",
+              "ka": "ტომენს ოფიციალურად რობერტის შვილად მიიჩნევდნენ, თუმცა მისი ბიოლოგიური მამა ჯეიმი იყო."
+            },
+            {
+              "en": "Tywin remained Hand when Tommen became king, until Tyrion killed him.",
+              "ka": "როცა ტომენი გამეფდა, ტაივინი კვლავ მეფის მარჯვენა იყო, სანამ ტირიონმა არ მოკლა."
+            },
+            {
+              "en": "Tommen married Margaery after Joffrey's death.",
+              "ka": "ჯოფრის სიკვდილის შემდეგ ტომენი მარჯერიზე დაქორწინდა."
+            }
+          ]
+        },
+        {
+          "id": "got-joffrey-baratheon",
+          "name": {
+            "en": "Joffrey Baratheon",
+            "ka": "ჯოფრი ბარათეონი"
+          },
+          "pitch": {
+            "en": "Your mystery box is revealed.",
+            "ka": "შენი მისტერი ბოქსი გაიხსნა."
+          },
+          "explanations": [
+            {
+              "en": "Joffrey's claim likewise rested on his public identity as Robert's son.",
+              "ka": "ჯოფრის პრეტენზიაც ტახტზე იმაზე იდგა, რომ მას რობერტის შვილად იცნობდნენ."
+            },
+            {
+              "en": "Tywin served as Hand to Joffrey.",
+              "ka": "ტაივინი ჯოფრის მეფის მარჯვენად ემსახურებოდა."
+            },
+            {
+              "en": "Joffrey married Margaery at the wedding where he was poisoned.",
+              "ka": "ჯოფრი მარჯერიზე იმ ქორწილში დაქორწინდა, რომელზეც მოწამლეს."
+            }
+          ]
+        }
+      ],
+      "clues": [
+        {
+          "en": "The public story about my father supported my claim to the throne.",
+          "ka": "მამაჩემის შესახებ გავრცელებული ამბავი ტახტზე ჩემს პრეტენზიას ამყარებდა."
+        },
+        {
+          "en": "My grandfather served as Hand during my reign.",
+          "ka": "ჩემი მეფობისას ბაბუაჩემი მეფის მარჯვენა იყო."
+        },
+        {
+          "en": "I married a woman from House Tyrell.",
+          "ka": "ტირელების საგვარეულოს წარმომადგენელ ქალზე დავქორწინდი."
+        }
+      ],
+      "prices": [
+        15,
+        20,
+        25,
+        30
+      ]
+    }
+  ]
+}

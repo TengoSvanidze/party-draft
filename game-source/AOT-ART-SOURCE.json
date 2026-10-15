@@ -1,0 +1,7 @@
+{
+  "tool": "Built-in image_gen edit",
+  "input": "../attack-on-titan-concept-v3.png",
+  "output": "public/assets/aot/outpost-art.webp",
+  "sourcePng": "../attack-on-titan-background.png",
+  "prompt": "Use case: precise-object-edit. Edit target: the supplied portrait concept image for our Attack on Titan fan game's mobile entrance. Preserve exactly the same cinematic detailed stone wall, closed arched wooden gate, rooftops, olive banners, warm lanterns, atmospheric smoke, dramatic sunset clouds, wet cobblestones, and foreground mechanical gear on its wooden bench. Preserve the camera angle, lighting, rich photographic material detail, portrait aspect ratio and composition. Remove ALL baked-in interface: top back/sound/settings buttons and icons, PARTY DRAFT branding, the entire large ATTACK ON TITAN title and Beyond the Walls subtitle, Drag the gear to inspect text, and the entire bottom gold Enter the gate button. Seamlessly reconstruct the real scenery underneath each removed interface element: stone wall behind the central title, clouds behind top buttons, cloth/bench behind bottom text and button. Also remove the giant Titan head above the wall, filling its place naturally with the existing dramatic clouds; no Titan or other character should remain. Keep the foreground mechanical equipment, closed gate and both banners in their original positions. This output is only the clean background artwork, with no text, icons, UI, watermark or new objects. Do not redesign the scene. High detail; the approved concept's exact overall visual style."
+}

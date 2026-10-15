@@ -1,5 +1,17 @@
 # Party Draft
 
+Finished release — 15 October 2026.
+
+- [Play on GitHub Pages](https://tengosvanidze.github.io/party-draft/)
+- [Play on the game server](https://party-draft-tengo.tengosvanidze3.chatgpt.site/)
+- Current application source and build instructions: [game-source](game-source/README.md)
+- Attack on Titan entrance and optimization notes: [AOT-EXPERIENCE.md](game-source/AOT-EXPERIENCE.md)
+
+The final Attack on Titan entrance includes the approved cinematic artwork, doors that swing open, an animated passage into the room, sound controls, reduced-motion support and optimized mobile rendering. GitHub Pages uses `docs/`; room APIs continue through the existing game server.
+
+## Earlier snapshots
+
+
 Private development snapshot of the Party Draft phone party game.
 
 ## Run
